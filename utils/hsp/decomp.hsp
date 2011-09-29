@@ -1,0 +1,42 @@
+#runtime "hsp3c"
+#define CHARWIDTH 190.4
+#define CHARHEIGHT 188.7
+#packopt name "decomp"
+#packopt hide 1
+#packopt orgpath 1
+
+;srcfile = "..\\srcgif\\0001.gif"
+srcfile = dir_cmdline
+tmp = srcfile: srcpath = ""
+repeat strlen(tmp),1
+	if (instr(srcfile,strlen(tmp)-cnt,"\\") != -1) {
+		srcpath = strmid(srcfile,0,strlen(tmp)-cnt)
+		tmp = strmid(srcfile,strlen(tmp)-cnt+1,strlen(tmp))
+		break
+	}
+loop
+srcfile_ = tmp
+tmp = srcfile_
+repeat strlen(tmp),1
+	if (instr(srcfile_,strlen(tmp)-cnt,".") != -1) {tmp = strmid(srcfile_,0,strlen(tmp)-cnt):break}
+loop
+srcfile_ = tmp
+
+buffer 2
+picload srcfile
+picx = ginfo_sx: picy = ginfo_sy
+buffer 3, picx+int(CHARWIDTH/4), picy+int(CHARHEIGHT/4)
+pos -int(CHARWIDTH/4), -int(CHARHEIGHT/4):gcopy 2,0,0,picx,picy
+
+id=0
+repeat (picy/int(CHARHEIGHT))+1
+	tmpy = cnt
+	repeat picx/int(CHARWIDTH)
+		tmpx = cnt
+		buffer 4,int(CHARWIDTH),int(CHARHEIGHT)
+		gcopy 3,int(CHARWIDTH*tmpx),int(CHARHEIGHT*tmpy),int(CHARWIDTH),int(CHARHEIGHT)
+		bmpsave strf("%s\\%s\\%05d.bmp",srcpath,srcfile_,id)
+		id++
+	loop
+loop
+end

@@ -1,0 +1,21 @@
+#!/usr/local/bin/fontforge -script
+
+if ($argc < 3)
+	Print("Usage: fontforge -script "+$0+" src-dir-name num-of-glyphs")
+	Quit(1)
+endif
+New()
+Reencode("custom")
+SetCharCnt(Strtol($2))
+glyphnum=0
+while (glyphnum < Strtol($2))
+	glyphcode=(ToString(Floor(Real(glyphnum)%100000/10000)) \
+	          +ToString(Floor(Real(glyphnum)% 10000/ 1000)) \
+	          +ToString(Floor(Real(glyphnum)%  1000/  100)) \
+	          +ToString(Floor(Real(glyphnum)%   100/   10)) \
+	          +ToString(Floor(Real(glyphnum)%    10      )))
+	Select(glyphnum)
+	Import($1+"/"+glyphcode+".svg")
+	glyphnum++
+endloop
+Save($1+".sfd")
