@@ -1,4 +1,5 @@
-TARGETS=0001.sfd
+TARGETS=0001.sfd 0002.sfd 0003.sfd 0004.sfd 0005.sfd 0006.sfd 0007.sfd \
+        0008.sfd 0009.sfd 0010.sfd
 
 .PHONY: all clean utils
 
