@@ -1,3 +1,41 @@
 Sophora, a print-style-like handwritten font project
 
 ボールペン書き楷書フォントプロジェクト Sophora
+
+
+※MakefileはCygwin専用設定になっています。
+
+■ビルド時に必要なもの
+
+	Cygwin
+		http://www.cygwin.com/
+	Cygwin/X
+		Cygwinインストーラーにパッケージ有り
+		http://x.cygwin.com/
+	FontForge
+		Cygwinインストーラーにパッケージ無し
+		http://fontforge.sourceforge.net/
+	potrace
+		Cygwinインストーラーにパッケージ有り
+		http://potrace.sourceforge.net/
+	HSPコマンドラインコンパイラ
+		Windows用アプリ
+		http://lldev.jp/others/freeware.html#chspcomp
+
+
+■リポジトリの中身
+
+	srcgif/
+		……手書きフォントをスキャンしたデータ
+
+	utils/hsp/
+		……HSP製自作ツール
+		makeにはHSPコマンドラインコンパイラが必要
+		入手は http://lldev.jp/others/freeware.html#chspcomp
+
+	utils/pe/
+		……FontForgeスクリプト
+
+	Sophora.sfd
+		……生成されたアウトラインデータを切り貼りしたフォントデータ
+
