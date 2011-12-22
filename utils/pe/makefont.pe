@@ -1,0 +1,12 @@
+#!/usr/local/bin/fontforge -script
+
+if ($argc < 3)
+	Print("Usage: fontforge -script "+$0+" source-file target-file")
+	Quit(1)
+endif
+
+Open($1)
+SelectWorthOutputting()
+AddExtrema()
+RoundToInt()
+Generate($2)

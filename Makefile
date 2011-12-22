@@ -1,6 +1,13 @@
 DIRS=utils srcgif
+TARGETS=Sophora.otf
 
 .PHONY: all clean $(DIRS)
+
+all: $(TARGETS)
+
+.SUFFIXES: .sfd .otf
+.sfd.otf:
+	./utils/pe/makefont.pe $*.sfd $*.otf
 
 srcgif: utils
 	cd $@;make
