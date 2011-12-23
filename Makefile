@@ -7,7 +7,7 @@ all: $(TARGETS)
 
 .SUFFIXES: .sfd .otf
 .sfd.otf:
-	./utils/pe/makefont.pe $*.sfd $*.otf
+	fontforge -script ./utils/pe/makefont.pe $*.sfd $*.otf
 
 srcgif: utils
 	cd $@;make

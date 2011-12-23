@@ -13,7 +13,7 @@ all: $(TARGETS)
 	cd $*;k=0;for i in `ls -1 *.bmp`; do \
 	echo -n "[$${k}]";potrace -s $$i; k=`expr $$k + 1`; \
 	done;echo ""; \
-	cd ..; ../utils/pe/import.pe $* $$k
+	cd ..; fontforge -script ../utils/pe/import.pe $* $$k
 
 clean:
 	-rm -rf $(TARGETS) $(TARGETS:.sfd=)
