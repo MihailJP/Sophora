@@ -7,7 +7,8 @@ all: $(TARGETS)
 
 .SUFFIXES: .sfd .otf
 .sfd.otf:
-	fontforge -script ./utils/pe/makefont.pe $*.sfd $*.otf
+	fontforge -lang=ff -c "Open(\"$*.sfd\");SelectWorthOutputting();Scale(120,0,0);Save(\"$*.scaled.sfd\")"
+	fontforge -script ./utils/pe/makefont.pe $*.scaled.sfd $*.otf
 
 srcgif: utils
 	cd $@;make
@@ -17,4 +18,4 @@ utils:
 
 clean:
 	-for i in $(DIRS); do cd $$i;make clean;cd ..;done
-	-rm $(TARGETS)
+	-rm $(TARGETS) $(TARGETS:.otf=.scaled.sfd)
