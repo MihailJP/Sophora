@@ -1,5 +1,5 @@
 DIRS=utils srcgif
-TARGETS=Sophora-Light.otf Sophora-Medium.otf Sophora-Bold.otf
+TARGETS=Sophora-Light.otf Sophora-Book.otf Sophora-Medium.otf Sophora-Demi-Bold.otf Sophora-Bold.otf
 
 .PHONY: all clean $(DIRS)
 
@@ -13,11 +13,15 @@ Sophora-Light.otf: Sophora.scaled.sfd
 	fontforge -script ./utils/pe/makefont.pe $< $@
 
 Sophora-Book.otf: Sophora.scaled.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 20 Book $*.sfd
+	fontforge -script ./utils/pe/embolden.pe $< 15 Book $*.sfd
+	fontforge -script ./utils/pe/makefont.pe $*.sfd $@
+
+Sophora-Medium.otf: Sophora.scaled.sfd
+	fontforge -script ./utils/pe/embolden.pe $< 30 Medium $*.sfd
 	fontforge -script ./utils/pe/makefont.pe $*.sfd $@
 
 Sophora-Demi-Bold.otf: Sophora.scaled.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 40 Demi-Bold $*.sfd
+	fontforge -script ./utils/pe/embolden.pe $< 45 Demi-Bold $*.sfd
 	fontforge -script ./utils/pe/makefont.pe $*.sfd $@
 
 Sophora-Bold.otf: Sophora.scaled.sfd
