@@ -7,15 +7,10 @@ endif
 
 Open($1)
 SelectWorthOutputting()
+UnlinkReference()
 AddExtrema()
 Simplify()
 RoundToInt()
 AutoHint()
 Generate($2)
 Close()
-
-Open($2)
-SelectWorthOutputting()
-CorrectDirection()
-AutoHint()
-Generate($2)
