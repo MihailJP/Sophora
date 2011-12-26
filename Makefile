@@ -12,12 +12,16 @@ Sophora.scaled.sfd: Sophora.sfd
 Sophora-Light.otf: Sophora.scaled.sfd
 	fontforge -script ./utils/pe/makefont.pe $< $@
 
-Sophora-Medium.otf: Sophora.scaled.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 20 Medium $*.sfd
+Sophora-Book.otf: Sophora.scaled.sfd
+	fontforge -script ./utils/pe/embolden.pe $< 20 Book $*.sfd
+	fontforge -script ./utils/pe/makefont.pe $*.sfd $@
+
+Sophora-Demi-Bold.otf: Sophora.scaled.sfd
+	fontforge -script ./utils/pe/embolden.pe $< 40 Demi-Bold $*.sfd
 	fontforge -script ./utils/pe/makefont.pe $*.sfd $@
 
 Sophora-Bold.otf: Sophora.scaled.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 40 Bold $*.sfd
+	fontforge -script ./utils/pe/embolden.pe $< 60 Bold $*.sfd
 	fontforge -script ./utils/pe/makefont.pe $*.sfd $@
 
 srcgif: utils
