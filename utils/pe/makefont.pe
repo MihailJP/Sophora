@@ -8,6 +8,7 @@ endif
 Open($1)
 SelectWorthOutputting()
 AddExtrema()
+Simplify()
 RoundToInt()
 AutoHint()
 Generate($2)

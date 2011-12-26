@@ -1,0 +1,15 @@
+#!/usr/local/bin/fontforge -script
+
+if ($argc < 5)
+	Print("Usage: fontforge -script "+$0+" source-file stroke-width weight-name target-file")
+	Quit(1)
+endif
+
+Open($1)
+SelectWorthOutputting()
+AddExtrema()
+Simplify()
+ExpandStroke(Strtod($2),0,0,0,1)
+RemoveOverlap()
+SetFontNames($familyname+"-"+$3,$familyname,$familyname+" "+$3,$3)
+Save($4)
