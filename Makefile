@@ -1,5 +1,5 @@
 DIRS=utils srcgif
-TARGETS=Sophora-ExtraLight.otf Sophora-Light.otf Sophora-Book.otf Sophora-Medium.otf Sophora-Demi-Bold.otf Sophora-Bold.otf
+TARGETS=Sophora-ExtraLight.otf Sophora-Light.otf Sophora-Book.otf Sophora-Medium.otf Sophora-Demi-Bold.otf Sophora-Bold.otf Sophora-ExtraBold.otf
 DISTDIR=Sophora
 DISTFILE=Sophora.7z
 DOCS=readme.txt pua.txt
