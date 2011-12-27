@@ -1,7 +1,9 @@
 DIRS=utils srcgif
 TARGETS=Sophora-Light.otf Sophora-Book.otf Sophora-Medium.otf Sophora-Demi-Bold.otf Sophora-Bold.otf
+DISTDIR=Sophora
+DISTFILE=Sophora.7z
 
-.PHONY: all clean $(DIRS)
+.PHONY: all clean $(DIRS) dist
 
 all: $(TARGETS)
 
@@ -32,4 +34,11 @@ utils:
 
 clean:
 	-for i in $(DIRS); do cd $$i;make clean;cd ..;done
-	-rm $(TARGETS) $(TARGETS:.otf=.sfd) *~ *.bak
+	-rm $(TARGETS) $(TARGETS:.otf=.sfd) *~ *.bak $(DISTFILE)
+	-rm -rf $(DISTDIR)
+
+dist: all
+	-rm -rf $(DISTDIR)
+	-mkdir $(DISTDIR)
+	cp $(TARGETS) $(DISTDIR)
+	7za a -mx=9 $(DISTFILE) $(DISTDIR)
