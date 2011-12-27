@@ -1,5 +1,5 @@
 DIRS=utils srcgif
-TARGETS=Sophora-ExtraLight.otf Sophora-Light.otf Sophora-Book.otf Sophora-Medium.otf Sophora-Demi-Bold.otf Sophora-Bold.otf Sophora-ExtraBold.otf
+TARGETS=Sophora-Light.otf Sophora-Book.otf Sophora-Medium.otf Sophora-Demi-Bold.otf Sophora-Bold.otf
 DISTDIR=Sophora
 DISTFILE=Sophora.7z
 DOCS=readme.txt pua.txt
@@ -9,11 +9,8 @@ DOCS=readme.txt pua.txt
 all: $(TARGETS)
 
 .SUFFIXES: .sfd .otf
-Sophora-ExtraLight.sfd: Sophora.sfd
+Sophora-Light.sfd: Sophora.sfd
 	fontforge -lang=ff -c "Open(\"$<\");SelectWorthOutputting();Scale(130,0,0);Save(\"$@\")"
-
-Sophora-Light.sfd: Sophora-ExtraLight.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 8 Light $@
 
 Sophora-Book.sfd: Sophora-Light.sfd
 	fontforge -script ./utils/pe/embolden.pe $< 15 Book $@
@@ -26,9 +23,6 @@ Sophora-Demi-Bold.sfd: Sophora-Light.sfd
 
 Sophora-Bold.sfd: Sophora-Light.sfd
 	fontforge -script ./utils/pe/embolden.pe $< 60 Bold $@
-
-Sophora-ExtraBold.sfd: Sophora-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 75 ExtraBold $@
 
 .sfd.otf:
 	fontforge -script ./utils/pe/makefont.pe $< $@
