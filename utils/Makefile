@@ -7,4 +7,4 @@ all: $(DIRS)
 
 clean:
 	-for i in $(DIRS); do cd $$i;make clean;cd ..;done
-	-rm ./*/*~ ./*/*.bak
+	-rm ./*~ ./*/*~ ./*.bak ./*/*.bak
