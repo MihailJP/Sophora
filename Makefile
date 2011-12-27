@@ -32,4 +32,4 @@ utils:
 
 clean:
 	-for i in $(DIRS); do cd $$i;make clean;cd ..;done
-	-rm $(TARGETS) $(TARGETS:.otf=.sfd)
+	-rm $(TARGETS) $(TARGETS:.otf=.sfd) *~ *.bak
