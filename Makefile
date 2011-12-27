@@ -2,6 +2,7 @@ DIRS=utils srcgif
 TARGETS=Sophora-Light.otf Sophora-Book.otf Sophora-Medium.otf Sophora-Demi-Bold.otf Sophora-Bold.otf
 DISTDIR=Sophora
 DISTFILE=Sophora.7z
+DOCS=readme.txt pua.txt
 
 .PHONY: all clean $(DIRS) dist
 
@@ -40,5 +41,5 @@ clean:
 dist: all
 	-rm -rf $(DISTDIR)
 	-mkdir $(DISTDIR)
-	cp $(TARGETS) $(DISTDIR)
+	cp $(TARGETS) $(DOCS) $(DISTDIR)
 	7za a -mx=9 $(DISTFILE) $(DISTDIR)
