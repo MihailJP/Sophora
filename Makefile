@@ -1,5 +1,8 @@
 DIRS=utils srcgif
-TARGETS=Sophora-Light.otf Sophora-Book.otf Sophora-Medium.otf Sophora-Demi-Bold.otf Sophora-Bold.otf
+TARGETS=Sophora-Light.otf Sophora-Book.otf Sophora-Medium.otf \
+        Sophora-Demi-Bold.otf Sophora-Bold.otf \
+        Sophora-P-Light.otf Sophora-P-Book.otf Sophora-P-Medium.otf \
+        Sophora-P-Demi-Bold.otf Sophora-P-Bold.otf
 DISTDIR=Sophora
 DISTFILE=Sophora.7z
 DOCS=readme.txt pua.txt
@@ -22,6 +25,21 @@ Sophora-Demi-Bold.sfd: Sophora-Light.sfd
 	fontforge -script ./utils/pe/embolden.pe $< 45 Demi-Bold $@
 
 Sophora-Bold.sfd: Sophora-Light.sfd
+	fontforge -script ./utils/pe/embolden.pe $< 60 Bold $@
+
+Sophora-P-Light.sfd: Sophora-Light.sfd
+	fontforge -script ./utils/pe/proportional.pe $< $@
+
+Sophora-P-Book.sfd: Sophora-P-Light.sfd
+	fontforge -script ./utils/pe/embolden.pe $< 15 Book $@
+
+Sophora-P-Medium.sfd: Sophora-P-Light.sfd
+	fontforge -script ./utils/pe/embolden.pe $< 30 Medium $@
+
+Sophora-P-Demi-Bold.sfd: Sophora-P-Light.sfd
+	fontforge -script ./utils/pe/embolden.pe $< 45 Demi-Bold $@
+
+Sophora-P-Bold.sfd: Sophora-P-Light.sfd
 	fontforge -script ./utils/pe/embolden.pe $< 60 Bold $@
 
 .sfd.otf:

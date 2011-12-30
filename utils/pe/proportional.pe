@@ -1,0 +1,24 @@
+#!/usr/local/bin/fontforge
+
+if ($argc < 3)
+	Print("Usage: fontforge -script "+$0+" source-file target-file")
+	Quit(1)
+endif
+
+Open($1)
+SetFontNames(Strsub($fontname,0,Strrstr($fontname,"-"+$weight))+"-P-"+$weight,$familyname+" P",$familyname+" P "+$weight,$weight)
+SelectWorthOutputting()
+foreach
+	if (GlyphInfo("Color") == 0x00ffff)
+		UnlinkReference()
+	elseif (GlyphInfo("Color") == 0x0000ff)
+		UnlinkReference()
+		SetWidth(300)
+	endif
+endloop
+foreach
+	if (GlyphInfo("Color") == 0x00ffff)
+		SetLBearing(50);SetRBearing(50)
+	endif
+endloop
+Save($2)
