@@ -11,6 +11,8 @@ SelectWorthOutputting()
 foreach
 	if (GlyphInfo("Color") == 0x00ffff)
 		UnlinkReference()
+	elseif (GlyphInfo("Color") == 0xffffff)
+		UnlinkReference()
 	elseif (GlyphInfo("Color") == 0x0000ff)
 		UnlinkReference()
 		SetWidth(300)
@@ -19,6 +21,13 @@ endloop
 foreach
 	if (GlyphInfo("Color") == 0x00ffff)
 		SetLBearing(50);SetRBearing(50)
+	elseif (GlyphInfo("Color") == 0xffffff)
+		SetLBearing(80);SetRBearing(80)
+	endif
+endloop
+foreach
+	if (GlyphInfo("Color") == 0xff0000)
+		BuildComposite()
 	endif
 endloop
 Save($2)
