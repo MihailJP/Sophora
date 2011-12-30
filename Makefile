@@ -17,30 +17,23 @@ Sophora-Light.sfd: Sophora.sfd
 
 Sophora-Book.sfd: Sophora-Light.sfd
 	fontforge -script ./utils/pe/embolden.pe $< 15 Book $@
-
 Sophora-Medium.sfd: Sophora-Light.sfd
 	fontforge -script ./utils/pe/embolden.pe $< 30 Medium $@
-
 Sophora-Demi-Bold.sfd: Sophora-Light.sfd
 	fontforge -script ./utils/pe/embolden.pe $< 45 Demi-Bold $@
-
 Sophora-Bold.sfd: Sophora-Light.sfd
 	fontforge -script ./utils/pe/embolden.pe $< 60 Bold $@
 
 Sophora-P-Light.sfd: Sophora-Light.sfd
 	fontforge -script ./utils/pe/proportional.pe $< $@
-
-Sophora-P-Book.sfd: Sophora-P-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 15 Book $@
-
-Sophora-P-Medium.sfd: Sophora-P-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 30 Medium $@
-
-Sophora-P-Demi-Bold.sfd: Sophora-P-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 45 Demi-Bold $@
-
-Sophora-P-Bold.sfd: Sophora-P-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 60 Bold $@
+Sophora-P-Book.sfd: Sophora-Book.sfd
+	fontforge -script ./utils/pe/proportional.pe $< $@
+Sophora-P-Medium.sfd: Sophora-Medium.sfd
+	fontforge -script ./utils/pe/proportional.pe $< $@
+Sophora-P-Demi-Bold.sfd: Sophora-Demi-Bold.sfd
+	fontforge -script ./utils/pe/proportional.pe $< $@
+Sophora-P-Bold.sfd: Sophora-Bold.sfd
+	fontforge -script ./utils/pe/proportional.pe $< $@
 
 .sfd.otf:
 	fontforge -script ./utils/pe/makefont.pe $< $@
