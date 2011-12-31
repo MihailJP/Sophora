@@ -1,5 +1,6 @@
 SOURCES=`ls -1 *.gif`
-TARGETS=$(SOURCES:.gif=.sfd)
+TARGETS=`ls -1 *.gif|sed -e 's/\.gif/\.sfd/g'`
+DIRS=`ls -1 *.gif|sed -e 's/\.gif//g'`
 
 .PHONY: all clean utils
 
@@ -15,4 +16,4 @@ all: $(TARGETS)
 	cd ..; fontforge -script ../utils/pe/import.pe $* $$k
 
 clean:
-	-rm -rf $(TARGETS) $(TARGETS:.sfd=)
+	-rm -rf $(TARGETS) $(DIRS)
