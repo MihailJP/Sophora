@@ -28,9 +28,6 @@ Sophora, a print-style-like handwritten font project
 	utils/pe/
 		……FontForgeスクリプト
 
-	utils/python/
-		……Pythonスクリプト
-
 	utils/perl/
 		……Perlスクリプト
 

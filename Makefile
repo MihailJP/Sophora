@@ -1,8 +1,6 @@
 DIRS=srcgif
-TARGETS=Sophora-Light.ttc Sophora-Book.ttc Sophora-Medium.ttc \
-        Sophora-Demi-Bold.ttc Sophora-Bold.ttc
-SOURCES=$(TARGETS:%.ttc=%.sfd) \
-        $(TARGETS:Sophora-%.ttc=Sophora-P-%.sfd)
+WEIGHTS=Light Book Medium Demi-Bold Bold
+TARGETS=$(WEIGHTS:%=Sophora-%.otf) $(WEIGHTS:%=Sophora-P-%.otf)
 DISTDIR=Sophora
 DISTFILE=Sophora.7z
 DOCS=readme.txt pua.txt
@@ -11,9 +9,9 @@ DOCS=readme.txt pua.txt
 
 all: $(TARGETS)
 
-.SUFFIXES: .sfd .ttc
+.SUFFIXES: .sfd .ttf .otf
 Sophora-Light.sfd: Sophora.sfd
-	fontforge -lang=ff -c "Open(\"$<\");SelectWorthOutputting();Scale(130,0,0);Save(\"$@\")"
+	fontforge -lang=ff -c "Open(\"$<\");SelectWorthOutputting();Scale(130,0,0);AddExtrema();Simplify();RoundToInt();AutoHint();Save(\"$@\")"
 
 Sophora-Book.sfd: Sophora-Light.sfd
 	fontforge -script ./utils/pe/embolden.pe $< 15 Book $@
@@ -35,16 +33,8 @@ Sophora-P-Demi-Bold.sfd: Sophora-Demi-Bold.sfd
 Sophora-P-Bold.sfd: Sophora-Bold.sfd
 	fontforge -script ./utils/pe/proportional.pe $< $@
 
-Sophora-Light.ttc: Sophora-Light.sfd Sophora-P-Light.sfd
-	fontforge -script ./utils/python/makettc.py $@ $^
-Sophora-Book.ttc: Sophora-Book.sfd Sophora-P-Book.sfd
-	fontforge -script ./utils/python/makettc.py $@ $^
-Sophora-Medium.ttc: Sophora-Medium.sfd Sophora-P-Medium.sfd
-	fontforge -script ./utils/python/makettc.py $@ $^
-Sophora-Demi-Bold.ttc: Sophora-Demi-Bold.sfd Sophora-P-Demi-Bold.sfd
-	fontforge -script ./utils/python/makettc.py $@ $^
-Sophora-Bold.ttc: Sophora-Bold.sfd Sophora-P-Bold.sfd
-	fontforge -script ./utils/python/makettc.py $@ $^
+.sfd.otf:
+	fontforge -script ./utils/pe/makefont.pe $< $@
 
 srcgif: utils
 	cd $@;make
@@ -54,7 +44,7 @@ utils:
 
 clean:
 	-for i in $(DIRS); do cd $$i;make clean;cd ..;done
-	-rm $(TARGETS) $(SOURCES) *~ *.bak $(DISTFILE)
+	-rm $(TARGETS) $(TARGETS:%.otf=%.sfd) *~ *.bak $(DISTFILE)
 	-rm -rf $(DISTDIR)
 
 dist: all

@@ -30,4 +30,6 @@ foreach
 		BuildComposite()
 	endif
 endloop
+ReplaceWithReference()
+AutoHint()
 Save($2)
