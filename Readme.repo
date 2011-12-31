@@ -18,9 +18,6 @@ Sophora, a print-style-like handwritten font project
 	potrace
 		Cygwinインストーラーにパッケージ有り
 		http://potrace.sourceforge.net/
-	HSPコマンドラインコンパイラ
-		Windows用アプリ
-		http://lldev.jp/others/freeware.html#chspcomp
 
 
 ■リポジトリの中身
@@ -28,13 +25,14 @@ Sophora, a print-style-like handwritten font project
 	srcgif/
 		……手書きフォントをスキャンしたデータ
 
-	utils/hsp/
-		……HSP製自作ツール
-		makeにはHSPコマンドラインコンパイラが必要
-		入手は http://lldev.jp/others/freeware.html#chspcomp
-
 	utils/pe/
 		……FontForgeスクリプト
+
+	utils/python/
+		……Pythonスクリプト
+
+	utils/perl/
+		……Perlスクリプト
 
 	Sophora.sfd
 		……生成されたアウトラインデータを切り貼りしたフォントデータ

@@ -1,4 +1,4 @@
-DIRS=utils srcgif
+DIRS=srcgif
 TARGETS=Sophora-Light.ttc Sophora-Book.ttc Sophora-Medium.ttc \
         Sophora-Demi-Bold.ttc Sophora-Bold.ttc
 SOURCES=$(TARGETS:%.ttc=%.sfd) \
