@@ -11,7 +11,7 @@ all: $(TARGETS)
 
 .SUFFIXES: .sfd .ttf .otf
 Sophora-Light.sfd: Sophora.sfd
-	fontforge -lang=ff -c "Open(\"$<\");SelectWorthOutputting();Scale(130,0,0);AddExtrema();Simplify();RoundToInt();AutoHint();Save(\"$@\")"
+	fontforge -lang=ff -c "Open(\"$<\");SelectWorthOutputting();Scale(130,0,0);Save(\"$@\")"
 
 Sophora-Book.sfd: Sophora-Light.sfd
 	fontforge -script ./utils/pe/embolden.pe $< 15 Book $@

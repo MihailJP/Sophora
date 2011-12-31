@@ -6,5 +6,11 @@ if ($argc < 3)
 endif
 
 Open($1)
+SelectWorthOutputting()
+UnlinkReference()
+AddExtrema()
+Simplify()
+RoundToInt()
+AutoHint()
 Generate($2)
 Close()
