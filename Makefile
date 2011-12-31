@@ -12,7 +12,7 @@ all: $(TARGETS)
 .SUFFIXES: .sfd .otf
 Sophora-Light.sfd: Sophora.sfd
 	fontforge -lang=ff -c "Open(\"$<\");SelectWorthOutputting();Scale(130,0,0);Save(\"$*.tmp\")"
-	cat $*.tmp|sed -e "s/Position2: \"\[MONO\] Diacritics width adjustment-1\" dx=0 dy=0 dh=-500 dv=0/Position2: \"\[MONO\] Diacritics width adjustment-1\" dx=-650 dy=0 dh=-650 dv=0/" > $@
+	cat $*.tmp|sed -e "s/Position2: \"\[MONO\] Diacritics width adjustment-1\" dx=0 dy=0 dh=-500 dv=0/Position2: \"\[MONO\] Diacritics width adjustment-1\" dx=0 dy=0 dh=-650 dv=0/" > $@
 
 Sophora-Book.sfd: Sophora-Light.sfd
 	fontforge -script ./utils/pe/embolden.pe $< 15 Book $@
