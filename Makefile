@@ -1,15 +1,20 @@
+.SUFFIXES: .sfd .otf .ttf .7z
+
 DIRS=srcgif
 WEIGHTS=Light Book Medium Demi-Bold Bold
-TARGETS=$(WEIGHTS:%=Sophora-%.otf) $(WEIGHTS:%=Sophora-P-%.otf)
-DISTDIR=Sophora
-DISTFILE=Sophora.7z
+OTF=$(WEIGHTS:%=Sophora-%.otf) $(WEIGHTS:%=Sophora-P-%.otf)
+TTF=$(OTF:.otf=.ttf)
+TARGETS=$(OTF) $(TTF)
 DOCS=readme.txt pua.txt
+DISTFILE=Sophora-OTF.7z Sophora-TTF.7z
+DISTDIR=$(DISTFILE:.7z=)
 
-.PHONY: all clean $(DIRS) dist a
-
+.PHONY: all clean $(DIRS) dist otf ttf
 all: $(TARGETS)
 
-.SUFFIXES: .sfd .otf
+otf: $(OTF)
+ttf: $(TTF)
+
 Sophora-Light.sfd: Sophora.sfd
 	fontforge -lang=ff -c "Open(\"$<\");SelectWorthOutputting();Scale(130,0,0);Save(\"$*.tmp\")"
 	cat $*.tmp|sed -e "s/Position2: \"\[MONO\] Diacritics width adjustment-1\" dx=0 dy=0 dh=-500 dv=0/Position2: \"\[MONO\] Diacritics width adjustment-1\" dx=0 dy=0 dh=-650 dv=0/" > $@
@@ -36,11 +41,10 @@ Sophora-P-Bold.sfd: Sophora-Bold.sfd
 
 .sfd.otf:
 	fontforge -script ./utils/pe/makefont.pe $< $@
+.sfd.ttf:
+	fontforge -script ./utils/pe/makefont.pe $< $@
 
-srcgif: utils
-	cd $@;make
-
-utils:
+srcgif:
 	cd $@;make
 
 clean:
@@ -48,8 +52,13 @@ clean:
 	-rm $(TARGETS) $(TARGETS:%.otf=%.sfd) *~ *.bak *.tmp $(DISTFILE)
 	-rm -rf $(DISTDIR)
 
-dist: all
-	-rm -rf $(DISTDIR)
-	-mkdir $(DISTDIR)
-	cp $(TARGETS) $(DOCS) $(DISTDIR)
-	7za a -mx=9 $(DISTFILE) $(DISTDIR)
+Sophora-OTF.7z: $(OTF) $(DOCS)
+	-rm -rf $*
+	mkdir $*;cp $^ $*
+	7za a -mx=9 $@ $*
+Sophora-TTF.7z: $(TTF) $(DOCS)
+	-rm -rf $*
+	mkdir $*;cp $^ $*
+	7za a -mx=9 $@ $*
+
+dist: $(DISTFILE)

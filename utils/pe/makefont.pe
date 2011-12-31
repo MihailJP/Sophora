@@ -7,7 +7,11 @@ endif
 
 Open($1)
 SelectWorthOutputting()
-UnlinkReference()
+if ($2:e == 'otf')
+	UnlinkReference()
+elseif ($2:e == 'ttf')
+	ScaleToEm(2048)
+endif
 AddExtrema()
 Simplify()
 RoundToInt()
