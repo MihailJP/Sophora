@@ -8,10 +8,24 @@ endif
 Open($1)
 SetFontNames(Strsub($fontname,0,Strrstr($fontname,"-"+$weight))+"-P-"+$weight,$familyname+" P",$familyname+" P "+$weight,$weight)
 SelectWorthOutputting()
+
+Glyphs=0
+foreach
+	Glyphs++
+endloop
+Refs = Array(Glyphs); i=0
+foreach
+	Refs[i++] = GlyphInfo("RefNames")
+endloop
+
 foreach
 	if (GlyphInfo("Color") == 0x00ffff)
 		UnlinkReference()
 	elseif (GlyphInfo("Color") == 0xffffff)
+		UnlinkReference()
+	elseif (GlyphInfo("Color") == 0x00ff00)
+		UnlinkReference()
+	elseif (GlyphInfo("Color") == 0xffff00)
 		UnlinkReference()
 	elseif (GlyphInfo("Color") == 0x0000ff)
 		UnlinkReference()
@@ -30,4 +44,15 @@ foreach
 		BuildComposite()
 	endif
 endloop
+
+i=0
+while (i < Glyphs)
+	j=0
+	while (j < SizeOf(Refs[i]))
+		Select(Refs[i][j++])
+		ReplaceWithReference()
+	endloop
+	i++
+endloop
+
 Save($2)
