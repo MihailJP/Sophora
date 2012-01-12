@@ -1,65 +1,19 @@
-SplineFontDB: 3.0
-FontName: Sophora-Halfwidth-Light
-FullName: Sophora Halfwidth Light
-FamilyName: Sophora Halfwidth
-Weight: Light
-Copyright: 
-UComments: "2012-1-10: Created." 
-Version: 
-ItalicAngle: 0
-UnderlinePosition: -100
-UnderlineWidth: 50
-Ascent: 800
-Descent: 200
-LayerCount: 2
-Layer: 0 0 "+gMyXYgAA"  1
-Layer: 1 0 "+Uk2XYgAA"  0
-XUID: [1021 709 1998960599 2157853]
-OS2Version: 0
-OS2_WeightWidthSlopeOnly: 0
-OS2_UseTypoMetrics: 1
-CreationTime: 1326160618
-ModificationTime: 1326161932
-OS2TypoAscent: 0
-OS2TypoAOffset: 1
-OS2TypoDescent: 0
-OS2TypoDOffset: 1
-OS2TypoLinegap: 0
-OS2WinAscent: 0
-OS2WinAOffset: 1
-OS2WinDescent: 0
-OS2WinDOffset: 1
-HheadAscent: 0
-HheadAOffset: 1
-HheadDescent: 0
-HheadDOffset: 1
-OS2Vendor: 'PfEd'
-MarkAttachClasses: 1
-DEI: 91125
-Encoding: ISO8859-1
-UnicodeInterp: none
-NameList: Adobe Glyph List
-DisplaySize: -48
-AntiAlias: 1
-FitToEm: 1
-WinInfo: 32 16 4
-BeginPrivate: 0
-EndPrivate
-BeginChars: 256 95
+BeginChars: 65538 97
 
 StartChar: space
 Encoding: 32 32 0
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
+Colour: ff
 EndChar
 
 StartChar: exclam
 Encoding: 33 33 1
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -78,13 +32,14 @@ SplineSet
  133.815 -13.6338 128.058 -8.39746 123.345 19.3506 c 0
  120.204 35.5811 121.773 41.8643 131.722 54.4297 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: quotedbl
 Encoding: 34 34 2
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -100,13 +55,14 @@ SplineSet
  124.12 321.264 120.437 319.158 116.227 319.158 c 0
  100.963 319.158 98.3311 337.579 101.489 410.737 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: numbersign
 Encoding: 35 35 3
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -162,13 +118,14 @@ SplineSet
  196.207 180.737 212.521 182.842 213.049 183.368 c 0
  213.575 184.421 215.681 213.895 217.786 249.685 c 2
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: dollar
 Encoding: 36 36 4
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -213,13 +170,14 @@ SplineSet
  244.177 153.906 254.646 184.272 242.604 213.068 c 0
  237.895 223.016 228.993 235.058 222.188 239.246 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: percent
 Encoding: 37 37 5
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -270,13 +228,14 @@ SplineSet
  137.923 377.053 142.134 397.579 142.66 412.842 c 1
  142.66 436.526 140.555 442.315 129.503 450.737 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: ampersand
 Encoding: 38 38 6
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -334,13 +293,14 @@ SplineSet
  106.421 240.211 123.789 264.421 142.21 293.368 c 0
  179.579 352.842 205.368 420.211 194.843 432.842 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: quotesingle
 Encoding: 39 39 7
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -351,13 +311,14 @@ SplineSet
  165.087 324.421 160.35 326.526 158.245 329.158 c 1
  153.507 337.579 147.718 429.158 149.297 473.368 c 1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: parenleft
 Encoding: 40 40 8
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -375,13 +336,14 @@ SplineSet
  117.6 279.685 118.652 298.632 127.073 332.842 c 0
  144.44 402.842 168.651 476.526 178.651 490.211 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: parenright
 Encoding: 41 41 9
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -397,13 +359,14 @@ SplineSet
  162.451 394.743 151.979 422.492 143.604 440.816 c 0
  135.226 459.142 126.849 479.561 125.277 486.891 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: asterisk
 Encoding: 42 42 10
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -434,13 +397,14 @@ SplineSet
  150.478 287.579 150.478 311.789 148.371 341.789 c 0
  146.267 371.264 146.267 400.211 148.371 404.947 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: plus
 Encoding: 43 43 11
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -463,13 +427,14 @@ SplineSet
  140.922 354.953 141.445 380.084 140.922 384.272 c 0
  140.398 388.461 141.445 395.267 142.493 398.932 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: comma
 Encoding: 44 44 12
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -481,13 +446,14 @@ SplineSet
  164.407 34.4209 181.776 78.6318 166.513 76.5264 c 0
  137.565 72.8418 126.513 95.4736 147.038 117.053 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: hyphen
 Encoding: 45 45 13
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -502,13 +468,14 @@ SplineSet
  69.9844 251.264 72.0908 251.264 77.3525 255.474 c 0
  81.5635 258.632 106.827 263.895 133.67 266 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: period
 Encoding: 46 46 14
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -520,13 +487,14 @@ SplineSet
  144.571 22.4922 140.384 30.8691 137.242 37.1523 c 0
  129.388 51.8115 129.388 62.8066 136.194 75.8965 c 0
 EndSplineSet
+Colour: ffffff
 EndChar
 
 StartChar: slash
 Encoding: 47 47 15
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -545,13 +513,14 @@ SplineSet
  161.585 250.737 185.271 319.685 204.217 374.421 c 0
  223.164 429.685 238.954 475.474 238.954 476.526 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: zero
 Encoding: 48 48 16
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -588,13 +557,15 @@ SplineSet
  265.937 271.789 265.409 323.895 263.304 345.474 c 0
  261.197 367.053 259.094 388.105 259.094 391.789 c 0
 EndSplineSet
+Substitution2: "Zero spaccato-1" zero.slash
+Colour: ffff
 EndChar
 
 StartChar: one
 Encoding: 49 49 17
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -619,13 +590,15 @@ SplineSet
  78.4658 370.66 88.9375 388.984 99.9316 410.45 c 0
  118.78 448.146 140.771 481.654 152.289 490.555 c 0
 EndSplineSet
+Substitution2: "Numeral glyph variants-1" one.alt
+Colour: ffffff
 EndChar
 
 StartChar: two
 Encoding: 50 50 18
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -657,13 +630,14 @@ SplineSet
  79.2881 370.211 74.0254 363.368 69.2881 368.105 c 0
  67.71 369.685 68.2363 373.895 70.3418 377.579 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: three
 Encoding: 51 51 19
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -694,13 +668,14 @@ SplineSet
  68.6367 457.047 65.4971 457.57 65.4971 467.519 c 0
  65.4971 473.277 69.1611 480.084 73.3496 482.178 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: four
 Encoding: 52 52 20
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -736,13 +711,14 @@ SplineSet
  73.7168 269.158 87.9277 358.105 91.085 408.632 c 0
  93.7168 449.685 98.9795 488.632 102.664 494.421 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: five
 Encoding: 53 53 21
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -775,13 +751,14 @@ SplineSet
  85.7051 342.842 81.4941 412.842 69.915 458.105 c 0
  64.125 479.158 63.5996 487.579 68.335 489.685 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: six
 Encoding: 54 54 22
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -810,13 +787,14 @@ SplineSet
  222.144 9.92676 239.421 47.623 239.421 144.481 c 0
  239.421 204.168 238.897 208.88 225.809 225.634 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: seven
 Encoding: 55 55 23
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -851,13 +829,14 @@ SplineSet
  79.6387 473.895 82.7959 473.368 85.4277 474.947 c 0
  88.5859 476.526 101.743 479.685 114.901 481.264 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: eight
 Encoding: 56 56 24
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -896,13 +875,14 @@ SplineSet
  225.059 35.5811 242.337 54.9531 242.337 75.8965 c 0
  242.337 120.398 208.305 207.832 182.648 228.251 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: nine
 Encoding: 57 57 25
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -931,13 +911,14 @@ SplineSet
  189.083 291.264 220.136 354.421 226.979 382.315 c 0
  232.768 403.895 225.925 443.895 213.82 457.579 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: colon
 Encoding: 58 58 26
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -953,13 +934,14 @@ SplineSet
  137.599 59.6846 136.021 65.4736 139.178 78.6318 c 1
  140.757 88.1055 143.389 97.0527 144.968 99.6846 c 0
 EndSplineSet
+Colour: ffffff
 EndChar
 
 StartChar: semicolon
 Encoding: 59 59 27
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -979,13 +961,14 @@ SplineSet
  147.46 75.3721 126.518 95.791 126.518 107.309 c 0
  126.518 112.545 132.801 120.398 141.178 124.587 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: less
 Encoding: 60 60 28
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -1004,13 +987,14 @@ SplineSet
  87.9434 202.842 l 2
  97.9434 215.474 129.522 249.685 158.47 280.211 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: equal
 Encoding: 61 61 29
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -1033,13 +1017,14 @@ SplineSet
  45.2334 180.211 81.0234 182.315 123.654 182.842 c 0
  166.286 183.368 206.813 185.474 214.182 187.579 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: greater
 Encoding: 62 62 30
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -1056,13 +1041,14 @@ SplineSet
  208.948 216.209 181.724 241.341 151.356 266.472 c 0
  89.0537 318.304 79.6279 330.346 93.7656 340.293 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: question
 Encoding: 63 63 31
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -1087,13 +1073,14 @@ SplineSet
  204.059 36 198.27 -22.4209 149.321 -16.1055 c 0
  114.059 -11.3682 104.586 12.3154 127.743 37.5791 c 1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: at
 Encoding: 64 64 32
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -1129,13 +1116,17 @@ SplineSet
  121.783 162.807 122.83 162.807 133.302 172.754 c 1
  145.343 185.319 169.427 247.1 169.427 266.472 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: A
 Encoding: 65 65 33
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 280 20 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1174,13 +1165,17 @@ SplineSet
  185.905 371.264 182.747 388.632 181.694 392.842 c 0
  180.641 397.053 179.59 403.895 179.59 407.579 c 1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: B
 Encoding: 66 66 34
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1219,13 +1214,17 @@ SplineSet
  258.581 131.264 257.002 146.526 248.056 174.421 c 0
  232.267 226.526 223.844 240.211 203.844 248.632 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: C
 Encoding: 67 67 35
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1248,13 +1247,17 @@ SplineSet
  47.5449 351.288 54.3496 388.984 96.7598 448.146 c 0
  120.843 481.654 138.644 494.22 167.964 499.455 c 1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: D
 Encoding: 68 68 36
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1304,13 +1307,17 @@ SplineSet
  207.646 402.842 200.279 412.315 200.279 416 c 0
  200.279 419.685 195.543 427.053 189.754 432.315 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: E
 Encoding: 69 69 37
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 250 20 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1340,13 +1347,17 @@ SplineSet
  44.9902 468.042 60.1729 473.801 100.486 472.754 c 0
  121.429 472.23 152.844 474.324 170.12 477.466 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: F
 Encoding: 70 70 38
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1376,13 +1387,17 @@ SplineSet
  57.2744 460.737 59.9053 470.737 63.5908 474.947 c 0
  68.3262 480.737 67.8008 484.421 62.5371 490.737 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: G
 Encoding: 71 71 39
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1422,13 +1437,17 @@ SplineSet
  29.7734 311.789 33.9844 388.632 46.6152 416.526 c 0
  60.8252 447.053 90.2988 482.315 108.722 490.737 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: H
 Encoding: 72 72 40
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1458,13 +1477,17 @@ SplineSet
  246.64 292.126 245.592 284.272 248.209 405.215 c 0
  248.732 435.581 251.874 466.472 255.018 474.849 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: I
 Encoding: 73 73 41
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1491,13 +1514,17 @@ SplineSet
  87.4795 481.264 93.7939 482.315 133.269 480.737 c 0
  157.479 479.685 184.848 480.211 193.794 482.315 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: J
 Encoding: 74 74 42
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1521,13 +1548,17 @@ SplineSet
  180.45 449.158 145.714 454.421 145.714 460.737 c 0
  145.714 462.842 153.608 468.105 163.082 472.842 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: K
 Encoding: 75 75 43
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1564,13 +1595,17 @@ SplineSet
  111.612 232.439 l 2
  161.35 309.927 174.439 332.964 214.23 412.021 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: L
 Encoding: 76 76 44
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1586,13 +1621,17 @@ SplineSet
  51.7285 129.685 l 2
  50.6758 212.315 48.5713 326.526 46.4658 383.895 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: M
 Encoding: 77 77 45
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1628,13 +1667,17 @@ SplineSet
  213.971 357.57 227.06 395.267 235.437 418.304 c 0
  244.338 441.341 252.189 466.472 253.761 474.849 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: N
 Encoding: 78 78 46
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1667,13 +1710,17 @@ SplineSet
  36.9365 73.8945 35.8838 113.895 35.8838 129.685 c 0
  33.7793 197.053 35.3574 465.474 37.9902 483.895 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: O
 Encoding: 79 79 47
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 162 10 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1701,13 +1748,17 @@ SplineSet
  258.208 158.632 263.47 229.158 259.259 327.579 c 0
  255.049 428.632 257.681 422.842 212.418 447.053 c 1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: P
 Encoding: 80 80 48
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1733,13 +1784,17 @@ SplineSet
  233.835 250.241 247.972 287.414 246.399 347.623 c 1
  244.307 399.455 232.788 428.775 207.656 442.911 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Q
 Encoding: 81 81 49
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1777,13 +1832,17 @@ SplineSet
  211.816 455.474 202.868 466.526 184.446 466.526 c 0
  177.605 466.526 171.816 469.158 171.816 471.789 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: R
 Encoding: 82 82 50
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1825,13 +1884,17 @@ SplineSet
  153.87 259.665 194.708 287.414 217.745 332.964 c 0
  234.499 365.947 235.547 418.304 219.84 438.199 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: S
 Encoding: 83 83 51
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1865,13 +1928,17 @@ SplineSet
  248.851 377.053 249.376 376 244.641 364.421 c 0
  239.902 352.315 232.008 353.895 232.008 366.526 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: T
 Encoding: 84 84 52
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1894,13 +1961,17 @@ SplineSet
  47.0264 474.421 129.657 482.315 200.71 484.947 c 0
  232.289 486.526 259.13 488.632 260.71 490.211 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: U
 Encoding: 85 85 53
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 140 10 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1922,13 +1993,17 @@ SplineSet
  235.929 289.508 238.546 361.235 240.117 399.979 c 0
  241.164 438.723 243.259 473.801 244.829 477.466 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: V
 Encoding: 86 86 54
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1958,13 +2033,17 @@ SplineSet
  240.526 355.474 249.476 410.737 253.686 452.842 c 0
  255.264 467.053 259.476 480.737 263.158 483.368 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: W
 Encoding: 87 87 55
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1999,13 +2078,17 @@ SplineSet
  216.285 57.5791 239.443 269.685 245.232 306 c 0
  259.969 401.264 269.969 453.895 275.232 468.105 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: X
 Encoding: 88 88 56
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2041,13 +2124,17 @@ SplineSet
  206.583 362.283 222.814 396.314 237.475 423.016 c 1
  251.61 450.241 263.652 475.896 263.652 480.607 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Y
 Encoding: 89 89 57
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2079,13 +2166,17 @@ SplineSet
  62.6914 412.315 56.9014 422.315 52.1641 429.685 c 0
  46.9014 437.053 42.1641 449.158 40.585 457.579 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Z
 Encoding: 90 90 58
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2127,13 +2218,14 @@ SplineSet
  43.6953 464.377 51.5479 475.372 60.4482 468.042 c 0
  65.1602 464.377 68.8252 464.9 73.0137 470.136 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: bracketleft
 Encoding: 91 91 59
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -2155,13 +2247,14 @@ SplineSet
  89.6045 344.947 84.8682 438.632 78.5527 464.421 c 0
  76.4473 472.842 78.0264 477.053 84.3418 478.632 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: backslash
 Encoding: 92 92 60
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -2186,13 +2279,14 @@ SplineSet
  62.6387 454.947 61.0596 471.789 60.5332 474.421 c 0
  60.0078 477.579 59.4805 481.264 60.0078 483.895 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: bracketright
 Encoding: 93 93 61
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -2217,13 +2311,14 @@ SplineSet
  64.8369 483.226 66.9307 484.271 74.7852 482.701 c 0
  80.5439 481.131 88.3975 481.654 92.0625 484.271 c 1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: asciicircum
 Encoding: 94 94 62
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -2249,13 +2344,14 @@ SplineSet
  117.034 401.264 126.508 427.579 126.508 431.264 c 0
  126.508 434.421 133.876 443.895 143.351 451.264 c 2
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: underscore
 Encoding: 95 95 63
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -2267,13 +2363,14 @@ SplineSet
  60.0234 -11.5391 64.2109 -8.39746 74.6816 -7.87402 c 0
  82.0117 -7.87402 117.615 -4.7334 153.74 -1.06836 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: grave
 Encoding: 96 96 64
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -2288,13 +2385,17 @@ SplineSet
  144.305 381.264 132.199 394.947 124.831 399.685 c 0
  103.777 413.895 92.7246 433.368 100.62 442.842 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: a
 Encoding: 97 97 65
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "topdiac" 163 380 basechar 0
+AnchorPoint: "ogonek" 210 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2325,13 +2426,18 @@ SplineSet
  170.289 37.1523 178.666 60.7119 180.762 153.906 c 0
  182.854 226.157 178.666 262.283 166.624 278.513 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" a.sc
+Colour: ffff
 EndChar
 
 StartChar: b
 Encoding: 98 98 66
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2360,13 +2466,18 @@ SplineSet
  228.678 130.737 225.519 163.368 222.359 176 c 1
  213.938 203.368 188.678 232.842 164.467 242.842 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" b.sc
+Colour: ffff
 EndChar
 
 StartChar: c
 Encoding: 99 99 67
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "topdiac" 163 380 basechar 0
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2389,13 +2500,18 @@ SplineSet
  106.25 232.315 137.302 260.211 153.619 263.368 c 0
  159.934 264.947 169.934 267.053 175.723 268.105 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" c.sc
+Colour: ffff
 EndChar
 
 StartChar: d
 Encoding: 100 100 68
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2431,13 +2547,18 @@ SplineSet
  231.114 77.9893 240.537 87.9385 242.107 93.6963 c 0
  245.772 107.309 245.249 165.947 241.062 197.885 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" d.sc
+Colour: ffff
 EndChar
 
 StartChar: e
 Encoding: 101 101 69
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "topdiac" 163 380 basechar 0
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2462,13 +2583,18 @@ SplineSet
  56.7637 144.481 74.041 204.691 89.2246 231.393 c 0
  104.932 258.618 124.826 279.561 143.15 287.938 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" e.sc
+Colour: ffff
 EndChar
 
 StartChar: f
 Encoding: 102 102 70
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2497,67 +2623,77 @@ SplineSet
  125.101 301.789 l 2
  125.626 416 129.312 426.526 174.047 457.053 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" f.sc
+Colour: ffff
 EndChar
 
 StartChar: g
 Encoding: 103 103 71
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "btmdiac" 163 -200 basechar 0
+AnchorPoint: "ogonek" 163 -200 basechar 0
+AnchorPoint: "topdiac" 163 380 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-144.587 275.896 m 0
- 161.341 280.084 161.865 280.084 200.609 273.277 c 0
- 233.069 268.042 238.829 265.424 247.206 251.288 c 0
- 257.676 234.534 257.676 232.964 255.583 127.728 c 0
- 255.059 106.262 254.536 54.4297 254.536 12.5449 c 2
- 254.536 -62.8477 l 1
- 272.336 -66.5127 l 2
- 294.849 -71.2246 310.033 -85.3613 299.561 -91.6436 c 0
- 295.896 -94.2617 283.331 -94.7852 272.336 -93.7383 c 1
- 252.441 -90.5967 251.918 -91.1201 251.918 -107.351 c 0
- 251.918 -152.9 223.645 -210.492 194.326 -225.676 c 0
- 183.331 -231.435 161.865 -233.528 118.933 -233.528 c 2
- 59.248 -233.528 l 1
- 39.876 -211.539 l 2
- 21.5508 -190.073 20.5029 -187.455 23.1221 -160.754 c 0
- 25.7402 -139.288 29.9277 -128.816 40.9219 -117.299 c 0
- 63.4355 -93.7383 106.368 -75.9375 165.006 -65.9893 c 2
- 217.886 -57.0889 l 1
- 221.027 -20.9629 l 1
- 226.263 32.9639 226.263 70.1357 221.551 70.1357 c 0
- 219.457 70.1357 213.698 63.8535 208.986 56 c 0
- 200.609 41.8643 182.284 22.4922 150.347 -5.78027 c 0
- 127.834 -25.1514 102.179 -31.4346 77.0479 -23.0576 c 0
- 36.21 -9.44531 24.168 30.3457 39.3516 104.691 c 0
- 55.583 184.272 105.844 265.947 144.587 275.896 c 0
-197.467 248.146 m 0
- 189.09 250.765 178.619 253.382 173.907 253.382 c 0
- 144.062 252.335 106.891 216.733 91.1836 174.849 c 0
- 86.4717 161.759 78.6191 140.816 73.3828 128.775 c 0
- 68.1484 116.209 61.8652 87.9385 60.2939 65.9473 c 0
- 57.1533 29.8223 58.2002 24.0625 68.6709 11.4971 c 1
- 80.7129 -4.20898 97.9912 -7.35059 117.363 2.59668 c 0
- 145.111 17.2568 182.284 54.9531 196.42 82.7012 c 0
- 206.891 103.644 214.221 112.021 222.075 112.021 c 0
- 232.021 112.021 232.545 114.115 229.404 163.33 c 0
- 225.216 222.492 218.41 240.816 197.467 248.146 c 0
-222.075 -94.2617 m 0
- 218.41 -84.3145 179.667 -85.3613 136.21 -96.8799 c 0
- 93.2793 -107.874 77.5723 -117.822 60.2939 -145.047 c 0
- 48.7764 -163.896 47.7285 -168.084 52.9639 -183.791 c 0
- 62.3877 -213.11 103.226 -231.958 136.734 -223.058 c 0
- 164.483 -215.728 197.467 -189.55 208.986 -167.036 c 0
- 219.457 -146.094 226.787 -106.304 222.075 -94.2617 c 0
+144.587 319.896 m 0
+ 161.341 324.084 161.865 324.084 200.609 317.277 c 0
+ 233.069 312.042 238.829 309.424 247.206 295.288 c 0
+ 257.676 278.534 257.676 276.964 255.583 171.728 c 0
+ 255.059 150.262 254.536 98.4297 254.536 56.5449 c 2
+ 254.536 -18.8477 l 1
+ 272.336 -22.5127 l 2
+ 294.849 -27.2246 310.033 -41.3613 299.561 -47.6436 c 0
+ 295.896 -50.2617 283.331 -50.7852 272.336 -49.7383 c 1
+ 252.441 -46.5967 251.918 -47.1201 251.918 -63.3506 c 0
+ 251.918 -108.9 223.645 -166.492 194.326 -181.676 c 0
+ 183.331 -187.435 150.432 -208.758 107.5 -208.758 c 2
+ 59.248 -189.528 l 1
+ 39.876 -167.539 l 2
+ 21.5508 -146.073 20.5029 -187.455 23.1221 -160.754 c 0
+ 25.7402 -139.288 29.9277 -84.8164 40.9219 -73.2988 c 0
+ 63.4355 -49.7383 106.368 -31.9375 165.006 -21.9893 c 2
+ 217.886 -13.0889 l 1
+ 221.027 23.0371 l 1
+ 226.263 76.9639 226.263 114.136 221.551 114.136 c 0
+ 219.457 114.136 213.698 107.854 208.986 100 c 0
+ 200.609 85.8643 182.284 66.4922 150.347 38.2197 c 0
+ 127.834 18.8486 102.179 12.5654 77.0479 20.9424 c 0
+ 36.21 34.5547 24.168 74.3457 39.3516 148.691 c 0
+ 55.583 228.272 105.844 309.947 144.587 319.896 c 0
+197.467 292.146 m 0
+ 189.09 294.765 178.619 297.382 173.907 297.382 c 0
+ 144.062 296.335 106.891 260.733 91.1836 218.849 c 0
+ 86.4717 205.759 78.6191 184.816 73.3828 172.775 c 0
+ 68.1484 160.209 61.8652 131.938 60.2939 109.947 c 0
+ 57.1533 73.8223 58.2002 68.0625 68.6709 55.4971 c 1
+ 80.7129 39.791 97.9912 36.6494 117.363 46.5967 c 0
+ 145.111 61.2568 182.284 98.9531 196.42 126.701 c 0
+ 206.891 147.644 214.221 156.021 222.075 156.021 c 0
+ 232.021 156.021 232.545 158.115 229.404 207.33 c 0
+ 225.216 266.492 218.41 284.816 197.467 292.146 c 0
+222.075 -50.2617 m 0
+ 218.41 -40.3145 179.667 -41.3613 136.21 -52.8799 c 0
+ 93.2793 -63.874 77.5723 -73.8223 60.2939 -101.047 c 0
+ 48.7764 -119.896 47.7285 -124.084 52.9639 -139.791 c 0
+ 62.3877 -169.11 103.226 -187.958 136.734 -179.058 c 0
+ 164.483 -171.728 197.467 -145.55 208.986 -123.036 c 0
+ 219.457 -102.094 226.787 -62.3037 222.075 -50.2617 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" g.sc
+Colour: ffff
 EndChar
 
 StartChar: h
 Encoding: 104 104 72
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2582,13 +2718,17 @@ SplineSet
  62.6895 346 64.7949 447.053 66.8994 452.315 c 0
  69.0059 457.579 67.9531 464.947 63.7422 469.685 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" h.sc
+Colour: ffff
 EndChar
 
 StartChar: i
 Encoding: 105 105 73
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2607,13 +2747,18 @@ SplineSet
  162.66 -19.2627 158.978 13.3682 156.871 51.7891 c 0
  147.924 224.947 147.397 240.737 154.24 248.632 c 0
 EndSplineSet
+Substitution2: "Dotless forms-1" dotlessi
+Substitution2: "Small Caps-1" i.sc
+Colour: ffffff
 EndChar
 
 StartChar: j
 Encoding: 106 106 74
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 -200 basechar 0
+AnchorPoint: "btmdiac" 163 -200 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2637,13 +2782,19 @@ SplineSet
  214.812 201.55 211.146 235.581 206.959 242.388 c 0
  201.199 251.288 202.247 254.953 213.241 266.472 c 0
 EndSplineSet
+Substitution2: "Dotless forms-1" dotlessj
+Substitution2: "Small Caps-1" j.sc
+Colour: ffff
 EndChar
 
 StartChar: k
 Encoding: 107 107 75
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2675,13 +2826,18 @@ SplineSet
  61.2295 -17.1582 57.0186 60.7373 54.9121 153.368 c 0
  49.123 396 49.6504 456.526 57.5449 470.737 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" k.sc
+Colour: ffff
 EndChar
 
 StartChar: l
 Encoding: 108 108 76
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+AnchorPoint: "topdiac" 163 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2711,13 +2867,18 @@ SplineSet
  158.883 243.435 181.396 282.178 183.49 313.592 c 0
  186.632 356.523 186.632 436.104 182.967 441.341 c 1
 EndSplineSet
+Substitution2: "Small Caps-1" l.sc
+Colour: ffffff
 EndChar
 
 StartChar: m
 Encoding: 109 109 77
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "topdiac" 163 380 basechar 0
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2749,13 +2910,18 @@ SplineSet
  36.4746 -9.78906 35.9482 -6.10547 34.8965 106 c 0
  34.3701 169.685 33.3174 234.421 31.7383 249.685 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" m.sc
+Colour: ffff
 EndChar
 
 StartChar: n
 Encoding: 110 110 78
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "topdiac" 163 380 basechar 0
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2780,13 +2946,18 @@ SplineSet
  115.901 210.211 l 2
  132.216 226.526 155.901 246.526 169.059 254.947 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" n.sc
+Colour: ffff
 EndChar
 
 StartChar: o
 Encoding: 111 111 79
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "topdiac" 163 380 basechar 0
+AnchorPoint: "ogonek" 130 10 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2809,13 +2980,18 @@ SplineSet
  249.24 191.603 225.682 216.733 218.875 216.733 c 0
  216.258 216.733 209.975 219.874 205.785 224.062 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" o.sc
+Colour: ffff
 EndChar
 
 StartChar: p
 Encoding: 112 112 80
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 -200 basechar 0
+AnchorPoint: "btmdiac" 163 -200 basechar 0
+AnchorPoint: "topdiac" 163 380 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2844,13 +3020,18 @@ SplineSet
  151.866 -11.3682 209.76 18.6318 227.655 73.3682 c 0
  241.866 116.526 236.076 156.526 209.234 198.105 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" p.sc
+Colour: ffff
 EndChar
 
 StartChar: q
 Encoding: 113 113 81
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 -200 basechar 0
+AnchorPoint: "btmdiac" 163 -200 basechar 0
+AnchorPoint: "topdiac" 163 380 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2884,13 +3065,18 @@ SplineSet
  214.581 201.264 211.423 238.632 208.266 244.421 c 0
  205.633 249.685 194.055 257.053 182.477 260.211 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" q.sc
+Colour: ffff
 EndChar
 
 StartChar: r
 Encoding: 114 114 82
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "topdiac" 163 380 basechar 0
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2911,13 +3097,18 @@ SplineSet
  83.2148 49.1934 70.124 280.607 63.8428 288.461 c 0
  61.2246 292.126 60.1777 297.361 62.2715 300.503 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" r.sc
+Colour: ffff
 EndChar
 
 StartChar: s
 Encoding: 115 115 83
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "topdiac" 163 380 basechar 0
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2944,13 +3135,18 @@ SplineSet
  79.8574 166.526 53.0156 202.315 60.3838 242.842 c 0
  64.0684 261.264 91.9639 288.632 124.068 305.474 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" s.sc
+Colour: ffff
 EndChar
 
 StartChar: t
 Encoding: 116 116 84
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "topdiac" 163 380 basechar 0
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2982,13 +3178,18 @@ SplineSet
  107.496 413.592 108.02 417.257 103.308 422.492 c 0
  100.167 426.681 99.1191 431.393 101.213 433.487 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" t.sc
+Colour: ffff
 EndChar
 
 StartChar: u
 Encoding: 117 117 85
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "topdiac" 163 380 basechar 0
+AnchorPoint: "ogonek" 260 10 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -3018,13 +3219,18 @@ SplineSet
  56.2549 236.526 54.1494 282.842 50.9912 284.947 c 0
  47.3076 287.053 47.3076 291.789 50.9912 298.632 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" u.sc
+Colour: ffff
 EndChar
 
 StartChar: v
 Encoding: 118 118 86
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "topdiac" 163 380 basechar 0
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -3050,13 +3256,18 @@ SplineSet
  170.402 8.63184 253.56 226.526 253.56 255.474 c 0
  253.56 259.158 258.823 273.895 265.139 288.105 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" v.sc
+Colour: ffff
 EndChar
 
 StartChar: w
 Encoding: 119 119 87
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "topdiac" 163 380 basechar 0
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -3085,13 +3296,18 @@ SplineSet
  87.6729 66.9951 95.5273 97.3613 104.427 133.487 c 0
  130.604 239.246 131.652 244.481 140.553 265.424 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" w.sc
+Colour: ffff
 EndChar
 
 StartChar: x
 Encoding: 120 120 88
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "topdiac" 163 380 basechar 0
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -3121,13 +3337,18 @@ SplineSet
  192.404 212.545 213.869 237.152 230.1 252.858 c 0
  245.806 268.565 258.896 283.226 258.896 285.843 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" x.sc
+Colour: ffff
 EndChar
 
 StartChar: y
 Encoding: 121 121 89
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "ogonek" 163 -200 basechar 0
+AnchorPoint: "btmdiac" 163 -200 basechar 0
+AnchorPoint: "topdiac" 163 380 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -3165,13 +3386,18 @@ SplineSet
  262.547 285.319 269.354 295.267 273.541 295.267 c 0
  277.729 295.267 280.871 297.885 280.871 300.503 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" y.sc
+Colour: ffff
 EndChar
 
 StartChar: z
 Encoding: 122 122 90
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
+AnchorPoint: "topdiac" 163 380 basechar 0
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -3210,13 +3436,15 @@ SplineSet
  60.1309 291.264 56.9727 287.579 54.3418 287.579 c 0
  48.5518 287.579 48.0244 294.947 53.2881 299.685 c 0
 EndSplineSet
+Substitution2: "Small Caps-1" z.sc
+Colour: ffff
 EndChar
 
 StartChar: braceleft
 Encoding: 123 123 91
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -3243,13 +3471,14 @@ SplineSet
  131.154 407.832 141.625 450.241 157.331 464.377 c 0
  162.043 469.089 172.515 475.896 180.369 480.084 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: bar
 Encoding: 124 124 92
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -3262,13 +3491,14 @@ SplineSet
  153.905 318.304 153.383 368.042 148.67 386.89 c 0
  146.053 398.408 143.436 420.398 143.436 435.581 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: braceright
 Encoding: 125 125 93
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -3295,13 +3525,14 @@ SplineSet
  79.9639 457.579 71.0176 460.737 69.9639 467.579 c 0
  68.9121 473.895 72.5967 477.053 85.7539 478.632 c 0
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: asciitilde
 Encoding: 126 126 94
 Width: 325
 VWidth: 0
-Flags: HW
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -3320,6 +3551,57 @@ SplineSet
  14.5898 193.368 14.5898 200.211 24.5898 208.632 c 0
  28.8008 212.315 32.4844 218.632 32.4844 222.842 c 0
  32.4844 242.842 48.2744 260.737 70.3789 266 c 0
+EndSplineSet
+Colour: ffff
+EndChar
+
+StartChar: dotlessi.half
+Encoding: 65536 -1 95
+Width: 325
+VWidth: 0
+Flags: HW
+AnchorPoint: "topdiac" 163 380 basechar 0
+AnchorPoint: "ogonek" 163 0 basechar 0
+AnchorPoint: "btmdiac" 163 0 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+154.24 248.632 m 0
+ 162.66 258.632 174.767 258.105 175.292 247.053 c 0
+ 175.292 241.789 176.346 197.579 177.924 148.105 c 0
+ 178.978 99.1582 180.557 42.8418 181.609 23.3682 c 0
+ 183.188 -1.89453 182.135 -14 176.871 -18.2109 c 0
+ 173.188 -21.3682 167.924 -22.4209 165.292 -20.8418 c 0
+ 162.66 -19.2627 158.978 13.3682 156.871 51.7891 c 0
+ 147.924 224.947 147.397 240.737 154.24 248.632 c 0
+EndSplineSet
+EndChar
+
+StartChar: dotlessj.half
+Encoding: 65537 -1 96
+Width: 325
+VWidth: 0
+Flags: HW
+AnchorPoint: "topdiac" 163 380 basechar 0
+AnchorPoint: "ogonek" 163 -200 basechar 0
+AnchorPoint: "btmdiac" 163 -200 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+213.241 266.472 m 0
+ 235.755 290.555 237.325 285.843 238.896 195.791 c 0
+ 239.42 159.665 240.99 123.539 242.037 114.639 c 0
+ 243.084 106.262 244.132 66.9951 244.655 28.251 c 0
+ 245.702 -36.1465 244.132 -46.0938 231.565 -84.3145 c 0
+ 223.713 -106.827 209.053 -138.241 199.104 -153.424 c 0
+ 180.257 -181.173 134.184 -217.822 117.43 -217.822 c 0
+ 100.675 -217.822 77.1162 -202.639 77.1162 -191.12 c 0
+ 77.1162 -176.461 91.252 -172.796 103.817 -184.314 c 0
+ 113.765 -193.215 114.812 -193.215 133.137 -183.791 c 0
+ 188.633 -153.947 224.236 -72.2725 220.571 16.209 c 0
+ 219.523 41.3408 217.43 100.503 216.383 147.1 c 0
+ 214.812 201.55 211.146 235.581 206.959 242.388 c 0
+ 201.199 251.288 202.247 254.953 213.241 266.472 c 0
 EndSplineSet
 EndChar
 EndChars

@@ -110,6 +110,11 @@ Sophora-P-Demi-Bold-Italic.sfd: Sophora-P-Demi-Bold.sfd italic-P-Demi-Bold.sfd
 Sophora-P-Bold-Italic.sfd: Sophora-P-Bold.sfd italic-P-Bold.sfd
 	fontforge -script ./utils/pe/italicize.pe $^ $@
 
+# Halfwidth variant preparation
+
+halfwidth.sfd: Sophora-Light.sfd halfwidth.txt
+	./utils/perl/fonthead.pl $^ > $@
+
 # Build fonts
 
 .sfd.otf:
