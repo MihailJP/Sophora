@@ -42,6 +42,9 @@ Sophora-P-Demi-Bold.sfd: Sophora-Demi-Bold.sfd
 Sophora-P-Bold.sfd: Sophora-Bold.sfd
 	fontforge -script ./utils/pe/proportional.pe $< $@
 
+italic.sfd: Sophora.sfd italic.txt
+	./utils/perl/fonthead.pl $^ > $@
+
 .sfd.otf:
 	fontforge -script ./utils/pe/makefont.pe $< $@
 .sfd.ttf:
@@ -52,7 +55,7 @@ srcgif:
 
 clean:
 	-for i in $(DIRS); do cd $$i;make clean;cd ..;done
-	-rm $(TARGETS) $(TARGETS:%.otf=%.sfd) *~ *.bak *.tmp $(DISTFILE)
+	-rm $(TARGETS) $(TARGETS:%.otf=%.sfd) italic.sfd *~ *.bak *.tmp $(DISTFILE)
 	-rm -rf $(DISTDIR)
 
 Sophora-OTF.7z: $(OTF) $(DOCS)
