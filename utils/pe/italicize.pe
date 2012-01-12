@@ -29,7 +29,7 @@ Skew(9,0,0)
 
 Print("Changing the font information...")
 @w=$weight; @f=$familyname
-SetFontNames($fontname+"-Italic",@f,@f+" "+@w+" Italic",@w+"Italic")
+SetFontNames($fontname+"-Italic",@f,@f+" "+@w+" Italic",@w+"-Italic")
 SetItalicAngle(-9)
 
 Print("Saving italic SFD...")
