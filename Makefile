@@ -117,7 +117,7 @@ halfwidth.sfd: Sophora-Light.sfd halfwidth.txt
 halfwidth-Light.sfd: halfwidth.sfd
 	fontforge -script ./utils/python/scalehw.py $< $@
 Sophora-HW-Light.sfd: Sophora-Light.sfd halfwidth-Light.sfd
-	fontforge -script ./utils/pe/halfwidth.pe $^ $@
+	fontforge -script ./utils/python/halfwidth.py $^ $@
 
 # Build fonts
 
