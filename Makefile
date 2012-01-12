@@ -114,6 +114,10 @@ Sophora-P-Bold-Italic.sfd: Sophora-P-Bold.sfd italic-P-Bold.sfd
 
 halfwidth.sfd: Sophora-Light.sfd halfwidth.txt
 	./utils/perl/fonthead.pl $^ > $@
+halfwidth-Light.sfd: halfwidth.sfd
+	fontforge -script ./utils/python/scalehw.py $< $@
+Sophora-HW-Light.sfd: Sophora-Light.sfd halfwidth-Light.sfd
+	fontforge -script ./utils/pe/halfwidth.pe $^ $@
 
 # Build fonts
 

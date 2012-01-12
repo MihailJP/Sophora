@@ -1,0 +1,43 @@
+#!/usr/local/bin/fontforge -script
+
+if ($argc < 4)
+	Print("Usage: fontforge -script "+$0+" base-sfd halfwidth-sfd target-file")
+	Quit(1)
+endif
+
+Print("Reading source files...")
+Open($1)
+Print("Unlinking references...")
+SelectWorthOutputting()
+UnlinkReference()
+
+SetCharCnt(CharCnt() + 2)
+Select(CharCnt() - 2);SetGlyphName("dotlessi.half")
+Select(CharCnt() - 1);SetGlyphName("dotlessj.half")
+Open($2)
+Print("Copying the halfwidth glyphs...")
+SelectWorthOutputting()
+foreach
+	col = GlyphInfo("Color")
+	nom = GlyphInfo("Name")
+	Copy()
+	Open($1)
+	Select(nom)
+	Paste()
+	SetGlyphColor(col)
+	Open($2)
+endloop
+
+Open($1)
+/*
+Print("Skewing glyphs...")
+SelectWorthOutputting()
+Skew(9,0,0)
+
+Print("Changing the font information...")
+@w=$weight; @f=$familyname
+SetFontNames($fontname+"-Italic",@f,@f+" "+@w+" Italic",@w+"-Italic")
+SetItalicAngle(-9)
+*/
+Print("Saving halfwidth SFD...")
+Save($3)
