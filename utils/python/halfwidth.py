@@ -66,6 +66,8 @@ Base.os2_winascent = Base.ascent
 Base.os2_windescent = Base.descent
 Base.os2_winascent_add = 0
 Base.os2_windescent_add = 0
+Base["i"].addPosSub("Dotless forms-1", "dotlessi.half")
+Base["j"].addPosSub("Dotless forms-1", "dotlessj.half")
 
 print "Saving halfwidth SFD..."
 Base.save(sys.argv[3])
