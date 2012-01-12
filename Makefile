@@ -117,7 +117,11 @@ halfwidth.sfd: Sophora-Light.sfd halfwidth.txt
 halfwidth-Light.sfd: halfwidth.sfd
 	fontforge -script ./utils/python/scalehw.py $< $@
 Sophora-HW-Light.sfd: Sophora-Light.sfd halfwidth-Light.sfd
-	fontforge -script ./utils/python/halfwidth.py $^ $@
+	fontforge -script ./utils/python/halfwidth.py $^ $*.tmp
+	cat $*.tmp \
+		| sed -e "s/Position2: \"\[MONO\] Diacritics width adjustment-1\" dx=0 dy=0 dh=-650 dv=0/Position2: \"\[MONO\] Diacritics width adjustment-1\" dx=0 dy=0 dh=-325 dv=0/" \
+		| sed -e "s/Position2: \"\[MONO\] Diacritics width adjustment-2\" dx=-650 dy=0 dh=-650 dv=0/Position2: \"\[MONO\] Diacritics width adjustment-2\" dx=-325 dy=0 dh=-325 dv=0/" \
+		> $@
 
 # Build fonts
 
