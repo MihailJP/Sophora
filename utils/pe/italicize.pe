@@ -1,0 +1,36 @@
+#!/usr/local/bin/fontforge -script
+
+if ($argc < 4)
+	Print("Usage: fontforge -script "+$0+" base-sfd italic-sfd target-file")
+	Quit(1)
+endif
+
+Print("Reading source files...")
+Open($1)
+
+Open($2)
+Print("Copying the italic glyphs...")
+SelectWorthOutputting()
+foreach
+	col = GlyphInfo("Color")
+	nom = GlyphInfo("Name")
+	Copy()
+	Open($1)
+	Select(nom)
+	Paste()
+	SetGlyphColor(col)
+	Open($2)
+endloop
+
+Open($1)
+Print("Skewing glyphs...")
+SelectWorthOutputting()
+Skew(9,0,0)
+
+Print("Changing the font information...")
+@w=$weight; @f=$familyname
+SetFontNames($fontname+"-Italic",@f,@f+" "+@w+" Italic",@w+"Italic")
+SetItalicAngle(-9)
+
+Print("Saving italic SFD...")
+Save($3)

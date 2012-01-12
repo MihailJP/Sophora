@@ -1,8 +1,15 @@
 #!/usr/local/bin/fontforge -script
 
 if ($argc < 5)
-	Print("Usage: fontforge -script "+$0+" source-file stroke-width weight-name target-file")
+	Print("Usage: fontforge -script "+$0+" source-file stroke-width weight-name target-file [subfamily-suffix]")
 	Quit(1)
+endif
+if ($argc <= 5)
+	weightcat = ""
+	weightsuffix = ""
+else
+	weightcat = " "
+	weightsuffix = $5
 endif
 
 WorkingScale=10
@@ -19,5 +26,5 @@ Simplify()
 ExpandStroke(Strtol($2)*WorkingScale,0,2,0,1)
 RemoveOverlap()
 Scale(100/WorkingScale,0,0)
-SetFontNames(Strsub($fontname,0,Strrstr($fontname,"-"+$weight))+"-"+$3,$familyname,$familyname+" "+$3,$3)
+SetFontNames(Strsub($fontname,0,Strrstr($fontname,"-"+$weight))+"-"+$3,$familyname,$familyname+" "+$3+weightcat+weightsuffix,$3+weightsuffix)
 Save($4)
