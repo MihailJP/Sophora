@@ -6,7 +6,11 @@ if ($argc < 3)
 endif
 
 Open($1)
-SetFontNames(Strsub($fontname,0,Strrstr($fontname,"-"+$weight))+"-P-"+$weight,$familyname+" P",$familyname+" P "+$weight,$weight)
+if (Strrstr($fontname,"-"+$weight) == -1)
+	SetFontNames($fontname+"-P-"+$weight,$familyname+" P",$familyname+" P "+$weight,$weight)
+else
+	SetFontNames(Strsub($fontname,0,Strrstr($fontname,"-"+$weight))+"-P-"+$weight,$familyname+" P",$familyname+" P "+$weight,$weight)
+endif
 SelectWorthOutputting()
 
 Glyphs=0
