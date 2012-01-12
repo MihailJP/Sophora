@@ -16,7 +16,7 @@ then
 fi
 
 target=${3%.*}
-fontforge -script ../python/halfwidth.py $1 $2 $target.tmp
+fontforge -script $(cd $(dirname $0);pwd)/../python/halfwidth.py $1 $2 $target.tmp
 chkerr $?
 cat ${target}.tmp \
 	| sed -e "s/Position2: \"\[MONO\] Diacritics width adjustment-1\" dx=0 dy=0 dh=-650 dv=0/Position2: \"\[MONO\] Diacritics width adjustment-1\" dx=0 dy=0 dh=-325 dv=0/" \
