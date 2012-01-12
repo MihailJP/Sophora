@@ -2,6 +2,8 @@
 # Makefile for Sophora
 #
 
+# Variants
+
 .SUFFIXES: .sfd .otf .ttf .7z
 
 DIRS=srcgif
@@ -13,6 +15,8 @@ TARGETS=$(OTF) $(TTF)
 DOCS=readme.txt pua.txt
 DISTFILE=Sophora-OTF.7z Sophora-TTF.7z
 DISTDIR=$(DISTFILE:.7z=)
+
+# All targets
 
 .PHONY: all clean $(DIRS) dist otf ttf
 all: $(TARGETS)
@@ -80,18 +84,31 @@ Sophora-Demi-Bold-Italic.sfd: Sophora-Demi-Bold.sfd italic-Demi-Bold.sfd
 Sophora-Bold-Italic.sfd: Sophora-Bold.sfd italic-Bold.sfd
 	fontforge -script ./utils/pe/italicize.pe $^ $@
 
-# Proportional italic variant
+# Proportional italic variant preparation
 
-Sophora-P-Light-Italic.sfd: Sophora-Light-Italic.sfd
+italic-P-Light.sfd: italic-Light.sfd
 	fontforge -script ./utils/pe/proportional.pe $< $@
-Sophora-P-Book-Italic.sfd: Sophora-Book-Italic.sfd
+italic-P-Book.sfd: italic-Book.sfd
 	fontforge -script ./utils/pe/proportional.pe $< $@
-Sophora-P-Medium-Italic.sfd: Sophora-Medium-Italic.sfd
+italic-P-Medium.sfd: italic-Medium.sfd
 	fontforge -script ./utils/pe/proportional.pe $< $@
-Sophora-P-Demi-Bold-Italic.sfd: Sophora-Demi-Bold-Italic.sfd
+italic-P-Demi-Bold.sfd: italic-Demi-Bold.sfd
 	fontforge -script ./utils/pe/proportional.pe $< $@
-Sophora-P-Bold.sfd-Italic: Sophora-Bold-Italic.sfd
+italic-P-Bold.sfd: italic-Bold.sfd
 	fontforge -script ./utils/pe/proportional.pe $< $@
+
+# Proportional italic variant preparation
+
+Sophora-P-Light-Italic.sfd: Sophora-P-Light.sfd italic-P-Light.sfd
+	fontforge -script ./utils/pe/italicize.pe $^ $@
+Sophora-P-Book-Italic.sfd: Sophora-P-Book.sfd italic-P-Book.sfd
+	fontforge -script ./utils/pe/italicize.pe $^ $@
+Sophora-P-Medium-Italic.sfd: Sophora-P-Medium.sfd italic-P-Medium.sfd
+	fontforge -script ./utils/pe/italicize.pe $^ $@
+Sophora-P-Demi-Bold-Italic.sfd: Sophora-P-Demi-Bold.sfd italic-P-Demi-Bold.sfd
+	fontforge -script ./utils/pe/italicize.pe $^ $@
+Sophora-P-Bold-Italic.sfd: Sophora-P-Bold.sfd italic-P-Bold.sfd
+	fontforge -script ./utils/pe/italicize.pe $^ $@
 
 # Build fonts
 
@@ -109,7 +126,7 @@ srcgif:
 
 clean:
 	-for i in $(DIRS); do cd $$i;make clean;cd ..;done
-	-rm $(TARGETS) $(TARGETS:%.otf=%.sfd) italic.sfd *~ *.bak *.tmp $(DISTFILE)
+	-rm $(TARGETS) $(TARGETS:%.otf=%.sfd) italic.sfd italic-*.sfd *~ *.bak *.tmp $(DISTFILE)
 	-rm -rf $(DISTDIR)
 
 # Distribution
