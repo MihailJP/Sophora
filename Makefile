@@ -141,6 +141,13 @@ Sophora-HW-Demi-Bold.sfd: Sophora-Demi-Bold.sfd halfwidth-Demi-Bold.sfd
 Sophora-HW-Bold.sfd: Sophora-Bold.sfd halfwidth-Bold.sfd
 	./utils/sh/rescalehw.sh $^ $@
 
+# Halfwidth italic variant preparation
+
+halfitalic.sfd: Sophora-Light.sfd halfitalic.txt
+	./utils/perl/fonthead.pl $^ > $@
+halfitalic-Light.sfd: halfitalic.sfd
+	fontforge -script ./utils/python/scalehw.py $< $@
+
 
 # Build fonts
 
@@ -161,6 +168,7 @@ clean:
 	-rm $(TARGETS) $(TARGETS:%.otf=%.sfd) \
 		italic.sfd italic-*.sfd \
 		halfwidth.sfd halfwidth-*.sfd \
+		halfitalic.sfd halfitalic-*.sfd \
 		*~ *.bak *.tmp $(DISTFILE)
 	-rm -rf $(DISTDIR)
 
