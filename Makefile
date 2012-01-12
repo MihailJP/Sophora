@@ -116,12 +116,31 @@ halfwidth.sfd: Sophora-Light.sfd halfwidth.txt
 	./utils/perl/fonthead.pl $^ > $@
 halfwidth-Light.sfd: halfwidth.sfd
 	fontforge -script ./utils/python/scalehw.py $< $@
+
+# Halfwidth weight variant
+
+halfwidth-Book.sfd: halfwidth-Light.sfd
+	fontforge -script ./utils/pe/embolden.pe $< 15 Book $@
+halfwidth-Medium.sfd: halfwidth-Light.sfd
+	fontforge -script ./utils/pe/embolden.pe $< 30 Medium $@
+halfwidth-Demi-Bold.sfd: halfwidth-Light.sfd
+	fontforge -script ./utils/pe/embolden.pe $< 45 Demi-Bold $@
+halfwidth-Bold.sfd: halfwidth-Light.sfd
+	fontforge -script ./utils/pe/embolden.pe $< 60 Bold $@
+
+# Halfwidth weight variant composition
+
 Sophora-HW-Light.sfd: Sophora-Light.sfd halfwidth-Light.sfd
-	fontforge -script ./utils/python/halfwidth.py $^ $*.tmp
-	cat $*.tmp \
-		| sed -e "s/Position2: \"\[MONO\] Diacritics width adjustment-1\" dx=0 dy=0 dh=-650 dv=0/Position2: \"\[MONO\] Diacritics width adjustment-1\" dx=0 dy=0 dh=-325 dv=0/" \
-		| sed -e "s/Position2: \"\[MONO\] Diacritics width adjustment-2\" dx=-650 dy=0 dh=-650 dv=0/Position2: \"\[MONO\] Diacritics width adjustment-2\" dx=-325 dy=0 dh=-325 dv=0/" \
-		> $@
+	./utils/sh/rescalehw.sh $^ $@
+Sophora-HW-Book.sfd: Sophora-Book.sfd halfwidth-Book.sfd
+	./utils/sh/rescalehw.sh $^ $@
+Sophora-HW-Medium.sfd: Sophora-Medium.sfd halfwidth-Medium.sfd
+	./utils/sh/rescalehw.sh $^ $@
+Sophora-HW-Demi-Bold.sfd: Sophora-Demi-Bold.sfd halfwidth-Demi-Bold.sfd
+	./utils/sh/rescalehw.sh $^ $@
+Sophora-HW-Bold.sfd: Sophora-Bold.sfd halfwidth-Bold.sfd
+	./utils/sh/rescalehw.sh $^ $@
+
 
 # Build fonts
 
@@ -139,7 +158,10 @@ srcgif:
 
 clean:
 	-for i in $(DIRS); do cd $$i;make clean;cd ..;done
-	-rm $(TARGETS) $(TARGETS:%.otf=%.sfd) italic.sfd italic-*.sfd *~ *.bak *.tmp $(DISTFILE)
+	-rm $(TARGETS) $(TARGETS:%.otf=%.sfd) \
+		italic.sfd italic-*.sfd \
+		halfwidth.sfd halfwidth-*.sfd \
+		*~ *.bak *.tmp $(DISTFILE)
 	-rm -rf $(DISTDIR)
 
 # Distribution
