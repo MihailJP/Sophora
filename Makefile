@@ -9,7 +9,8 @@
 DIRS=srcgif
 WEIGHTS=Light Book Medium Demi-Bold Bold
 OTF=$(WEIGHTS:%=Sophora-%.otf) $(WEIGHTS:%=Sophora-P-%.otf) \
-    $(WEIGHTS:%=Sophora-%-Italic.otf) $(WEIGHTS:%=Sophora-P-%-Italic.otf)
+    $(WEIGHTS:%=Sophora-%-Italic.otf) $(WEIGHTS:%=Sophora-P-%-Italic.otf) \
+    $(WEIGHTS:%=Sophora-HW-%.otf) $(WEIGHTS:%=Sophora-HW-%-Italic.otf)
 TTF=$(OTF:.otf=.ttf)
 TARGETS=$(OTF) $(TTF)
 DOCS=readme.txt pua.txt
@@ -147,6 +148,43 @@ halfitalic.sfd: Sophora-Light.sfd halfitalic.txt
 	./utils/perl/fonthead.pl $^ > $@
 halfitalic-Light.sfd: halfitalic.sfd
 	fontforge -script ./utils/python/scalehw.py $< $@
+
+# Halfwidth italic weight variant
+
+halfitalic-Book.sfd: halfitalic-Light.sfd
+	fontforge -script ./utils/pe/embolden.pe $< 15 Book $@ Italic
+halfitalic-Medium.sfd: halfitalic-Light.sfd
+	fontforge -script ./utils/pe/embolden.pe $< 30 Medium $@ Italic
+halfitalic-Demi-Bold.sfd: halfitalic-Light.sfd
+	fontforge -script ./utils/pe/embolden.pe $< 45 Demi-Bold $@ Italic
+halfitalic-Bold.sfd: halfitalic-Light.sfd
+	fontforge -script ./utils/pe/embolden.pe $< 60 Bold $@ Italic
+
+# Italicize halfwidth variant preparation
+
+halfwidth-Light-Italic.sfd: halfwidth-Light.sfd halfitalic-Light.sfd
+	fontforge -script ./utils/pe/italicize.pe $^ $@
+halfwidth-Book-Italic.sfd: halfwidth-Book.sfd halfitalic-Book.sfd
+	fontforge -script ./utils/pe/italicize.pe $^ $@
+halfwidth-Medium-Italic.sfd: halfwidth-Medium.sfd halfitalic-Medium.sfd
+	fontforge -script ./utils/pe/italicize.pe $^ $@
+halfwidth-Demi-Bold-Italic.sfd: halfwidth-Light.sfd halfitalic-Demi-Bold.sfd
+	fontforge -script ./utils/pe/italicize.pe $^ $@
+halfwidth-Bold-Italic.sfd: halfwidth-Bold.sfd halfitalic-Bold.sfd
+	fontforge -script ./utils/pe/italicize.pe $^ $@
+
+# Halfwidth italic variant composition
+
+Sophora-HW-Light-Italic.sfd: Sophora-Light-Italic.sfd halfwidth-Light-Italic.sfd
+	./utils/sh/rescalehw.sh $^ $@
+Sophora-HW-Book-Italic.sfd: Sophora-Book-Italic.sfd halfwidth-Book-Italic.sfd
+	./utils/sh/rescalehw.sh $^ $@
+Sophora-HW-Medium-Italic.sfd: Sophora-Medium-Italic.sfd halfwidth-Medium-Italic.sfd
+	./utils/sh/rescalehw.sh $^ $@
+Sophora-HW-Demi-Bold-Italic.sfd: Sophora-Demi-Bold-Italic.sfd halfwidth-Demi-Bold-Italic.sfd
+	./utils/sh/rescalehw.sh $^ $@
+Sophora-HW-Bold-Italic.sfd: Sophora-Bold-Italic.sfd halfwidth-Bold-Italic.sfd
+	./utils/sh/rescalehw.sh $^ $@
 
 
 # Build fonts

@@ -1,6 +1,7 @@
 #!/usr/local/bin/fontforge -script
 
 import sys
+import re
 import fontforge
 
 if (len(sys.argv) < 4):
@@ -50,24 +51,37 @@ Base.addLookup("[MONO] Width Hack", "gsub_multiple", (),
     ),
   )
 )
-Base.addLookupSubtable("[MONO] Width Hack","[MONO] Width Hack-1")
+
+GlyphCount = 0
 for Glyph in Base.glyphs():
   if Glyph.isWorthOutputting():
     if Glyph.width != basewidth:
       if (Glyph.color != 0x00ff00) and (Glyph.color != 0x008000):
+        if (GlyphCount % 256) == 0:
+          Base.addLookupSubtable("[MONO] Width Hack","[MONO] Width Hack-"+str(GlyphCount / 256))
         Glyph.width = basewidth
-        Glyph.addPosSub("[MONO] Width Hack-1", (Glyph.glyphname, "space"))
+        Glyph.addPosSub("[MONO] Width Hack-"+str(GlyphCount / 256), (Glyph.glyphname, "space"))
+        GlyphCount+=1
 
 print "Changing the font information..."
-Base.fullname = Base.familyname+" HW "+Base.weight
+p = re.compile('-Italic')
+Base.fullname = Base.familyname+" HW "+p.sub(' Italic',Base.weight)
 Base.fontname = Base.familyname+"-HW-"+Base.weight
 Base.familyname = Base.familyname+" HW"
-Base.os2_winascent = Base.ascent
-Base.os2_windescent = Base.descent
-Base.os2_winascent_add = 0
-Base.os2_windescent_add = 0
+Base.os2_winascent = Base.ascent; Base.os2_winascent_add = 0
+Base.os2_windescent = Base.descent; Base.os2_windescent_add = 0
+Base.os2_typoascent = Base.ascent; Base.os2_typoascent_add = 0
+Base.os2_typodescent = -Base.descent; Base.os2_typodescent_add = 0
+Base.os2_typolinegap = 0
 Base["i"].addPosSub("Dotless forms-1", "dotlessi.half")
 Base["j"].addPosSub("Dotless forms-1", "dotlessj.half")
+
+print "Replacing with references..."
+Base.selection.none()
+for Glyph in Base.glyphs():
+  if Glyph.isWorthOutputting():
+    Base.selection.select(("more",),Glyph)
+Base.replaceWithReference()
 
 print "Saving halfwidth SFD..."
 Base.save(sys.argv[3])
