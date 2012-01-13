@@ -73,6 +73,9 @@ Base.os2_windescent = Base.descent; Base.os2_windescent_add = 0
 Base.os2_typoascent = Base.ascent; Base.os2_typoascent_add = 0
 Base.os2_typodescent = -Base.descent; Base.os2_typodescent_add = 0
 Base.os2_typolinegap = 0
+Base.hhea_ascent = Base.ascent; Base.hhea_ascent_add = 0
+Base.hhea_descent = -Base.descent; Base.hhea_descent_add = 0
+Base.hhea_linegap = 0
 Base["i"].addPosSub("Dotless forms-1", "dotlessi.half")
 Base["j"].addPosSub("Dotless forms-1", "dotlessj.half")
 
