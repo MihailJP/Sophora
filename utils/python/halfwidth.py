@@ -6,12 +6,19 @@ import fontforge
 
 if (len(sys.argv) < 4):
   print 'Usage: fontforge -script %s base-sfd halfwidth-sfd target-file' % sys.argv[0]
-  quit(1)
+  exit(1)
 
 print "Reading source files..."
 Base = fontforge.open(sys.argv[1])
 HW = fontforge.open(sys.argv[2])
 basewidth = HW["space"].width
+
+ReferenceGlyph = ()
+print "Checking for references..."
+for Glyph in Base.glyphs():
+  if Glyph.isWorthOutputting():
+    for Ref in Glyph.references:
+      ReferenceGlyph += (Glyph.glyphname,Ref[0])
 
 print "Unlinking references..."
 for Glyph in Base.glyphs():
@@ -81,9 +88,8 @@ Base["j"].addPosSub("Dotless forms-1", "dotlessj.half")
 
 print "Replacing with references..."
 Base.selection.none()
-for Glyph in Base.glyphs():
-  if Glyph.isWorthOutputting():
-    Base.selection.select(("more",),Glyph)
+for Glyph in ReferenceGlyph:
+  Base.selection.select(("more",),Glyph)
 Base.replaceWithReference()
 
 print "Saving halfwidth SFD..."
