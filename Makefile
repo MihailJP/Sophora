@@ -168,7 +168,7 @@ halfwidth-Book-Italic.sfd: halfwidth-Book.sfd halfitalic-Book.sfd
 	fontforge -script ./utils/pe/italicize.pe $^ $@
 halfwidth-Medium-Italic.sfd: halfwidth-Medium.sfd halfitalic-Medium.sfd
 	fontforge -script ./utils/pe/italicize.pe $^ $@
-halfwidth-Demi-Bold-Italic.sfd: halfwidth-Light.sfd halfitalic-Demi-Bold.sfd
+halfwidth-Demi-Bold-Italic.sfd: halfwidth-Demi-Bold.sfd halfitalic-Demi-Bold.sfd
 	fontforge -script ./utils/pe/italicize.pe $^ $@
 halfwidth-Bold-Italic.sfd: halfwidth-Bold.sfd halfitalic-Bold.sfd
 	fontforge -script ./utils/pe/italicize.pe $^ $@
