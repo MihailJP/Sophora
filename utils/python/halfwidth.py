@@ -4,7 +4,7 @@ import sys
 import re
 import fontforge
 
-HackFlag = false
+HackFlag = False
 if (len(sys.argv) < 4):
   print 'Usage: fontforge -script %s base-sfd halfwidth-sfd target-file [hack-flag]' % sys.argv[0]
   exit(1)
