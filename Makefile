@@ -190,9 +190,11 @@ Sophora-HW-Bold-Italic.sfd: Sophora-Bold-Italic.sfd halfwidth-Bold-Italic.sfd
 # Build fonts
 
 .sfd.otf:
-	fontforge -script ./utils/pe/makefont.pe $< $@
+	./utils/sh/makefont.sh $< $@
 .sfd.ttf:
-	fontforge -script ./utils/pe/makefont.pe $< $@
+	./utils/sh/makefont.sh $< $@
+
+
 
 # GIF to SFD
 
