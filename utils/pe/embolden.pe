@@ -18,6 +18,27 @@ if (Strtol($2) > 50)
 endif
 
 Open($1)
+
+if ($3 == "Black")
+	SetPanose(2, 10); SetOS2Value("Weight", 900)
+elseif ($3 == "Heavy")
+	SetPanose(2, 9); SetOS2Value("Weight", 800)
+elseif ($3 == "Bold")
+	SetPanose(2, 8); SetOS2Value("Weight", 700)
+elseif ($3 == "Demi-Bold")
+	SetPanose(2, 7); SetOS2Value("Weight", 600)
+elseif ($3 == "Medium")
+	SetPanose(2, 6); SetOS2Value("Weight", 500)
+elseif ($3 == "Book")
+	SetPanose(2, 5); SetOS2Value("Weight", 400)
+elseif ($3 == "Light")
+	SetPanose(2, 4); SetOS2Value("Weight", 300)
+elseif ($3 == "Extra-Light")
+	SetPanose(2, 3); SetOS2Value("Weight", 200)
+elseif ($3 == "Thin")
+	SetPanose(2, 2); SetOS2Value("Weight", 100)
+endif
+
 SelectWorthOutputting()
 Scale(WorkingScale*100,0,0)
 AddExtrema()

@@ -59,4 +59,6 @@ while (i < Glyphs)
 	i++
 endloop
 
+SetPanose(3, 2)
+
 Save($2)
