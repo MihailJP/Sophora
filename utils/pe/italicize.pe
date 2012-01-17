@@ -1,4 +1,4 @@
-#!/usr/local/bin/fontforge -script
+#!/usr/local/bin/fontforge
 
 if ($argc < 4)
 	Print("Usage: fontforge -script "+$0+" base-sfd italic-sfd target-file")
