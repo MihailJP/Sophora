@@ -1,0 +1,15 @@
+#!/usr/local/bin/mensis
+
+if ($argc < 2)
+	Print("Usage: "+$0+" font-file")
+	Quit(1)
+endif
+
+Print("Reading source files...")
+Open($1)
+
+SetTableField("isFixedPitch", 1, 'post')
+SetTableField("advanceWidthMax", GetTableField("advanceWidthMax", 'hhea') / 2, 'hhea')
+Save()
+
+Close()

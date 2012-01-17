@@ -3,18 +3,17 @@ Sophora, a print-style-like handwritten font project
 ボールペン書き楷書フォントプロジェクト Sophora
 
 
-※MakefileはCygwin専用設定になっています。
-
 ■ビルド時に必要なもの
 
-	Cygwin
+	Cygwin (when on Windows)
 		http://www.cygwin.com/
-	Cygwin/X
+	Cygwin/X (when on Windows)
 		Cygwinインストーラーにパッケージ有り
 		http://x.cygwin.com/
 	FontForge
-		Cygwinインストーラーにパッケージ無し
 		http://fontforge.sourceforge.net/
+	Mensis
+		http://mensis.sourceforge.net/
 	potrace
 		Cygwinインストーラーにパッケージ有り
 		http://potrace.sourceforge.net/
@@ -26,10 +25,16 @@ Sophora, a print-style-like handwritten font project
 		……手書きフォントをスキャンしたデータ
 
 	utils/pe/
-		……FontForgeスクリプト
+		……FontForge/Mensisスクリプト
 
 	utils/perl/
 		……Perlスクリプト
+
+	utils/python/
+		……Pythonスクリプト
+
+	utils/sh/
+		……シェルスクリプト
 
 	Sophora.sfd
 		……生成されたアウトラインデータを切り貼りしたフォントデータ

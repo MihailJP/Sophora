@@ -28,106 +28,106 @@ ttf: $(TTF)
 # Scaling
 
 Sophora-Light.sfd: Sophora.sfd
-	sh ./utils/sh/scale.sh $< $@
+	./utils/sh/scale.sh $< $@
 
 # Weight variant
 
 Sophora-Book.sfd: Sophora-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 15 Book $@
+	./utils/pe/embolden.pe $< 15 Book $@
 Sophora-Medium.sfd: Sophora-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 30 Medium $@
+	./utils/pe/embolden.pe $< 30 Medium $@
 Sophora-Demi-Bold.sfd: Sophora-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 45 Demi-Bold $@
+	./utils/pe/embolden.pe $< 45 Demi-Bold $@
 Sophora-Bold.sfd: Sophora-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 60 Bold $@
+	./utils/pe/embolden.pe $< 60 Bold $@
 
 # Proportional variant
 
 Sophora-P-Light.sfd: Sophora-Light.sfd
-	fontforge -script ./utils/pe/proportional.pe $< $@
+	./utils/pe/proportional.pe $< $@
 Sophora-P-Book.sfd: Sophora-Book.sfd
-	fontforge -script ./utils/pe/proportional.pe $< $@
+	./utils/pe/proportional.pe $< $@
 Sophora-P-Medium.sfd: Sophora-Medium.sfd
-	fontforge -script ./utils/pe/proportional.pe $< $@
+	./utils/pe/proportional.pe $< $@
 Sophora-P-Demi-Bold.sfd: Sophora-Demi-Bold.sfd
-	fontforge -script ./utils/pe/proportional.pe $< $@
+	./utils/pe/proportional.pe $< $@
 Sophora-P-Bold.sfd: Sophora-Bold.sfd
-	fontforge -script ./utils/pe/proportional.pe $< $@
+	./utils/pe/proportional.pe $< $@
 
 # Italic scaling
 
 italic.sfd: Sophora.sfd italic.txt
 	./utils/perl/fonthead.pl $^ > $@
 italic-Light.sfd: italic.sfd
-	sh ./utils/sh/scale.sh $< $@
+	./utils/sh/scale.sh $< $@
 
 # Italic weight variant
 
 italic-Book.sfd: italic-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 15 Book $@ Italic
+	./utils/pe/embolden.pe $< 15 Book $@ Italic
 italic-Medium.sfd: italic-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 30 Medium $@ Italic
+	./utils/pe/embolden.pe $< 30 Medium $@ Italic
 italic-Demi-Bold.sfd: italic-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 45 Demi-Bold $@ Italic
+	./utils/pe/embolden.pe $< 45 Demi-Bold $@ Italic
 italic-Bold.sfd: italic-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 60 Bold $@ Italic
+	./utils/pe/embolden.pe $< 60 Bold $@ Italic
 
 # Italicize
 
 Sophora-Light-Italic.sfd: Sophora-Light.sfd italic-Light.sfd
-	fontforge -script ./utils/pe/italicize.pe $^ $@
+	./utils/pe/italicize.pe $^ $@
 Sophora-Book-Italic.sfd: Sophora-Book.sfd italic-Book.sfd
-	fontforge -script ./utils/pe/italicize.pe $^ $@
+	./utils/pe/italicize.pe $^ $@
 Sophora-Medium-Italic.sfd: Sophora-Medium.sfd italic-Medium.sfd
-	fontforge -script ./utils/pe/italicize.pe $^ $@
+	./utils/pe/italicize.pe $^ $@
 Sophora-Demi-Bold-Italic.sfd: Sophora-Demi-Bold.sfd italic-Demi-Bold.sfd
-	fontforge -script ./utils/pe/italicize.pe $^ $@
+	./utils/pe/italicize.pe $^ $@
 Sophora-Bold-Italic.sfd: Sophora-Bold.sfd italic-Bold.sfd
-	fontforge -script ./utils/pe/italicize.pe $^ $@
+	./utils/pe/italicize.pe $^ $@
 
 # Proportional italic variant preparation
 
 italic-P-Light.sfd: italic-Light.sfd
-	fontforge -script ./utils/pe/proportional.pe $< $@
+	./utils/pe/proportional.pe $< $@
 italic-P-Book.sfd: italic-Book.sfd
-	fontforge -script ./utils/pe/proportional.pe $< $@
+	./utils/pe/proportional.pe $< $@
 italic-P-Medium.sfd: italic-Medium.sfd
-	fontforge -script ./utils/pe/proportional.pe $< $@
+	./utils/pe/proportional.pe $< $@
 italic-P-Demi-Bold.sfd: italic-Demi-Bold.sfd
-	fontforge -script ./utils/pe/proportional.pe $< $@
+	./utils/pe/proportional.pe $< $@
 italic-P-Bold.sfd: italic-Bold.sfd
-	fontforge -script ./utils/pe/proportional.pe $< $@
+	./utils/pe/proportional.pe $< $@
 
 # Proportional italic variant preparation
 
 Sophora-P-Light-Italic.sfd: Sophora-P-Light.sfd italic-P-Light.sfd
-	fontforge -script ./utils/pe/italicize.pe $^ $@
+	./utils/pe/italicize.pe $^ $@
 Sophora-P-Book-Italic.sfd: Sophora-P-Book.sfd italic-P-Book.sfd
-	fontforge -script ./utils/pe/italicize.pe $^ $@
+	./utils/pe/italicize.pe $^ $@
 Sophora-P-Medium-Italic.sfd: Sophora-P-Medium.sfd italic-P-Medium.sfd
-	fontforge -script ./utils/pe/italicize.pe $^ $@
+	./utils/pe/italicize.pe $^ $@
 Sophora-P-Demi-Bold-Italic.sfd: Sophora-P-Demi-Bold.sfd italic-P-Demi-Bold.sfd
-	fontforge -script ./utils/pe/italicize.pe $^ $@
+	./utils/pe/italicize.pe $^ $@
 Sophora-P-Bold-Italic.sfd: Sophora-P-Bold.sfd italic-P-Bold.sfd
-	fontforge -script ./utils/pe/italicize.pe $^ $@
+	./utils/pe/italicize.pe $^ $@
 
 # Halfwidth variant preparation
 
 halfwidth.sfd: Sophora-Light.sfd halfwidth.txt
 	./utils/perl/fonthead.pl $^ > $@
 halfwidth-Light.sfd: halfwidth.sfd
-	fontforge -script ./utils/python/scalehw.py $< $@
+	./utils/python/scalehw.py $< $@
 
 # Halfwidth weight variant
 
 halfwidth-Book.sfd: halfwidth-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 15 Book $@
+	./utils/pe/embolden.pe $< 15 Book $@
 halfwidth-Medium.sfd: halfwidth-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 30 Medium $@
+	./utils/pe/embolden.pe $< 30 Medium $@
 halfwidth-Demi-Bold.sfd: halfwidth-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 45 Demi-Bold $@
+	./utils/pe/embolden.pe $< 45 Demi-Bold $@
 halfwidth-Bold.sfd: halfwidth-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 60 Bold $@
+	./utils/pe/embolden.pe $< 60 Bold $@
 
 # Halfwidth weight variant composition
 
@@ -147,31 +147,31 @@ Sophora-HW-Bold.sfd: Sophora-Bold.sfd halfwidth-Bold.sfd
 halfitalic.sfd: Sophora-Light.sfd halfitalic.txt
 	./utils/perl/fonthead.pl $^ > $@
 halfitalic-Light.sfd: halfitalic.sfd
-	fontforge -script ./utils/python/scalehw.py $< $@
+	./utils/python/scalehw.py $< $@
 
 # Halfwidth italic weight variant
 
 halfitalic-Book.sfd: halfitalic-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 15 Book $@ Italic
+	./utils/pe/embolden.pe $< 15 Book $@ Italic
 halfitalic-Medium.sfd: halfitalic-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 30 Medium $@ Italic
+	./utils/pe/embolden.pe $< 30 Medium $@ Italic
 halfitalic-Demi-Bold.sfd: halfitalic-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 45 Demi-Bold $@ Italic
+	./utils/pe/embolden.pe $< 45 Demi-Bold $@ Italic
 halfitalic-Bold.sfd: halfitalic-Light.sfd
-	fontforge -script ./utils/pe/embolden.pe $< 60 Bold $@ Italic
+	./utils/pe/embolden.pe $< 60 Bold $@ Italic
 
 # Italicize halfwidth variant preparation
 
 halfwidth-Light-Italic.sfd: halfwidth-Light.sfd halfitalic-Light.sfd
-	fontforge -script ./utils/pe/italicize.pe $^ $@
+	./utils/pe/italicize.pe $^ $@
 halfwidth-Book-Italic.sfd: halfwidth-Book.sfd halfitalic-Book.sfd
-	fontforge -script ./utils/pe/italicize.pe $^ $@
+	./utils/pe/italicize.pe $^ $@
 halfwidth-Medium-Italic.sfd: halfwidth-Medium.sfd halfitalic-Medium.sfd
-	fontforge -script ./utils/pe/italicize.pe $^ $@
+	./utils/pe/italicize.pe $^ $@
 halfwidth-Demi-Bold-Italic.sfd: halfwidth-Demi-Bold.sfd halfitalic-Demi-Bold.sfd
-	fontforge -script ./utils/pe/italicize.pe $^ $@
+	./utils/pe/italicize.pe $^ $@
 halfwidth-Bold-Italic.sfd: halfwidth-Bold.sfd halfitalic-Bold.sfd
-	fontforge -script ./utils/pe/italicize.pe $^ $@
+	./utils/pe/italicize.pe $^ $@
 
 # Halfwidth italic variant composition
 

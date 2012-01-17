@@ -18,14 +18,12 @@ fi
 echo $1| grep "HW" # returns 0 if found, 1 otherwise
 HWFLAG=$?
 if [[ $HWFLAG == 0 ]]; then
-	fontforge -script $(cd $(dirname $0);pwd)/../pe/makefont.pe $1 tmp-$2
+	$(cd $(dirname $0);pwd)/../pe/makefont.pe $1 $2
 	chkerr $?
-	$(cd $(dirname $0);pwd)/../perl/flagmono.pl tmp-$2 $2
-	chkerr $?
-	rm tmp-$2
+	$(cd $(dirname $0);pwd)/../pe/hwhack.pl $2
 	chkerr $?
 else
-	fontforge -script $(cd $(dirname $0);pwd)/../pe/makefont.pe $1 $2
+	$(cd $(dirname $0);pwd)/../pe/makefont.pe $1 $2
 	chkerr $?
 fi
 exit 0
