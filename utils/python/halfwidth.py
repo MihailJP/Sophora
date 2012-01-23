@@ -78,11 +78,11 @@ print "Changing the font information..."
 p = re.compile('-Italic')
 if HackFlag:
   Base.fullname = Base.familyname+" HW Hack "+p.sub(' Italic',Base.weight)
-  Base.fontname = Base.familyname+"-HW-Hack-"+Base.weight
+  Base.fontname = Base.familyname+"HWHack-"+Base.weight
   Base.familyname = Base.familyname+" HW Hack"
 else:
   Base.fullname = Base.familyname+" HW "+p.sub(' Italic',Base.weight)
-  Base.fontname = Base.familyname+"-HW-"+Base.weight
+  Base.fontname = Base.familyname+"HW-"+Base.weight
   Base.familyname = Base.familyname+" HW"
 Base.os2_winascent = Base.ascent; Base.os2_winascent_add = 0
 Base.os2_windescent = Base.descent; Base.os2_windescent_add = 0
