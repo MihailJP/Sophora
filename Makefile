@@ -8,9 +8,9 @@
 
 DIRS=srcgif
 WEIGHTS=Light Book Medium Demi-Bold Bold
-OTF=$(WEIGHTS:%=Sophora-%.otf) $(WEIGHTS:%=Sophora-P-%.otf) \
-    $(WEIGHTS:%=Sophora-%-Italic.otf) $(WEIGHTS:%=Sophora-P-%-Italic.otf) \
-    $(WEIGHTS:%=Sophora-HW-%.otf) $(WEIGHTS:%=Sophora-HW-%-Italic.otf)
+OTF=$(WEIGHTS:%=Sophora-%.otf) $(WEIGHTS:%=SophoraP-%.otf) \
+    $(WEIGHTS:%=Sophora-%-Italic.otf) $(WEIGHTS:%=SophoraP-%-Italic.otf) \
+    $(WEIGHTS:%=SophoraHW-%.otf) $(WEIGHTS:%=SophoraHW-%-Italic.otf)
 TTF=$(OTF:.otf=.ttf)
 TARGETS=$(OTF) $(TTF)
 DOCS=readme.txt pua.txt
@@ -43,15 +43,15 @@ Sophora-Bold.sfd: Sophora-Light.sfd
 
 # Proportional variant
 
-Sophora-P-Light.sfd: Sophora-Light.sfd
+SophoraP-Light.sfd: Sophora-Light.sfd
 	./utils/pe/proportional.pe $< $@
-Sophora-P-Book.sfd: Sophora-Book.sfd
+SophoraP-Book.sfd: Sophora-Book.sfd
 	./utils/pe/proportional.pe $< $@
-Sophora-P-Medium.sfd: Sophora-Medium.sfd
+SophoraP-Medium.sfd: Sophora-Medium.sfd
 	./utils/pe/proportional.pe $< $@
-Sophora-P-Demi-Bold.sfd: Sophora-Demi-Bold.sfd
+SophoraP-Demi-Bold.sfd: Sophora-Demi-Bold.sfd
 	./utils/pe/proportional.pe $< $@
-Sophora-P-Bold.sfd: Sophora-Bold.sfd
+SophoraP-Bold.sfd: Sophora-Bold.sfd
 	./utils/pe/proportional.pe $< $@
 
 # Italic scaling
@@ -100,15 +100,15 @@ italic-P-Bold.sfd: italic-Bold.sfd
 
 # Proportional italic variant preparation
 
-Sophora-P-Light-Italic.sfd: Sophora-P-Light.sfd italic-P-Light.sfd
+SophoraP-Light-Italic.sfd: SophoraP-Light.sfd italic-P-Light.sfd
 	./utils/pe/italicize.pe $^ $@
-Sophora-P-Book-Italic.sfd: Sophora-P-Book.sfd italic-P-Book.sfd
+SophoraP-Book-Italic.sfd: SophoraP-Book.sfd italic-P-Book.sfd
 	./utils/pe/italicize.pe $^ $@
-Sophora-P-Medium-Italic.sfd: Sophora-P-Medium.sfd italic-P-Medium.sfd
+SophoraP-Medium-Italic.sfd: SophoraP-Medium.sfd italic-P-Medium.sfd
 	./utils/pe/italicize.pe $^ $@
-Sophora-P-Demi-Bold-Italic.sfd: Sophora-P-Demi-Bold.sfd italic-P-Demi-Bold.sfd
+SophoraP-Demi-Bold-Italic.sfd: SophoraP-Demi-Bold.sfd italic-P-Demi-Bold.sfd
 	./utils/pe/italicize.pe $^ $@
-Sophora-P-Bold-Italic.sfd: Sophora-P-Bold.sfd italic-P-Bold.sfd
+SophoraP-Bold-Italic.sfd: SophoraP-Bold.sfd italic-P-Bold.sfd
 	./utils/pe/italicize.pe $^ $@
 
 # Halfwidth variant preparation
@@ -131,15 +131,15 @@ halfwidth-Bold.sfd: halfwidth-Light.sfd
 
 # Halfwidth weight variant composition
 
-Sophora-HW-Light.sfd: Sophora-Light.sfd halfwidth-Light.sfd
+SophoraHW-Light.sfd: Sophora-Light.sfd halfwidth-Light.sfd
 	./utils/sh/rescalehw.sh $^ $@
-Sophora-HW-Book.sfd: Sophora-Book.sfd halfwidth-Book.sfd
+SophoraHW-Book.sfd: Sophora-Book.sfd halfwidth-Book.sfd
 	./utils/sh/rescalehw.sh $^ $@
-Sophora-HW-Medium.sfd: Sophora-Medium.sfd halfwidth-Medium.sfd
+SophoraHW-Medium.sfd: Sophora-Medium.sfd halfwidth-Medium.sfd
 	./utils/sh/rescalehw.sh $^ $@
-Sophora-HW-Demi-Bold.sfd: Sophora-Demi-Bold.sfd halfwidth-Demi-Bold.sfd
+SophoraHW-Demi-Bold.sfd: Sophora-Demi-Bold.sfd halfwidth-Demi-Bold.sfd
 	./utils/sh/rescalehw.sh $^ $@
-Sophora-HW-Bold.sfd: Sophora-Bold.sfd halfwidth-Bold.sfd
+SophoraHW-Bold.sfd: Sophora-Bold.sfd halfwidth-Bold.sfd
 	./utils/sh/rescalehw.sh $^ $@
 
 # Halfwidth italic variant preparation
@@ -175,15 +175,15 @@ halfwidth-Bold-Italic.sfd: halfwidth-Bold.sfd halfitalic-Bold.sfd
 
 # Halfwidth italic variant composition
 
-Sophora-HW-Light-Italic.sfd: Sophora-Light-Italic.sfd halfwidth-Light-Italic.sfd
+SophoraHW-Light-Italic.sfd: Sophora-Light-Italic.sfd halfwidth-Light-Italic.sfd
 	./utils/sh/rescalehw.sh $^ $@
-Sophora-HW-Book-Italic.sfd: Sophora-Book-Italic.sfd halfwidth-Book-Italic.sfd
+SophoraHW-Book-Italic.sfd: Sophora-Book-Italic.sfd halfwidth-Book-Italic.sfd
 	./utils/sh/rescalehw.sh $^ $@
-Sophora-HW-Medium-Italic.sfd: Sophora-Medium-Italic.sfd halfwidth-Medium-Italic.sfd
+SophoraHW-Medium-Italic.sfd: Sophora-Medium-Italic.sfd halfwidth-Medium-Italic.sfd
 	./utils/sh/rescalehw.sh $^ $@
-Sophora-HW-Demi-Bold-Italic.sfd: Sophora-Demi-Bold-Italic.sfd halfwidth-Demi-Bold-Italic.sfd
+SophoraHW-Demi-Bold-Italic.sfd: Sophora-Demi-Bold-Italic.sfd halfwidth-Demi-Bold-Italic.sfd
 	./utils/sh/rescalehw.sh $^ $@
-Sophora-HW-Bold-Italic.sfd: Sophora-Bold-Italic.sfd halfwidth-Bold-Italic.sfd
+SophoraHW-Bold-Italic.sfd: Sophora-Bold-Italic.sfd halfwidth-Bold-Italic.sfd
 	./utils/sh/rescalehw.sh $^ $@
 
 

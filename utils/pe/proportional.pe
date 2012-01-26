@@ -9,7 +9,7 @@ Open($1)
 if (Strrstr($fontname,"-"+$weight) == -1)
 	SetFontNames($fontname+"P-"+$weight,$familyname+" P",$familyname+" P "+$weight,$weight)
 else
-	SetFontNames(Strsub($fontname,0,Strrstr($fontname,"-"+$weight))+"-P-"+$weight,$familyname+" P",$familyname+" P "+$weight,$weight)
+	SetFontNames(Strsub($fontname,0,Strrstr($fontname,"-"+$weight))+"P-"+$weight,$familyname+" P",$familyname+" P "+$weight,$weight)
 endif
 SelectWorthOutputting()
 
