@@ -56,6 +56,8 @@ reFullName = re.compile('^FullName: ')
 reFamilyName = re.compile('^FamilyName: ')
 reSChar = re.compile('^StartChar: ')
 reEncoding = re.compile('^Encoding: ')
+reEncodingBMP = re.compile('^Encoding: UnicodeBmp')
+reEncodingFull = re.compile('^Encoding: UnicodeFull')
 reSpace = re.compile(' ')
 
 FontNum = 2
@@ -85,9 +87,9 @@ while FontNum < len(sys.argv):
           GlyphSwapFlag = 2; PreviousSwapType = 2; break
         PreviousGlyph += 1
       if GlyphSwapFlag == 1:
-        target.write("FamilyName: %s.font0001\n" % GlyphName)
+        target.write("StartChar: %s.font0001\n" % GlyphName)
       elif GlyphSwapFlag == 2:
-        target.write("FamilyName: %s\n" % GlyphName)
+        target.write("StartChar: %s\n" % GlyphName)
       else:
         target.write(line)
     elif reEncoding.match(line):
@@ -97,6 +99,10 @@ while FontNum < len(sys.argv):
       elif PreviousSwapType == 2:
         sp = reSpace.split(line)
         target.write("Encoding: %d %d %d\n" % (int(sp[1]), GlyphCode[FontNum-1][PreviousGlyph], int(sp[3])))
+      elif reEncodingBMP.match(line):
+        target.write("Encoding: Custom\n")
+      elif reEncodingFull.match(line):
+        target.write("Encoding: Custom\n")
       else:
         target.write(line)
       PreviousSwapType = 0; PreviousGlyph = 0
