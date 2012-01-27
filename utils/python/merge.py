@@ -40,9 +40,14 @@ while FontNum < len(sys.argv):
       if GlyphDiffers:
         BaseFont.createChar(-1,"%s.%s" % (GlyphName, glyphSuffix))
         AddendFont.selection.select(GlyphName)
+        GlyphRef = AddendFont[GlyphName].references
+        AddendFont.unlinkReferences()
         AddendFont.copy()
         BaseFont.selection.select("%s.%s" % (GlyphName, glyphSuffix))
         BaseFont.paste()
+        for RefGlyph in GlyphRef:
+           BaseFont.selection.select(RefGlyph[0], ("more",))
+        BaseFont.replaceWithReference()
         GlyphDifference[FontNum-1] += (GlyphName,)
         GlyphCode[FontNum-1] += (Glyph.unicode,)
   AddendFont.close()
