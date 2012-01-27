@@ -13,6 +13,7 @@ BaseFont = fontforge.open(sys.argv[1])
 
 FontName = (BaseFont.fontname,); FullName = (BaseFont.fullname,); FamilyName = (BaseFont.fullname,)
 GlyphDifference = [(),]; GlyphCode = [(),]
+FontPanose = (BaseFont.os2_panose,)
 FontNum = 2
 while FontNum < len(sys.argv):
   glyphSuffix = "font%04d" % FontNum
@@ -20,6 +21,7 @@ while FontNum < len(sys.argv):
   AddendFont = fontforge.open(sys.argv[FontNum])
   FontName += (AddendFont.fontname,); FullName += (AddendFont.fullname,); FamilyName += (AddendFont.fullname,)
   GlyphDifference += [(),]; GlyphCode += [(),]
+  FontPanose += (AddendFont.os2_panose,)
   for Glyph in AddendFont.glyphs():
     if Glyph.isWorthOutputting():
       GlyphName = Glyph.glyphname; GlyphDiffers = False
@@ -56,6 +58,7 @@ reFullName = re.compile('^FullName: ')
 reFamilyName = re.compile('^FamilyName: ')
 reSChar = re.compile('^StartChar: ')
 reEncoding = re.compile('^Encoding: ')
+rePanose = re.compile('^Panose: ')
 reEncodingBMP = re.compile('^Encoding: UnicodeBmp')
 reEncodingFull = re.compile('^Encoding: UnicodeFull')
 reSpace = re.compile(' ')
@@ -78,6 +81,12 @@ while FontNum < len(sys.argv):
       target.write("FullName: %s\n" % FullName[FontNum-1])
     elif reFamilyName.match(line):
       target.write("FamilyName: %s\n" % FamilyName[FontNum-1])
+    elif rePanose.match(line):
+      target.write("Panose: %d %d %d %d %d %d %d %d %d %d\n" %
+      FontPanose[FontNum-1][0], FontPanose[FontNum-1][1], FontPanose[FontNum-1][2], 
+      FontPanose[FontNum-1][3], FontPanose[FontNum-1][4], FontPanose[FontNum-1][5], 
+      FontPanose[FontNum-1][6], FontPanose[FontNum-1][7], FontPanose[FontNum-1][8], 
+      FontPanose[FontNum-1][9] )
     elif reSChar.match(line):
       GlyphSwapFlag = 0; PreviousGlyph = 0
       for GlyphName in GlyphDifference[FontNum-1]:
