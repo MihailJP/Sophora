@@ -83,10 +83,10 @@ while FontNum < len(sys.argv):
       target.write("FamilyName: %s\n" % FamilyName[FontNum-1])
     elif rePanose.match(line):
       target.write("Panose: %d %d %d %d %d %d %d %d %d %d\n" %
-      FontPanose[FontNum-1][0], FontPanose[FontNum-1][1], FontPanose[FontNum-1][2], 
+      (FontPanose[FontNum-1][0], FontPanose[FontNum-1][1], FontPanose[FontNum-1][2], 
       FontPanose[FontNum-1][3], FontPanose[FontNum-1][4], FontPanose[FontNum-1][5], 
       FontPanose[FontNum-1][6], FontPanose[FontNum-1][7], FontPanose[FontNum-1][8], 
-      FontPanose[FontNum-1][9] )
+      FontPanose[FontNum-1][9]) )
     elif reSChar.match(line):
       GlyphSwapFlag = 0; PreviousGlyph = 0
       for GlyphName in GlyphDifference[FontNum-1]:
