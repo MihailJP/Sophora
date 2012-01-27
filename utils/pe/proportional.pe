@@ -59,6 +59,10 @@ while (i < Glyphs)
 	i++
 endloop
 
+SelectNone()
+SelectGlyphsBoth()
+UnlinkReference()
+
 SetPanose(3, 2)
 
 Save($2)
