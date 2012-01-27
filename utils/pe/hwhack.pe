@@ -9,7 +9,7 @@ Print("Reading source files...")
 Open($1)
 
 SetTableField("isFixedPitch", 1, 'post')
-SetTableField("advanceWidthMax", GetTableField("advanceWidthMax", 'hhea') / 2, 'hhea')
+SetTableField("advanceWidthMax", GetTableOffset(4*3, 2, 'hmtx'), 'hhea')
 Save()
 
 Close()
