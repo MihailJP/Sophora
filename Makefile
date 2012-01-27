@@ -4,17 +4,20 @@
 
 # Variants
 
-.SUFFIXES: .sfd .otf .ttf .7z
+.SUFFIXES: .sfd .otf .ttf .ttc .7z
 
 DIRS=srcgif
 WEIGHTS=Light Book Medium Demi-Bold Bold
+VARIANTS=Sophora SophoraP SophoraHW
 OTF=$(WEIGHTS:%=Sophora-%.otf) $(WEIGHTS:%=SophoraP-%.otf) \
     $(WEIGHTS:%=Sophora-%-Italic.otf) $(WEIGHTS:%=SophoraP-%-Italic.otf) \
     $(WEIGHTS:%=SophoraHW-%.otf) $(WEIGHTS:%=SophoraHW-%-Italic.otf)
 TTF=$(OTF:.otf=.ttf)
-TARGETS=$(OTF) $(TTF)
+PRETTF=$(OTF:.otf=.forTTC.sfd) $(OTF:.otf=.forTTC.ttf)
+TTC=$(WEIGHTS:%=Sophora-%.ttc) $(WEIGHTS:%=Sophora-%-Italic.ttc)
+TARGETS=$(OTF) $(TTF) $(TTC)
 DOCS=readme.txt pua.txt
-DISTFILE=Sophora-OTF.7z Sophora-TTF.7z
+DISTFILE=Sophora-OTF.7z Sophora-TTF.7z Sophora.7z
 DISTDIR=$(DISTFILE:.7z=)
 
 # All targets
@@ -24,6 +27,7 @@ all: $(TARGETS)
 
 otf: $(OTF)
 ttf: $(TTF)
+ttc: $(TTC)
 
 # Scaling
 
@@ -187,12 +191,80 @@ SophoraHW-Bold-Italic.sfd: Sophora-Bold-Italic.sfd halfwidth-Bold-Italic.sfd
 	./utils/sh/rescalehw.sh $^ $@
 
 
+# TTC preparation
+
+Sophora-Light.forTTC.sfd: $(VARIANTS:%=%-Light.sfd)
+	./utils/python/merge.py $^
+Sophora-Book.forTTC.sfd: $(VARIANTS:%=%-Book.sfd)
+	./utils/python/merge.py $^
+Sophora-Medium.forTTC.sfd: $(VARIANTS:%=%-Medium.sfd)
+	./utils/python/merge.py $^
+Sophora-Demi-Bold.forTTC.sfd: $(VARIANTS:%=%-Demi-Bold.sfd)
+	./utils/python/merge.py $^
+Sophora-Bold.forTTC.sfd: $(VARIANTS:%=%-Bold.sfd)
+	./utils/python/merge.py $^
+SophoraP-Light.forTTC.sfd: Sophora-Light.forTTC.sfd
+SophoraP-Book.forTTC.sfd: Sophora-Book.forTTC.sfd
+SophoraP-Medium.forTTC.sfd: Sophora-Medium.forTTC.sfd
+SophoraP-Demi-Bold.forTTC.sfd: Sophora-Demi-Bold.forTTC.sfd
+SophoraP-Bold.forTTC.sfd: Sophora-Bold.forTTC.sfd
+SophoraHW-Light.forTTC.sfd: Sophora-Light.forTTC.sfd
+SophoraHW-Book.forTTC.sfd: Sophora-Book.forTTC.sfd
+SophoraHW-Medium.forTTC.sfd: Sophora-Medium.forTTC.sfd
+SophoraHW-Demi-Bold.forTTC.sfd: Sophora-Demi-Bold.forTTC.sfd
+SophoraHW-Bold.forTTC.sfd: Sophora-Bold.forTTC.sfd
+
+Sophora-Light-Italic.forTTC.sfd: $(VARIANTS:%=%-Light-Italic.sfd)
+	./utils/python/merge.py $^
+Sophora-Book-Italic.forTTC.sfd: $(VARIANTS:%=%-Book-Italic.sfd)
+	./utils/python/merge.py $^
+Sophora-Medium-Italic.forTTC.sfd: $(VARIANTS:%=%-Medium-Italic.sfd)
+	./utils/python/merge.py $^
+Sophora-Demi-Bold-Italic.forTTC.sfd: $(VARIANTS:%=%-Demi-Bold-Italic.sfd)
+	./utils/python/merge.py $^
+Sophora-Bold-Italic.forTTC.sfd: $(VARIANTS:%=%-Bold-Italic.sfd)
+	./utils/python/merge.py $^
+SophoraP-Light-Italic.forTTC.sfd: Sophora-Light-Italic.forTTC.sfd
+SophoraP-Book-Italic.forTTC.sfd: Sophora-Book-Italic.forTTC.sfd
+SophoraP-Medium-Italic.forTTC.sfd: Sophora-Medium-Italic.forTTC.sfd
+SophoraP-Demi-Bold-Italic.forTTC.sfd: Sophora-Demi-Bold-Italic.forTTC.sfd
+SophoraP-Bold-Italic.forTTC.sfd: Sophora-Bold-Italic.forTTC.sfd
+SophoraHW-Light-Italic.forTTC.sfd: Sophora-Light-Italic.forTTC.sfd
+SophoraHW-Book-Italic.forTTC.sfd: Sophora-Book-Italic.forTTC.sfd
+SophoraHW-Medium-Italic.forTTC.sfd: Sophora-Medium-Italic.forTTC.sfd
+SophoraHW-Demi-Bold-Italic.forTTC.sfd: Sophora-Demi-Bold-Italic.forTTC.sfd
+SophoraHW-Bold-Italic.forTTC.sfd: Sophora-Bold-Italic.forTTC.sfd
+
+# Build TTC
+Sophora-Light.ttc: $(VARIANTS:%=%-Light.forTTC.ttf)
+	UniteTTC $@ $^
+Sophora-Book.ttc: $(VARIANTS:%=%-Book.forTTC.ttf)
+	UniteTTC $@ $^
+Sophora-Medium.ttc: $(VARIANTS:%=%-Medium.forTTC.ttf)
+	UniteTTC $@ $^
+Sophora-Demi-Bold.ttc: $(VARIANTS:%=%-Demi-Bold.forTTC.ttf)
+	UniteTTC $@ $^
+Sophora-Bold.ttc: $(VARIANTS:%=%-Bold.forTTC.ttf)
+	UniteTTC $@ $^
+Sophora-Light-Italic.ttc: $(VARIANTS:%=%-Light-Italic.forTTC.ttf)
+	UniteTTC $@ $^
+Sophora-Book-Italic.ttc: $(VARIANTS:%=%-Book-Italic.forTTC.ttf)
+	UniteTTC $@ $^
+Sophora-Medium-Italic.ttc: $(VARIANTS:%=%-Medium-Italic.forTTC.ttf)
+	UniteTTC $@ $^
+Sophora-Demi-Bold-Italic.ttc: $(VARIANTS:%=%-Demi-Bold-Italic.forTTC.ttf)
+	UniteTTC $@ $^
+Sophora-Bold-Italic.ttc: $(VARIANTS:%=%-Bold-Italic.forTTC.ttf)
+	UniteTTC $@ $^
+
+
 # Build fonts
 
 .sfd.otf:
 	./utils/sh/makefont.sh $< $@
 .sfd.ttf:
 	./utils/sh/makefont.sh $< $@
+
 
 
 
@@ -209,6 +281,7 @@ clean:
 		italic.sfd italic-*.sfd \
 		halfwidth.sfd halfwidth-*.sfd \
 		halfitalic.sfd halfitalic-*.sfd \
+		$(PRETTF) \
 		*~ *.bak *.tmp $(DISTFILE)
 	-rm -rf $(DISTDIR)
 
@@ -222,5 +295,10 @@ Sophora-TTF.7z: $(TTF) $(DOCS)
 	-rm -rf $*
 	mkdir $*;cp $^ $*
 	7za a -mx=9 $@ $*
+Sophora.7z: $(TTC) $(DOCS)
+	-rm -rf $*
+	mkdir $*;cp $^ $*
+	7za a -mx=9 $@ $*
 
-dist: $(DISTFILE)
+#dist: $(DISTFILE)
+dist: Sophora.7z

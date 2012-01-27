@@ -15,8 +15,13 @@ then
 	exit 1
 fi
 
+echo $1| grep "forTTC"; TTCFLAG=$?
+echo $1| grep "SophoraP-"; PROPFLAG=$?
 echo $1| grep "HW" # returns 0 if found, 1 otherwise
 HWFLAG=$?
+if [[ ( $TTCFLAG == 0 ) && ( $PROFLAG != 0 ) ]]; then
+	HWFLAG=0
+fi
 if [[ $HWFLAG == 0 ]]; then
 	$(cd $(dirname $0);pwd)/../pe/makefont.pe $1 $2
 	chkerr $?
