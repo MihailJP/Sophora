@@ -4,7 +4,7 @@
 
 # Variants
 
-.SUFFIXES: .sfd .otf .ttf .7z
+.SUFFIXES: .sfd .otf .ttf .ttc .7z
 
 DIRS=srcgif
 WEIGHTS=Light Book Medium Demi-Bold Bold
