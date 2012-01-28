@@ -11,7 +11,7 @@ if (len(sys.argv) < 3):
 print 'Loading base file %s...' % sys.argv[1]
 BaseFont = fontforge.open(sys.argv[1])
 
-FontName = (BaseFont.fontname,); FullName = (BaseFont.fullname,); FamilyName = (BaseFont.fullname,)
+FontName = (BaseFont.fontname,); FullName = (BaseFont.fullname,); FamilyName = (BaseFont.familyname,)
 GlyphDifference = [(),]; GlyphCode = [(),]
 FontPanose = (BaseFont.os2_panose,)
 FontNum = 2
@@ -19,7 +19,7 @@ while FontNum < len(sys.argv):
   glyphSuffix = "font%04d" % FontNum
   print 'Loading addend file %s...' % sys.argv[FontNum]
   AddendFont = fontforge.open(sys.argv[FontNum])
-  FontName += (AddendFont.fontname,); FullName += (AddendFont.fullname,); FamilyName += (AddendFont.fullname,)
+  FontName += (AddendFont.fontname,); FullName += (AddendFont.fullname,); FamilyName += (AddendFont.familyname,)
   GlyphDifference += [(),]; GlyphCode += [(),]
   FontPanose += (AddendFont.os2_panose,)
   for Glyph in AddendFont.glyphs():
