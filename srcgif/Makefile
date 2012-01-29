@@ -5,7 +5,7 @@ TARGETS=0001.sfd 0002.sfd 0003.sfd 0004.sfd 0005.sfd 0006.sfd 0007.sfd \
         0029.sfd          0031.sfd 0032.sfd 0033.sfd 0034.sfd 0035.sfd \
         0036.sfd 0037.sfd 0038.sfd 0039.sfd 0040.sfd 0041.sfd 0042.sfd \
         0043.sfd 0044.sfd 0045.sfd 0046.sfd 0047.sfd 0048.sfd 0049.sfd \
-        0050.sfd 0051.sfd 0052.sfd 0053.sfd
+        0050.sfd 0051.sfd 0052.sfd 0053.sfd 0054.sfd
 
 .PHONY: all clean utils
 
