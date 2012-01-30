@@ -7,6 +7,12 @@ endif
 
 Open($1)
 SelectWorthOutputting()
+foreach
+	if (GlyphInfo("Color") == 0xff00ff)
+		UnlinkReference()
+		CorrectDirection()
+	endif
+endloop
 if ($2:e == 'otf')
 	UnlinkReference()
 elseif ($2:e == 'ttf')
