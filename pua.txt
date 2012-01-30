@@ -18,6 +18,18 @@
 	　忍びいろは。忍者が使った暗号文字と言われています。
 	　いろは順に収録してあります。
 
+■U+E337、U+E44D、U+E491、U+E517、U+E5B1、U+E734～U+E735、U+E74E、U+E77B、
+　U+E79E、U+E7A2、U+E7B2、U+E7C3～U+E7CC、U+E7E4、U+E8B3～U+E8D7、
+　U+EAD0～U+EADA、U+EAF1～U+EAF2、U+EBA0～U+EBAE、U+EEC2～U+EF15、
+　U+EFA0～U+EFAE、U+EFDD～U+EFDF、U+F00A～U+F040、U+F106～U+F161
+　U+F193～U+F23A、U+F2E0～U+F2FD、U+F4F9～U+F4FF、U+F704～U+F71C：
+	　ラテン文字の拡張。MUFI character recommendation v. 3.0に基づいています。
+	但し、グリフの合成で表現できる文字と、“should be retained for backwards
+	compatibility and not used for any new character”となっている文字につい
+	ては、諸事情により収録していませんし、その予定もありません。
+	　MUFI character recommendationの内容は、MUFIのサイトで参照できます。
+	http://www.mufi.info/specs/
+
 ■U+EC01～U+ECA7：
 	　変体仮名。住基仮名の番号順になっているはずです。
 
