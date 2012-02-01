@@ -8,7 +8,6 @@ endif
 Print("Reading source files...")
 Open($1)
 
-SetTableField("isFixedPitch", 1, 'post')
 SetTableField("advanceWidthMax", GetTableOffset(4*3, 2, 'hmtx'), 'hhea')
 Save()
 

@@ -15,20 +15,21 @@ then
 	exit 1
 fi
 
-echo $1| grep "forTTC"; TTCFLAG=$?
 echo $1| grep "SophoraP-"; PROPFLAG=$?
-echo $1| grep "HW" # returns 0 if found, 1 otherwise
-HWFLAG=$?
-if [[ ( $TTCFLAG == 0 ) && ( $PROFLAG != 0 ) ]]; then
-	HWFLAG=0
+echo $1| grep "HW"; HWFLAG=$? # returns 0 if found, 1 otherwise
+
+if [[ $HWFLAG != 0 ]]; then
+	PROPFLAG=1
 fi
-if [[ $HWFLAG == 0 ]]; then
-	$(cd $(dirname $0);pwd)/../pe/makefont.pe $1 $2
+
+$(cd $(dirname $0);pwd)/../pe/makefont.pe $1 $2
+chkerr $?
+if [[ $PROPFLAG != 0 ]]; then
+	$(cd $(dirname $0);pwd)/../pe/flagmono.pe $2
 	chkerr $?
-	$(cd $(dirname $0);pwd)/../pe/hwhack.pe $2
-	chkerr $?
-else
-	$(cd $(dirname $0);pwd)/../pe/makefont.pe $1 $2
-	chkerr $?
+	if [[ $HWFLAG == 0 ]]; then
+		$(cd $(dirname $0);pwd)/../pe/hwhack.pe $2
+		chkerr $?
+	fi
 fi
 exit 0
