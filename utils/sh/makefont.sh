@@ -25,10 +25,10 @@ fi
 $(cd $(dirname $0);pwd)/../pe/makefont.pe $1 $2
 chkerr $?
 if [[ $PROPFLAG != 0 ]]; then
-	$(cd $(dirname $0);pwd)/../pe/flagmono.pe $2
+	$(cd $(dirname $0);pwd)/../mensis/flagmono.pe $2
 	chkerr $?
 	if [[ $HWFLAG == 0 ]]; then
-		$(cd $(dirname $0);pwd)/../pe/hwhack.pe $2
+		$(cd $(dirname $0);pwd)/../mensis/hwhack.pe $2
 		chkerr $?
 	fi
 fi
