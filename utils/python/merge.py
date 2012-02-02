@@ -14,6 +14,14 @@ BaseFont = fontforge.open(sys.argv[1])
 FontName = (BaseFont.fontname,); FullName = (BaseFont.fullname,); FamilyName = (BaseFont.familyname,)
 GlyphDifference = [(),]; GlyphCode = [(),]
 FontPanose = (BaseFont.os2_panose,)
+FontMetrics = ((BaseFont.os2_typoascent, BaseFont.os2_typoascent.add,
+                BaseFont.os2_typodescent, BaseFont.os2_typodescent.add,
+                BaseFont.os2_typolinegap,
+                BaseFont.os2_winascent, BaseFont.os2_winascent.add,
+                BaseFont.os2_windescent, BaseFont.os2_windescent.add,
+                BaseFont.hhea_ascent, BaseFont.hhea_ascent.add,
+                BaseFont.hhea_descent, BaseFont.hhea_descent.add,
+                BaseFont.hhea_linegap),)
 FontNum = 2
 while FontNum < len(sys.argv):
   glyphSuffix = "font%04d" % FontNum
@@ -22,6 +30,14 @@ while FontNum < len(sys.argv):
   FontName += (AddendFont.fontname,); FullName += (AddendFont.fullname,); FamilyName += (AddendFont.familyname,)
   GlyphDifference += [(),]; GlyphCode += [(),]
   FontPanose += (AddendFont.os2_panose,)
+  FontMetrics = ((AddendFont.os2_typoascent, AddendFont.os2_typoascent.add,
+                  AddendFont.os2_typodescent, AddendFont.os2_typodescent.add,
+                  AddendFont.os2_typolinegap,
+                  AddendFont.os2_winascent, AddendFont.os2_winascent.add,
+                  AddendFont.os2_windescent, AddendFont.os2_windescent.add,
+                  AddendFont.hhea_ascent, AddendFont.hhea_ascent.add,
+                  AddendFont.hhea_descent, AddendFont.hhea_descent.add,
+                  AddendFont.hhea_linegap),)
   for Glyph in AddendFont.glyphs():
     if Glyph.isWorthOutputting():
       GlyphName = Glyph.glyphname; GlyphDiffers = False
@@ -67,6 +83,13 @@ rePanose = re.compile('^Panose: ')
 reEncodingBMP = re.compile('^Encoding: UnicodeBmp')
 reEncodingFull = re.compile('^Encoding: UnicodeFull')
 reSpace = re.compile(' ')
+MetricName = ('OS2TypoAscent', 'OS2TypoAOffset', 'OS2TypoDescent', 'OS2TypoDOffset', 'OS2TypoLinegap',
+              'OS2WinAscent', 'OS2WinAOffset', 'OS2WinDescent', 'OS2WinDOffset',
+              'HheadAscent', 'HheadAOffset', 'HheadDescent', 'HheadDOffset', 'LineGap')
+reMetrics = (); i=0
+for nom in MetricName:
+  reMetrics += (re.compile('^'+MetricName[i]+': '),)
+  i+=1
 
 FontNum = 2
 while FontNum < len(sys.argv):
@@ -121,6 +144,13 @@ while FontNum < len(sys.argv):
         target.write(line)
       PreviousSwapType = 0; PreviousGlyph = 0
     else:
-      target.write(line)
+      thruput=True; i=0
+      for reg in reMetrics:
+        if reg.match(line):
+          target.write('%s: %d' % MetricName[i], FontMetrics[i])
+          thruput=False
+        i+=1
+      if thruput:
+        target.write(line)
   target.close()
   FontNum += 1
