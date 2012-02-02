@@ -301,10 +301,6 @@ Encoding: 74 74 7
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "horn" 300 550 basechar 0
-AnchorPoint: "topright" 300 550 basechar 0
-AnchorPoint: "center" 163 250 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "btmdiac" 163 -200 basechar 0
 AnchorPoint: "ogonek" 163 -200 basechar 0
 AnchorPoint: "topdiac" 163 550 basechar 0
@@ -338,10 +334,6 @@ Encoding: 97 97 8
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
 AnchorPoint: "ogonek" 210 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
@@ -390,10 +382,6 @@ Encoding: 98 98 9
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "horn" 300 550 basechar 0
-AnchorPoint: "topright" 300 550 basechar 0
-AnchorPoint: "center" 163 250 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
 AnchorPoint: "topdiac" 163 550 basechar 0
@@ -433,10 +421,6 @@ Encoding: 99 99 10
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
@@ -472,10 +456,6 @@ Encoding: 100 100 11
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "horn" 300 550 basechar 0
-AnchorPoint: "topright" 300 550 basechar 0
-AnchorPoint: "center" 163 250 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
 AnchorPoint: "topdiac" 163 550 basechar 0
@@ -532,10 +512,6 @@ Encoding: 101 101 12
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
@@ -578,10 +554,6 @@ Encoding: 102 102 13
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "horn" 300 550 basechar 0
-AnchorPoint: "topright" 300 550 basechar 0
-AnchorPoint: "center" 163 250 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
 AnchorPoint: "topdiac" 163 550 basechar 0
@@ -620,10 +592,6 @@ Encoding: 103 103 14
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "btmdiac" 163 -200 basechar 0
 AnchorPoint: "ogonek" 163 -200 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
@@ -694,10 +662,6 @@ Encoding: 104 104 15
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "horn" 300 550 basechar 0
-AnchorPoint: "topright" 300 550 basechar 0
-AnchorPoint: "center" 163 250 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
 AnchorPoint: "topdiac" 163 550 basechar 0
@@ -739,10 +703,6 @@ Encoding: 105 105 16
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
 LayerCount: 2
@@ -777,10 +737,6 @@ Encoding: 106 106 17
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "btmdiac" 163 -200 basechar 0
 AnchorPoint: "ogonek" 163 -200 basechar 0
 LayerCount: 2
@@ -814,10 +770,6 @@ Encoding: 107 107 18
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "horn" 300 550 basechar 0
-AnchorPoint: "topright" 300 550 basechar 0
-AnchorPoint: "center" 163 250 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
 AnchorPoint: "topdiac" 163 550 basechar 0
@@ -871,10 +823,6 @@ Encoding: 108 108 19
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "horn" 300 550 basechar 0
-AnchorPoint: "topright" 300 550 basechar 0
-AnchorPoint: "center" 163 250 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
 AnchorPoint: "topdiac" 163 550 basechar 0
@@ -919,10 +867,6 @@ Encoding: 109 109 20
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
@@ -979,10 +923,6 @@ Encoding: 110 110 21
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
@@ -1025,10 +965,6 @@ Encoding: 111 111 22
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
 AnchorPoint: "ogonek" 130 10 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
@@ -1063,10 +999,6 @@ Encoding: 112 112 23
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "ogonek" 163 -200 basechar 0
 AnchorPoint: "btmdiac" 163 -200 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
@@ -1121,10 +1053,6 @@ Encoding: 113 113 24
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "ogonek" 163 -200 basechar 0
 AnchorPoint: "btmdiac" 163 -200 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
@@ -1173,10 +1101,6 @@ Encoding: 114 114 25
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
@@ -1221,10 +1145,6 @@ Encoding: 115 115 26
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
@@ -1270,10 +1190,6 @@ Encoding: 116 116 27
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
@@ -1311,10 +1227,6 @@ Encoding: 117 117 28
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
 AnchorPoint: "ogonek" 260 10 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
@@ -1361,10 +1273,6 @@ Encoding: 118 118 29
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
@@ -1405,10 +1313,6 @@ Encoding: 119 119 30
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
@@ -1453,10 +1357,6 @@ Encoding: 120 120 31
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
@@ -1508,10 +1408,6 @@ Encoding: 121 121 32
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "ogonek" 163 -200 basechar 0
 AnchorPoint: "btmdiac" 163 -200 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
@@ -1554,10 +1450,6 @@ Encoding: 122 122 33
 Width: 325
 VWidth: 0
 Flags: HMW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
@@ -1612,10 +1504,6 @@ Encoding: 65536 -1 34
 Width: 325
 VWidth: 0
 Flags: HW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
 AnchorPoint: "ogonek" 163 0 basechar 0
 AnchorPoint: "btmdiac" 163 0 basechar 0
@@ -1642,10 +1530,6 @@ Encoding: 65537 -1 35
 Width: 325
 VWidth: 0
 Flags: HW
-AnchorPoint: "topright" 300 380 basechar 0
-AnchorPoint: "horn" 300 380 basechar 0
-AnchorPoint: "center" 163 160 basechar 0
-AnchorPoint: "boxcenter" 163 250 basechar 0
 AnchorPoint: "topdiac" 163 380 basechar 0
 AnchorPoint: "ogonek" 163 -200 basechar 0
 AnchorPoint: "btmdiac" 163 -200 basechar 0
