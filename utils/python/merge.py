@@ -30,14 +30,14 @@ while FontNum < len(sys.argv):
   FontName += (AddendFont.fontname,); FullName += (AddendFont.fullname,); FamilyName += (AddendFont.familyname,)
   GlyphDifference += [(),]; GlyphCode += [(),]
   FontPanose += (AddendFont.os2_panose,)
-  FontMetrics = ((AddendFont.os2_typoascent, AddendFont.os2_typoascent_add,
-                  AddendFont.os2_typodescent, AddendFont.os2_typodescent_add,
-                  AddendFont.os2_typolinegap,
-                  AddendFont.os2_winascent, AddendFont.os2_winascent_add,
-                  AddendFont.os2_windescent, AddendFont.os2_windescent_add,
-                  AddendFont.hhea_ascent, AddendFont.hhea_ascent_add,
-                  AddendFont.hhea_descent, AddendFont.hhea_descent_add,
-                  AddendFont.hhea_linegap),)
+  FontMetrics += ((AddendFont.os2_typoascent, AddendFont.os2_typoascent_add,
+                   AddendFont.os2_typodescent, AddendFont.os2_typodescent_add,
+                   AddendFont.os2_typolinegap,
+                   AddendFont.os2_winascent, AddendFont.os2_winascent_add,
+                   AddendFont.os2_windescent, AddendFont.os2_windescent_add,
+                   AddendFont.hhea_ascent, AddendFont.hhea_ascent_add,
+                   AddendFont.hhea_descent, AddendFont.hhea_descent_add,
+                   AddendFont.hhea_linegap),)
   for Glyph in AddendFont.glyphs():
     if Glyph.isWorthOutputting():
       GlyphName = Glyph.glyphname; GlyphDiffers = False
