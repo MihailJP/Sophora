@@ -147,7 +147,7 @@ while FontNum < len(sys.argv):
       thruput=True; i=0
       for reg in reMetrics:
         if reg.match(line):
-          target.write('%s: %d' % (MetricName[i], FontMetrics[i]))
+          target.write('%s: %d' % (MetricName[i], FontMetrics[FontNum-1][i]))
           thruput=False
         i+=1
       if thruput:
