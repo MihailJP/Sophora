@@ -6,7 +6,7 @@ import fontforge
 
 HackFlag = False
 if (len(sys.argv) < 4):
-  print 'Usage: fontforge -script %s base-sfd halfwidth-sfd target-file [hack-flag]' % sys.argv[0]
+  print 'Usage: fontforge -script %s base-sfd halfwidth-sfd target-file' % sys.argv[0]
   exit(1)
 elif (len(sys.argv) > 4):
   HackFlag = boolean(sys.argv[4])
@@ -43,37 +43,6 @@ for Glyph in HW.glyphs():
     Base.paste()
     Base[nom].color = col
 
-if HackFlag:
-  print "Hacking glyph width..."
-  Base.addLookup("[MONO] Width Hack", "gsub_multiple", (),
-    (
-      ("ccmp",
-        (
-          ("DFLT",("dflt",)),
-          ("latn",("dflt","ROM ")),
-          ("kana",("dflt",)),
-          ("hani",("dflt",)),
-          ("grek",("dflt",)),
-          ("cyrl",("dflt","MKD ","SRB ")),
-          ("hebr",("dflt",)),
-          ("runr",("dflt",)),
-          ("brai",("dflt",)),
-        )
-      ),
-    )
-  )
-
-  GlyphCount = 0
-  for Glyph in Base.glyphs():
-    if Glyph.isWorthOutputting():
-      if Glyph.width != basewidth:
-        if (Glyph.color != 0x00ff00) and (Glyph.color != 0x008000):
-          if (GlyphCount % 256) == 0:
-            Base.addLookupSubtable("[MONO] Width Hack","[MONO] Width Hack-"+str(GlyphCount / 256))
-          Glyph.width = basewidth
-          Glyph.addPosSub("[MONO] Width Hack-"+str(GlyphCount / 256), (Glyph.glyphname, "space"))
-          GlyphCount+=1
-
 print "Changing the font information..."
 p = re.compile('-Italic')
 if HackFlag:
@@ -89,8 +58,8 @@ Base.os2_windescent = Base.descent; Base.os2_windescent_add = 0
 Base.os2_typoascent = Base.ascent; Base.os2_typoascent_add = 0
 Base.os2_typodescent = -Base.descent; Base.os2_typodescent_add = 0
 Base.os2_typolinegap = 0
-Base.hhea_ascent = Base.ascent; Base.hhea_ascent_add = 0
-Base.hhea_descent = -Base.descent; Base.hhea_descent_add = 0
+#Base.hhea_ascent = Base.ascent; Base.hhea_ascent_add = 0
+#Base.hhea_descent = -Base.descent; Base.hhea_descent_add = 0
 Base.hhea_linegap = 0
 Base["i"].addPosSub("Dotless forms-1", "dotlessi.half")
 Base["j"].addPosSub("Dotless forms-1", "dotlessj.half")
