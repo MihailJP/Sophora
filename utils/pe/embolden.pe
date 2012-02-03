@@ -45,6 +45,13 @@ AddExtrema()
 RoundToInt()
 Simplify()
 ExpandStroke(Strtol($2)*WorkingScale,0,2,0,1)
+foreach
+	if (GlyphInfo("Color") == 0xff00ff)
+		UnlinkReference()
+		CorrectDirection()
+		SetGlyphColor(-2)
+	endif
+endloop
 RemoveOverlap()
 Scale(100/WorkingScale,0,0)
 SetFontNames(Strsub($fontname,0,Strrstr($fontname,"-"+$weight))+"-"+$3,$familyname,$familyname+" "+$3+weightcat+weightsuffix,$3+weightsuffix)
