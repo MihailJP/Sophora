@@ -14,13 +14,13 @@ BaseFont = fontforge.open(sys.argv[1])
 FontName = (BaseFont.fontname,); FullName = (BaseFont.fullname,); FamilyName = (BaseFont.familyname,)
 GlyphDifference = [(),]; GlyphCode = [(),]
 FontPanose = (BaseFont.os2_panose,)
-FontMetrics = ((BaseFont.os2_typoascent, BaseFont.os2_typoascent.add,
-                BaseFont.os2_typodescent, BaseFont.os2_typodescent.add,
+FontMetrics = ((BaseFont.os2_typoascent, BaseFont.os2_typoascent_add,
+                BaseFont.os2_typodescent, BaseFont.os2_typodescent_add,
                 BaseFont.os2_typolinegap,
-                BaseFont.os2_winascent, BaseFont.os2_winascent.add,
-                BaseFont.os2_windescent, BaseFont.os2_windescent.add,
-                BaseFont.hhea_ascent, BaseFont.hhea_ascent.add,
-                BaseFont.hhea_descent, BaseFont.hhea_descent.add,
+                BaseFont.os2_winascent, BaseFont.os2_winascent_add,
+                BaseFont.os2_windescent, BaseFont.os2_windescent_add,
+                BaseFont.hhea_ascent, BaseFont.hhea_ascent_add,
+                BaseFont.hhea_descent, BaseFont.hhea_descent_add,
                 BaseFont.hhea_linegap),)
 FontNum = 2
 while FontNum < len(sys.argv):
@@ -30,13 +30,13 @@ while FontNum < len(sys.argv):
   FontName += (AddendFont.fontname,); FullName += (AddendFont.fullname,); FamilyName += (AddendFont.familyname,)
   GlyphDifference += [(),]; GlyphCode += [(),]
   FontPanose += (AddendFont.os2_panose,)
-  FontMetrics = ((AddendFont.os2_typoascent, AddendFont.os2_typoascent.add,
-                  AddendFont.os2_typodescent, AddendFont.os2_typodescent.add,
+  FontMetrics = ((AddendFont.os2_typoascent, AddendFont.os2_typoascent_add,
+                  AddendFont.os2_typodescent, AddendFont.os2_typodescent_add,
                   AddendFont.os2_typolinegap,
-                  AddendFont.os2_winascent, AddendFont.os2_winascent.add,
-                  AddendFont.os2_windescent, AddendFont.os2_windescent.add,
-                  AddendFont.hhea_ascent, AddendFont.hhea_ascent.add,
-                  AddendFont.hhea_descent, AddendFont.hhea_descent.add,
+                  AddendFont.os2_winascent, AddendFont.os2_winascent_add,
+                  AddendFont.os2_windescent, AddendFont.os2_windescent_add,
+                  AddendFont.hhea_ascent, AddendFont.hhea_ascent_add,
+                  AddendFont.hhea_descent, AddendFont.hhea_descent_add,
                   AddendFont.hhea_linegap),)
   for Glyph in AddendFont.glyphs():
     if Glyph.isWorthOutputting():
