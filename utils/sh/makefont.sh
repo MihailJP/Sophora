@@ -18,7 +18,7 @@ fi
 echo $1| grep "SophoraP-"; PROPFLAG=$?
 echo $1| grep "HW"; HWFLAG=$? # returns 0 if found, 1 otherwise
 
-if [[ $HWFLAG != 0 ]]; then
+if [[ $HWFLAG == 0 ]]; then
 	PROPFLAG=1
 fi
 
@@ -27,9 +27,5 @@ chkerr $?
 if [[ $PROPFLAG != 0 ]]; then
 	$(cd $(dirname $0);pwd)/../mensis/flagmono.pe $2
 	chkerr $?
-	if [[ $HWFLAG == 0 ]]; then
-		$(cd $(dirname $0);pwd)/../mensis/hwhack.pe $2
-		chkerr $?
-	fi
 fi
 exit 0
