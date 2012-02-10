@@ -13,7 +13,9 @@ else
 endif
 
 WorkingScale=10
-if (Strtol($2) > 50)
+if (Strtol($2) == 15)
+	WorkingScale=12
+elseif (Strtol($2) > 50)
 	WorkingScale=5
 endif
 
