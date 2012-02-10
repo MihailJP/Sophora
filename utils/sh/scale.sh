@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 function chkerr {
 	if [[ $1 != 0 ]]
