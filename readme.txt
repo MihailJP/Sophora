@@ -65,6 +65,19 @@
 	Blog： http://shinshu.fm/MHz/48.59
 
 
+■開発環境
+	OS： デュアルブート(Windows 7 Home Premium、openSUSE 12.1)
+	メモリ： 2GB
+	Cygwin： 1.7系列
+	バージョン管理ソフト： Git
+	FontForge： Gitリポジトリの最新版を使用
+	Mensis： 7 May 2008 (Linuxのみ。Cygwin環境ではビルド失敗)
+	Perl： 5.14 (Linux)
+	原稿用紙： 無印良品・整うノート(B5、30枚、6mm罫) 片面使用
+	ボールペン： 0.5mm油性黒(メイン)、0.7mm油性赤(補助)
+	Gimp： 2.6系列
+
+
 ■更新情報
 
 	history.txtを参照してください。
