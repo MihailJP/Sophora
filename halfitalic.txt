@@ -1,4 +1,4 @@
-BeginChars: 65538 36
+BeginChars: 1114114 36
 
 StartChar: one
 Encoding: 49 49 0
@@ -1500,7 +1500,7 @@ Colour: ffff
 EndChar
 
 StartChar: dotlessi.half
-Encoding: 65536 -1 34
+Encoding: 1114112 -1 34
 Width: 325
 VWidth: 0
 Flags: HW
@@ -1526,7 +1526,7 @@ EndSplineSet
 EndChar
 
 StartChar: dotlessj.half
-Encoding: 65537 -1 35
+Encoding: 1114113 -1 35
 Width: 325
 VWidth: 0
 Flags: HW
