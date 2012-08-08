@@ -315,9 +315,13 @@ srcgif:
 clean:
 	-for i in $(DIRS); do cd $$i;make clean;cd ..;done
 	-rm $(TARGETS) $(TARGETS:%.otf=%.sfd) \
-		italic.sfd italic-*.sfd \
-		halfwidth.sfd halfwidth-*.sfd \
-		halfitalic.sfd halfitalic-*.sfd \
+		$(TARGETS:%.otf=%.tmp.sfd) \
+		$(TARGETS:%.otf=%.tmp2.sfd) \
+		Sophora-Light.tmp3.sfd \
+		Sophora-Light.tmp4.sfd \
+		italic.sfd italic.tmp.sfd italic-*.sfd \
+		halfwidth.sfd halfwidth.tmp.sfd halfwidth-*.sfd \
+		halfitalic.sfd halfitalic.tmp.sfd halfitalic-*.sfd \
 		$(PRETTF) \
 		*~ *.bak *.tmp $(DISTFILE)
 	-rm -rf $(DISTDIR)
