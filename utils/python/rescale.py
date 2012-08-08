@@ -24,6 +24,7 @@ BaseFont.transform(psMat.scale(1.2))
 
 WidthJ = BaseFont["ahiragana"].width
 WidthE = BaseFont["A"].width
+WidthV = BaseFont["A"].vwidth
 
 BaseFont.selection.none()
 for glyph in BaseFont.glyphs():
@@ -35,6 +36,7 @@ print 'Moving...'
 BaseFont.transform(psMat.translate(float(WidthJ - WidthE) / 2.0, 0.0))
 for glyph in BaseFont.selection.byGlyphs:
   glyph.width = WidthJ
+  glyph.vwidth = WidthV
 
 print 'Saving target file %s...' % sys.argv[2]
 BaseFont.save(sys.argv[2])
