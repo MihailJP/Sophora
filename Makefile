@@ -93,7 +93,9 @@ SophoraP-Bold.sfd: Sophora-Bold.sfd
 
 italic.sfd: Sophora.sfd italic.txt
 	./utils/perl/fonthead.pl $^ > $@
-italic-Light.sfd: italic.sfd
+italic.tmp.sfd: italic.sfd
+	./utils/python/sparse.py $< $@
+italic-Light.sfd: italic.tmp.sfd
 	./utils/sh/scale.sh $< $@
 
 # Italic weight variant
@@ -150,7 +152,9 @@ SophoraP-Bold-Italic.sfd: SophoraP-Bold.sfd italic-P-Bold.sfd
 
 halfwidth.sfd: Sophora-Light.sfd halfwidth.txt
 	./utils/perl/fonthead.pl $^ > $@
-halfwidth-Light.sfd: halfwidth.sfd
+halfwidth.tmp.sfd: italic.sfd
+	./utils/python/sparse.py $< $@
+halfwidth-Light.sfd: halfwidth.tmp.sfd
 	./utils/python/scalehw.py $< $@
 
 # Halfwidth weight variant
@@ -181,7 +185,9 @@ SophoraHW-Bold.sfd: Sophora-Bold.sfd halfwidth-Bold.sfd
 
 halfitalic.sfd: Sophora-Light.sfd halfitalic.txt
 	./utils/perl/fonthead.pl $^ > $@
-halfitalic-Light.sfd: halfitalic.sfd
+halfitalic.tmp.sfd: italic.sfd
+	./utils/python/sparse.py $< $@
+halfitalic-Light.sfd: halfitalic.tmp.sfd
 	./utils/python/scalehw.py $< $@
 
 # Halfwidth italic weight variant
