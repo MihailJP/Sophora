@@ -14,7 +14,7 @@ elif (len(sys.argv) > 4):
 print "Reading source files..."
 Base = fontforge.open(sys.argv[1])
 HW = fontforge.open(sys.argv[2])
-basewidth = HW["space"].width
+basewidth = HW["a"].width
 
 ReferenceGlyph = ()
 print "Checking for references..."
