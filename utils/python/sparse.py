@@ -20,7 +20,7 @@ for glyph in BaseFont.glyphs():
 print 'Rescaling...'
 BaseFont.transform(psMat.translate(float(origWidth) * 0.1, 0.0))
 for glyph in BaseFont.selection.byGlyphs:
-  glyph.width = origWidth
+  glyph.width = origWidth * 1.2
 
 print 'Saving target file %s...' % sys.argv[2]
 BaseFont.save(sys.argv[2])
