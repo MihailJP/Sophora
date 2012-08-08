@@ -18,7 +18,7 @@ for glyph in BaseFont.glyphs():
     BaseFont.selection.select(("more",), glyph)
 
 print 'Rescaling...'
-BaseFont.transform(psMat.translate(float(origWidth) * 1.1, 0.0))
+BaseFont.transform(psMat.translate(float(origWidth) * 0.1, 0.0))
 for glyph in BaseFont.selection.byGlyphs:
   glyph.width = origWidth
 

@@ -152,7 +152,7 @@ SophoraP-Bold-Italic.sfd: SophoraP-Bold.sfd italic-P-Bold.sfd
 
 halfwidth.sfd: Sophora-Light.sfd halfwidth.txt
 	./utils/perl/fonthead.pl $^ > $@
-halfwidth.tmp.sfd: italic.sfd
+halfwidth.tmp.sfd: halfwidth.sfd
 	./utils/python/sparse.py $< $@
 halfwidth-Light.sfd: halfwidth.tmp.sfd
 	./utils/python/scalehw.py $< $@
@@ -185,7 +185,7 @@ SophoraHW-Bold.sfd: Sophora-Bold.sfd halfwidth-Bold.sfd
 
 halfitalic.sfd: Sophora-Light.sfd halfitalic.txt
 	./utils/perl/fonthead.pl $^ > $@
-halfitalic.tmp.sfd: italic.sfd
+halfitalic.tmp.sfd: halfitalic.sfd
 	./utils/python/sparse.py $< $@
 halfitalic-Light.sfd: halfitalic.tmp.sfd
 	./utils/python/scalehw.py $< $@
