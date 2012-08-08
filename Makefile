@@ -31,19 +31,50 @@ ttc: $(TTC)
 
 # Scaling
 
-Sophora-Light.sfd: Sophora.sfd
+Sophora-Light.tmp.sfd: Sophora.sfd
 	./utils/sh/scale.sh $< $@
 
 # Weight variant
 
-Sophora-Book.sfd: Sophora-Light.sfd
+Sophora-Book.tmp.sfd: Sophora-Light.tmp.sfd
 	./utils/pe/embolden.pe $< 15 Book $@
-Sophora-Medium.sfd: Sophora-Light.sfd
+Sophora-Medium.tmp.sfd: Sophora-Light.tmp.sfd
 	./utils/pe/embolden.pe $< 30 Medium $@
-Sophora-Demi-Bold.sfd: Sophora-Light.sfd
+Sophora-Demi-Bold.tmp.sfd: Sophora-Light.tmp.sfd
 	./utils/pe/embolden.pe $< 45 Demi-Bold $@
-Sophora-Bold.sfd: Sophora-Light.sfd
+Sophora-Bold.tmp.sfd: Sophora-Light.tmp.sfd
 	./utils/pe/embolden.pe $< 60 Bold $@
+
+Sophora-Light.tmp3.sfd: Sophora.sfd
+	./utils/python/debolden.py $< $@
+
+# Rescaling
+
+Sophora-Light.tmp2.sfd: Sophora-Light.tmp.sfd
+	./utils/python/rescale.py $< $@
+Sophora-Book.tmp2.sfd: Sophora-Book.tmp.sfd
+	./utils/python/rescale.py $< $@
+Sophora-Medium.tmp2.sfd: Sophora-Medium.tmp.sfd
+	./utils/python/rescale.py $< $@
+Sophora-Demi-Bold.tmp2.sfd: Sophora-Demi-Bold.tmp.sfd
+	./utils/python/rescale.py $< $@
+Sophora-Bold.tmp2.sfd: Sophora-Bold.tmp.sfd
+	./utils/python/rescale.py $< $@
+Sophora-Light.tmp4.sfd: Sophora-Light.tmp3.sfd
+	./utils/python/rescale.py $< $@
+
+# Overlay
+
+Sophora-Light.sfd: Sophora-Light.tmp2.sfd Sophora-Light.tmp4.sfd
+	./utils/python/overlay.py $^ $@
+Sophora-Book.sfd: Sophora-Book.tmp2.sfd Sophora-Light.tmp2.sfd
+	./utils/python/overlay.py $^ $@
+Sophora-Medium.sfd: Sophora-Medium.tmp2.sfd Sophora-Book.tmp2.sfd
+	./utils/python/overlay.py $^ $@
+Sophora-Demi-Bold.sfd: Sophora-Demi-Bold.tmp2.sfd Sophora-Medium.tmp2.sfd
+	./utils/python/overlay.py $^ $@
+Sophora-Bold.sfd: Sophora-Bold.tmp2.sfd Sophora-Demi-Bold.tmp2.sfd
+	./utils/python/overlay.py $^ $@
 
 # Proportional variant
 

@@ -31,6 +31,10 @@ foreach
 		UnlinkReference()
 	elseif (GlyphInfo("Color") == 0xffff00)
 		UnlinkReference()
+	elseif (GlyphInfo("Color") == 0x00d4d4)
+		UnlinkReference()
+	elseif (GlyphInfo("Color") == 0xd4d400)
+		UnlinkReference()
 	elseif (GlyphInfo("Color") == 0x0000ff)
 		UnlinkReference()
 		SetWidth(300)
@@ -40,7 +44,9 @@ foreach
 	if (GlyphInfo("Color") == 0x00ffff)
 		SetLBearing(50);SetRBearing(50)
 	elseif (GlyphInfo("Color") == 0xffffff)
-		SetLBearing(80);SetRBearing(80)
+		SetLBearing(100);SetRBearing(100)
+	elseif (GlyphInfo("Color") == 0x00d4d4)
+		SetLBearing(50);SetRBearing(50)
 	endif
 endloop
 foreach
