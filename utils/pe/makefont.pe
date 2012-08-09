@@ -12,6 +12,7 @@ foreach
 		UnlinkReference()
 		CorrectDirection()
 	endif
+    SetVWidth($ascent)
 endloop
 if ($2:e == 'otf')
 	UnlinkReference()
