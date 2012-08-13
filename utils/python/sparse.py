@@ -11,15 +11,15 @@ if (len(sys.argv) < 3):
 print 'Loading base file %s...' % sys.argv[1]
 BaseFont = fontforge.open(sys.argv[1])
 
-origWidth = BaseFont["a"].width
 BaseFont.selection.none()
 for glyph in BaseFont.glyphs():
   if glyph.isWorthOutputting():
     BaseFont.selection.select(("more",), glyph)
 
 print 'Rescaling...'
-BaseFont.transform(psMat.translate(float(origWidth) * 0.1, 0.0))
 for glyph in BaseFont.selection.byGlyphs:
+  origWidth = glyph.width
+  glyph.transform(psMat.translate(float(origWidth) * 0.1, 0.0), ("partialRefs",))
   glyph.width = origWidth * 1.2
 
 print 'Saving target file %s...' % sys.argv[2]
