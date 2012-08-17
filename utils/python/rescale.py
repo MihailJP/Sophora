@@ -19,12 +19,14 @@ for glyph in BaseFont.glyphs():
     if (glyph.color == 0xff8000) or (glyph.color == 0x00d4d4) or (glyph.color == 0xd4d400):
       BaseFont.selection.select(("more",), glyph)
 
+WidthE = BaseFont["ahiragana"].width
+WidthV = BaseFont["ahiragana"].vwidth
+      
 print 'Rescaling...'
 BaseFont.transform(psMat.scale(1.2))
 
 WidthJ = BaseFont["ahiragana"].width
-WidthE = BaseFont["A"].width
-WidthV = BaseFont["A"].vwidth
+WidthA = BaseFont["A"].width
 
 BaseFont.selection.none()
 for glyph in BaseFont.glyphs():
@@ -35,7 +37,10 @@ for glyph in BaseFont.glyphs():
 print 'Moving...'
 BaseFont.transform(psMat.translate(float(WidthJ - WidthE) / 2.0, 0.0))
 for glyph in BaseFont.selection.byGlyphs:
-  glyph.width = WidthJ
+  if glyph.width >= WidthE:
+    glyph.width = WidthJ
+  else:
+    glyph.width = WidthJ / 2
   glyph.vwidth = WidthV
 
 print 'Saving target file %s...' % sys.argv[2]
