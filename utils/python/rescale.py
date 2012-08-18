@@ -24,6 +24,7 @@ WidthV = BaseFont["ahiragana"].vwidth
       
 print 'Rescaling...'
 BaseFont.transform(psMat.scale(1.2))
+BaseFont.transform(psMat.translate(0,-50))
 
 WidthJ = BaseFont["ahiragana"].width
 WidthA = BaseFont["A"].width
