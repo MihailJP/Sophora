@@ -65,7 +65,7 @@ Sophora-Light.tmp4.sfd: Sophora-Light.tmp3.sfd
 
 # Overlay
 
-Sophora-Light.sfd: Sophora-Light.tmp2.sfd Sophora-Light.tmp4.sfd
+Sophora-Light.tmp5.sfd: Sophora-Light.tmp2.sfd Sophora-Light.tmp4.sfd
 	./utils/python/overlay.py $^ $@
 Sophora-Book.sfd: Sophora-Book.tmp2.sfd Sophora-Light.tmp2.sfd
 	./utils/python/overlay.py $^ $@
@@ -75,6 +75,19 @@ Sophora-Demi-Bold.sfd: Sophora-Demi-Bold.tmp2.sfd Sophora-Medium.tmp2.sfd
 	./utils/python/overlay.py $^ $@
 Sophora-Bold.sfd: Sophora-Bold.tmp2.sfd Sophora-Demi-Bold.tmp2.sfd
 	./utils/python/overlay.py $^ $@
+
+# Overlay
+
+Sophora-Light.sfd: Sophora-Light.tmp5.sfd
+	./utils/python/rescale2.py $^ $@
+#Sophora-Book.sfd: Sophora-Book.tmp2.sfd Sophora-Light.tmp2.sfd
+#	./utils/python/overlay.py $^ $@
+#Sophora-Medium.sfd: Sophora-Medium.tmp2.sfd Sophora-Book.tmp2.sfd
+#	./utils/python/overlay.py $^ $@
+#Sophora-Demi-Bold.sfd: Sophora-Demi-Bold.tmp2.sfd Sophora-Medium.tmp2.sfd
+#	./utils/python/overlay.py $^ $@
+#Sophora-Bold.sfd: Sophora-Bold.tmp2.sfd Sophora-Demi-Bold.tmp2.sfd
+#	./utils/python/overlay.py $^ $@
 
 # Proportional variant
 
@@ -319,6 +332,7 @@ clean:
 		$(TARGETS:%.otf=%.tmp2.sfd) \
 		Sophora-Light.tmp3.sfd \
 		Sophora-Light.tmp4.sfd \
+		Sophora-Light.tmp5.sfd \
 		italic.sfd italic.tmp.sfd italic-*.sfd \
 		halfwidth.sfd halfwidth.tmp.sfd halfwidth-*.sfd \
 		halfitalic.sfd halfitalic.tmp.sfd halfitalic-*.sfd \
