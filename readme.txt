@@ -60,13 +60,14 @@
 
 
 ■開発環境
-	OS： デュアルブート(Windows 7 Home Premium、openSUSE 12.1)
-	メモリ： 2GB
+	OS： デュアルブート(Windows 7 Home Premium 32bit、openSUSE 12.2 64bit)
+	メモリ： 4GB
 	Cygwin： 1.7系列
 	バージョン管理ソフト： Git
-	FontForge： Gitリポジトリの最新版を使用
+	FontForge： 31 Jul 2012
 	Mensis： 7 May 2008 (Linuxのみ。Cygwin環境ではビルド失敗)
-	Perl： 5.14 (Linux)
+	UniteTTC:  TTC生成に使用
+	Perl： 5.16 (Linux)、5.14か5.10 (Cygwin)
 	原稿用紙： 無印良品・整うノート(B5、30枚、6mm罫) 片面使用
 	ボールペン： 0.5mm油性黒(メイン)、0.7mm油性赤(補助)
 	スキャナの設定： 400dpi
