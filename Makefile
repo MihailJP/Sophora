@@ -169,8 +169,10 @@ halfwidth.sfd: Sophora-Light.sfd halfwidth.txt
 	./utils/perl/fonthead.pl $^ > $@
 halfwidth.tmp.sfd: halfwidth.sfd
 	./utils/python/sparse.py $< $@
-halfwidth-Light.sfd: halfwidth.tmp.sfd
+halfwidth.tmp2.sfd: halfwidth.tmp.sfd
 	./utils/python/scalehw.py $< $@
+halfwidth-Light.sfd: halfwidth.tmp2.sfd
+	./utils/python/rescale2.py $^ $@
 
 # Halfwidth weight variant
 
@@ -202,8 +204,10 @@ halfitalic.sfd: Sophora-Light.sfd halfitalic.txt
 	./utils/perl/fonthead.pl $^ > $@
 halfitalic.tmp.sfd: halfitalic.sfd
 	./utils/python/sparse.py $< $@
-halfitalic-Light.sfd: halfitalic.tmp.sfd
+halfitalic.tmp2.sfd: halfitalic.tmp.sfd
 	./utils/python/scalehw.py $< $@
+halfitalic-Light.sfd: halfitalic.tmp2.sfd
+	./utils/python/rescale2.py $^ $@
 
 # Halfwidth italic weight variant
 
@@ -336,8 +340,8 @@ clean:
 		Sophora-Light.tmp4.sfd \
 		Sophora-Light.tmp5.sfd \
 		italic.sfd italic.tmp.sfd italic.tmp2.sfd italic-*.sfd \
-		halfwidth.sfd halfwidth.tmp.sfd halfwidth-*.sfd \
-		halfitalic.sfd halfitalic.tmp.sfd halfitalic-*.sfd \
+		halfwidth.sfd halfwidth.tmp.sfd halfwidth.tmp2.sfd halfwidth-*.sfd \
+		halfitalic.sfd halfitalic.tmp.sfd halfitalic.tmp2.sfd halfitalic-*.sfd \
 		$(PRETTF) \
 		*~ *.bak *.tmp $(DISTFILE)
 	-rm -rf $(DISTDIR)
