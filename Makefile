@@ -108,8 +108,10 @@ italic.sfd: Sophora.sfd italic.txt
 	./utils/perl/fonthead.pl $^ > $@
 italic.tmp.sfd: italic.sfd
 	./utils/python/sparse.py $< $@
-italic-Light.sfd: italic.tmp.sfd
+italic.tmp2.sfd: italic.tmp.sfd
 	./utils/sh/scale.sh $< $@
+italic-Light.sfd: italic.tmp2.sfd
+	./utils/python/rescale2.py $^ $@
 
 # Italic weight variant
 
@@ -333,7 +335,7 @@ clean:
 		$(TARGETS:%.otf=%.tmp3.sfd) \
 		Sophora-Light.tmp4.sfd \
 		Sophora-Light.tmp5.sfd \
-		italic.sfd italic.tmp.sfd italic-*.sfd \
+		italic.sfd italic.tmp.sfd italic.tmp2.sfd italic-*.sfd \
 		halfwidth.sfd halfwidth.tmp.sfd halfwidth-*.sfd \
 		halfitalic.sfd halfitalic.tmp.sfd halfitalic-*.sfd \
 		$(PRETTF) \

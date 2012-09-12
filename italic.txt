@@ -149,9 +149,9 @@ Encoding: 1076 1076 3
 Width: 500
 VWidth: 0
 Flags: HMW
-AnchorPoint: "ogonek" 250 -160 basechar 0
-AnchorPoint: "btmdiac" 250 -160 basechar 0
-AnchorPoint: "topdiac" 250 380 basechar 0
+AnchorPoint: "btmdiac" 250 0 basechar 0
+AnchorPoint: "ogonek" 250 0 basechar 0
+AnchorPoint: "topdiac" 250 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
