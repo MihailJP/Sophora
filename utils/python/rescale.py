@@ -3,6 +3,7 @@
 import sys
 import psMat
 import fontforge
+from color import isJGlyphP, isJGlyph
 
 if (len(sys.argv) < 3):
   print 'Usage: fontforge -script %s source-file target-file' % sys.argv[0]
@@ -14,9 +15,9 @@ BaseFont = fontforge.open(sys.argv[1])
 BaseFont.selection.none()
 for glyph in BaseFont.glyphs():
   if glyph.isWorthOutputting():
-    if glyph.color == 0xd4d400:
+    if isJGlyphP(glyph):
       glyph.unlinkRef()
-    if (glyph.color == 0xff8000) or (glyph.color == 0x00d4d4) or (glyph.color == 0xd4d400):
+    if isJGlyph(glyph):
       BaseFont.selection.select(("more",), glyph)
 
 WidthE = BaseFont["ahiragana"].width
@@ -32,7 +33,7 @@ WidthA = BaseFont["A"].width
 BaseFont.selection.none()
 for glyph in BaseFont.glyphs():
   if glyph.isWorthOutputting():
-    if (glyph.color != 0xff8000) and (glyph.color != 0x00d4d4) and (glyph.color != 0xd4d400):
+    if not isJGlyph(glyph):
       BaseFont.selection.select(("more",), glyph)
 
 print 'Moving...'

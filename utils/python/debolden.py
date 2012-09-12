@@ -4,6 +4,7 @@ import sys
 import psMat
 import fontforge
 from math import hypot
+from color import isJGlyphP, isJGlyph
 
 def fixContour(glyph):
   newLayer = fontforge.layer()
@@ -39,13 +40,13 @@ BaseFont = fontforge.open(sys.argv[1])
 
 for glyph in BaseFont.glyphs():
   if glyph.isWorthOutputting():
-    if glyph.color == 0xd4d400:
+    if isJGlyphP(glyph):
       glyph.unlinkRef()
 
 print 'Changing weight...'
 for glyph in BaseFont.glyphs():
   if glyph.isWorthOutputting():
-    if (glyph.color == 0xff8000) or (glyph.color == 0x00d4d4) or (glyph.color == 0xd4d400):
+    if isJGlyph(glyph):
       glyph.transform(psMat.scale(2.0))
       glyph.stroke("circular", 10, "butt", "miter", ("removeexternal", "cleanup"))
       fixContour(glyph)

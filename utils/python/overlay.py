@@ -2,6 +2,7 @@
 
 import sys
 import fontforge
+from color import isJGlyphP, isJGlyph
 
 if (len(sys.argv) < 4):
   print 'Usage: fontforge -script %s base-file overlay-file target-file' % sys.argv[0]
@@ -15,13 +16,13 @@ OvlFont = fontforge.open(sys.argv[2])
 
 for glyph in BaseFont.glyphs():
   if glyph.isWorthOutputting():
-    if glyph.color == 0xd4d400:
+    if isJGlyphP(glyph):
       glyph.unlinkRef()
 
 BaseFont.selection.none(); OvlFont.selection.none()
 for glyph in BaseFont.glyphs():
   if glyph.isWorthOutputting():
-    if (glyph.color == 0xff8000) or (glyph.color == 0x00d4d4) or (glyph.color == 0xd4d400):
+    if isJGlyph(glyph):
       OvlFont.selection.select(("more",), glyph.glyphname)
       BaseFont.selection.select(("more",), glyph)
 print 'Overlaying...'

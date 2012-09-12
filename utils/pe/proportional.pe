@@ -29,6 +29,8 @@ foreach
 		UnlinkReference()
 	elseif (GlyphInfo("Color") == 0x00ff00)
 		UnlinkReference()
+	elseif (GlyphInfo("Color") == 0x00d400)
+		UnlinkReference()
 	elseif (GlyphInfo("Color") == 0xffff00)
 		UnlinkReference()
 	elseif (GlyphInfo("Color") == 0x00d4d4)
