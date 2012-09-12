@@ -67,27 +67,27 @@ Sophora-Light.tmp4.sfd: Sophora-Light.tmp3.sfd
 
 Sophora-Light.tmp5.sfd: Sophora-Light.tmp2.sfd Sophora-Light.tmp4.sfd
 	./utils/python/overlay.py $^ $@
-Sophora-Book.sfd: Sophora-Book.tmp2.sfd Sophora-Light.tmp2.sfd
+Sophora-Book.tmp3.sfd: Sophora-Book.tmp2.sfd Sophora-Light.tmp2.sfd
 	./utils/python/overlay.py $^ $@
-Sophora-Medium.sfd: Sophora-Medium.tmp2.sfd Sophora-Book.tmp2.sfd
+Sophora-Medium.tmp3.sfd: Sophora-Medium.tmp2.sfd Sophora-Book.tmp2.sfd
 	./utils/python/overlay.py $^ $@
-Sophora-Demi-Bold.sfd: Sophora-Demi-Bold.tmp2.sfd Sophora-Medium.tmp2.sfd
+Sophora-Demi-Bold.tmp3.sfd: Sophora-Demi-Bold.tmp2.sfd Sophora-Medium.tmp2.sfd
 	./utils/python/overlay.py $^ $@
-Sophora-Bold.sfd: Sophora-Bold.tmp2.sfd Sophora-Demi-Bold.tmp2.sfd
+Sophora-Bold.tmp3.sfd: Sophora-Bold.tmp2.sfd Sophora-Demi-Bold.tmp2.sfd
 	./utils/python/overlay.py $^ $@
 
 # Rescaling again
 
 Sophora-Light.sfd: Sophora-Light.tmp5.sfd
 	./utils/python/rescale2.py $^ $@
-#Sophora-Book.sfd: Sophora-Book.tmp2.sfd Sophora-Light.tmp2.sfd
-#	./utils/python/overlay.py $^ $@
-#Sophora-Medium.sfd: Sophora-Medium.tmp2.sfd Sophora-Book.tmp2.sfd
-#	./utils/python/overlay.py $^ $@
-#Sophora-Demi-Bold.sfd: Sophora-Demi-Bold.tmp2.sfd Sophora-Medium.tmp2.sfd
-#	./utils/python/overlay.py $^ $@
-#Sophora-Bold.sfd: Sophora-Bold.tmp2.sfd Sophora-Demi-Bold.tmp2.sfd
-#	./utils/python/overlay.py $^ $@
+Sophora-Book.sfd: Sophora-Book.tmp3.sfd
+	./utils/python/rescale2.py $^ $@
+Sophora-Medium.sfd: Sophora-Medium.tmp3.sfd
+	./utils/python/rescale2.py $^ $@
+Sophora-Demi-Bold.sfd: Sophora-Demi-Bold.tmp3.sfd
+	./utils/python/rescale2.py $^ $@
+Sophora-Bold.sfd: Sophora-Bold.tmp3.sfd
+	./utils/python/rescale2.py $^ $@
 
 # Proportional variant
 
