@@ -18,11 +18,15 @@ for glyph in BaseFont.glyphs():
     if glyph.color == 0xd4d400:
       glyph.unlinkRef()
 
-print 'Overlaying...'
+BaseFont.selection.none(); OvlFont.selection.none()
 for glyph in BaseFont.glyphs():
   if glyph.isWorthOutputting():
     if (glyph.color == 0xff8000) or (glyph.color == 0x00d4d4) or (glyph.color == 0xd4d400):
-      glyph = OvlFont[glyph.glyphname]
+      OvlFont.selection.select(("more",), glyph.glyphname)
+      BaseFont.selection.select(("more",), glyph)
+print 'Overlaying...'
+OvlFont.copy()
+BaseFont.paste()
 
 print 'Saving target file %s...' % sys.argv[3]
 BaseFont.save(sys.argv[3])

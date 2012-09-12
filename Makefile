@@ -45,7 +45,7 @@ Sophora-Demi-Bold.tmp.sfd: Sophora-Light.tmp.sfd
 Sophora-Bold.tmp.sfd: Sophora-Light.tmp.sfd
 	./utils/pe/embolden.pe $< 60 Bold $@
 
-Sophora-Light.tmp3.sfd: Sophora.sfd
+Sophora-Light.tmp3.sfd: Sophora-Light.tmp.sfd
 	./utils/python/debolden.py $< $@
 
 # Rescaling
@@ -76,7 +76,7 @@ Sophora-Demi-Bold.sfd: Sophora-Demi-Bold.tmp2.sfd Sophora-Medium.tmp2.sfd
 Sophora-Bold.sfd: Sophora-Bold.tmp2.sfd Sophora-Demi-Bold.tmp2.sfd
 	./utils/python/overlay.py $^ $@
 
-# Overlay
+# Rescaling again
 
 Sophora-Light.sfd: Sophora-Light.tmp5.sfd
 	./utils/python/rescale2.py $^ $@
@@ -330,7 +330,7 @@ clean:
 	-rm $(TARGETS) $(TARGETS:%.otf=%.sfd) \
 		$(TARGETS:%.otf=%.tmp.sfd) \
 		$(TARGETS:%.otf=%.tmp2.sfd) \
-		Sophora-Light.tmp3.sfd \
+		$(TARGETS:%.otf=%.tmp3.sfd) \
 		Sophora-Light.tmp4.sfd \
 		Sophora-Light.tmp5.sfd \
 		italic.sfd italic.tmp.sfd italic-*.sfd \
