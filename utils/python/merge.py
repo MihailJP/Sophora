@@ -42,7 +42,7 @@ while FontNum < len(sys.argv):
     if Glyph.isWorthOutputting():
       GlyphName = Glyph.glyphname; GlyphDiffers = False
       try:
-        GlyphDiffers = ((Glyph.foreground != BaseFont[GlyphName].foreground) or (Glyph.width != BaseFont[GlyphName].width))
+        GlyphDiffers = ((Glyph.width != BaseFont[GlyphName].width) or (Glyph.foreground != BaseFont[GlyphName].foreground))
       except TypeError, inst:
         r = re.compile("No such glyph")
         if r.match(str(inst)):
