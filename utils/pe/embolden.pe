@@ -55,6 +55,6 @@ foreach
 	endif
 endloop
 RemoveOverlap()
-Scale(100/WorkingScale,0,0)
+Scale(100.0/WorkingScale,0,0)
 SetFontNames(Strsub($fontname,0,Strrstr($fontname,"-"+$weight))+"-"+$3,$familyname,$familyname+" "+$3+weightcat+weightsuffix,$3+weightsuffix)
 Save($4)
