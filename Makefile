@@ -17,7 +17,8 @@ PRETTF=$(OTF:.otf=.forTTC.sfd) $(OTF:.otf=.forTTC.ttf)
 TTC=$(WEIGHTS:%=Sophora-%.ttc) $(WEIGHTS:%=Sophora-%-Italic.ttc)
 TARGETS=$(OTF) $(TTF) $(TTC)
 DOCS=readme.txt pua.txt history.txt
-DISTFILE=Sophora-OTF.7z Sophora-TTF.7z Sophora.7z
+#DISTFILE=Sophora-OTF.7z Sophora-TTF.7z Sophora.7z
+DISTFILE=Sophora-OTF.7z Sophora-TTF.7z
 DISTDIR=$(DISTFILE:.7z=)
 
 # All targets
@@ -361,5 +362,4 @@ Sophora.7z: $(TTC) $(DOCS)
 	mkdir $*;cp $^ $*
 	7za a -mx=9 $@ $*
 
-#dist: $(DISTFILE)
-dist: Sophora.7z
+dist: $(DISTFILE)
