@@ -53,10 +53,10 @@ else:
   Base.fullname = Base.familyname+" HW "+p.sub(' Italic',Base.weight)
   Base.fontname = Base.familyname+"HW-"+Base.weight
   Base.familyname = Base.familyname+" HW"
-Base.os2_winascent = Base.ascent; Base.os2_winascent_add = 0
-Base.os2_windescent = Base.descent; Base.os2_windescent_add = 0
-Base.os2_typoascent = Base.ascent; Base.os2_typoascent_add = 0
-Base.os2_typodescent = -Base.descent; Base.os2_typodescent_add = 0
+Base.os2_winascent = Base.ascent * 1.3; Base.os2_winascent_add = 0
+Base.os2_windescent = Base.descent * 1.3; Base.os2_windescent_add = 0
+Base.os2_typoascent = Base.ascent * 1.3; Base.os2_typoascent_add = 0
+Base.os2_typodescent = -Base.descent * 1.3; Base.os2_typodescent_add = 0
 Base.os2_typolinegap = 0
 #Base.hhea_ascent = Base.ascent; Base.hhea_ascent_add = 0
 #Base.hhea_descent = -Base.descent; Base.hhea_descent_add = 0
