@@ -4,7 +4,7 @@
 
 # Variants
 
-.SUFFIXES: .sfd .otf .ttf .ttc .7z
+.SUFFIXES: .sfd .otf .ttf .ttc .7z .tar .tar.xz
 
 DIRS=srcgif
 WEIGHTS=Light Book Medium Demi-Bold Bold
@@ -17,9 +17,9 @@ PRETTF=$(OTF:.otf=.forTTC.sfd) $(OTF:.otf=.forTTC.ttf)
 TTC=$(WEIGHTS:%=Sophora-%.ttc) $(WEIGHTS:%=Sophora-%-Italic.ttc)
 TARGETS=$(OTF) $(TTF) $(TTC)
 DOCS=readme.txt pua.txt history.txt
-#DISTFILE=Sophora-OTF.7z Sophora-TTF.7z Sophora.7z
-DISTFILE=Sophora-OTF.7z Sophora-TTF.7z
-DISTDIR=$(DISTFILE:.7z=)
+#DISTFILE=Sophora-OTF.tar.xz Sophora-TTF.tar.xz Sophora.tar.xz
+DISTFILE=Sophora-OTF.tar.xz Sophora-TTF.tar.xz
+DISTDIR=$(DISTFILE:.tar.xz=)
 
 # All targets
 
@@ -349,17 +349,17 @@ clean:
 
 # Distribution
 
-Sophora-OTF.7z: $(OTF) $(DOCS)
+Sophora-OTF.tar.xz: $(OTF) $(DOCS)
 	-rm -rf $*
 	mkdir $*;cp $^ $*
-	7za a -mx=9 $@ $*
-Sophora-TTF.7z: $(TTF) $(DOCS)
+	tar cfv $*.tar $* && xz -z9e $*.tar
+Sophora-TTF.tar.xz: $(TTF) $(DOCS)
 	-rm -rf $*
 	mkdir $*;cp $^ $*
-	7za a -mx=9 $@ $*
-Sophora.7z: $(TTC) $(DOCS)
+	tar cfv $*.tar $* && xz -z9e $*.tar
+Sophora.tar.xz: $(TTC) $(DOCS)
 	-rm -rf $*
 	mkdir $*;cp $^ $*
-	7za a -mx=9 $@ $*
+	tar cfv $*.tar $* && xz -z9e $*.tar
 
 dist: $(DISTFILE)
