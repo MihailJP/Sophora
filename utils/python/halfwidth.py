@@ -53,13 +53,13 @@ else:
   Base.fullname = Base.familyname+" HW "+p.sub(' Italic',Base.weight)
   Base.fontname = Base.familyname+"HW-"+Base.weight
   Base.familyname = Base.familyname+" HW"
-Base.os2_winascent = Base.ascent * 1.25; Base.os2_winascent_add = 0
-Base.os2_windescent = Base.descent * 2; Base.os2_windescent_add = 0
-Base.os2_typoascent = Base.ascent * 1.25; Base.os2_typoascent_add = 0
-Base.os2_typodescent = -Base.descent * 2; Base.os2_typodescent_add = 0
+Base.os2_winascent = Base.ascent + 200; Base.os2_winascent_add = 0
+Base.os2_windescent = Base.descent + 200; Base.os2_windescent_add = 0
+Base.os2_typoascent = Base.ascent + 200; Base.os2_typoascent_add = 0
+Base.os2_typodescent = -Base.descent - 200; Base.os2_typodescent_add = 0
 Base.os2_typolinegap = 0
-#Base.hhea_ascent = Base.ascent * 1.25; Base.hhea_ascent_add = 0
-#Base.hhea_descent = -Base.descent * 2; Base.hhea_descent_add = 0
+#Base.hhea_ascent = Base.ascent + 200; Base.hhea_ascent_add = 0
+#Base.hhea_descent = -Base.descent - 200; Base.hhea_descent_add = 0
 Base.hhea_linegap = 0
 Base["i"].addPosSub("Dotless forms-1", "dotlessi.half")
 Base["j"].addPosSub("Dotless forms-1", "dotlessj.half")
