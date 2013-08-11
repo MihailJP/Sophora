@@ -28,4 +28,6 @@ if [[ $PROPFLAG != 0 ]]; then
 	$(cd $(dirname $0);pwd)/../mensis/flagmono.pe $2
 	chkerr $?
 fi
+$(cd $(dirname $0);pwd)/../mensis/vert.pe $2
+chkerr $?
 exit 0
