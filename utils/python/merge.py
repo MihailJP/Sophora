@@ -5,7 +5,7 @@ import re
 import fontforge
 
 if (len(sys.argv) < 3):
-  print 'Usage: fontforge -script %s source-file1 source-file2 [source-file3 ...]' % sys.argv[0]
+  print 'Usage: %s source-file1 source-file2 [source-file3 ...]' % sys.argv[0]
   quit(1)
 
 print 'Loading base file %s...' % sys.argv[1]

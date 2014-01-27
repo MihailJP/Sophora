@@ -6,7 +6,7 @@ import fontforge
 
 HackFlag = False
 if (len(sys.argv) < 4):
-  print 'Usage: fontforge -script %s base-sfd halfwidth-sfd target-file' % sys.argv[0]
+  print 'Usage: %s base-sfd halfwidth-sfd target-file' % sys.argv[0]
   exit(1)
 elif (len(sys.argv) > 4):
   HackFlag = boolean(sys.argv[4])

@@ -5,7 +5,7 @@ import fontforge
 import psMat
 
 if (len(sys.argv) < 3):
-  print 'Usage: fontforge -script %s source-file target-file' % sys.argv[0]
+  print 'Usage: %s source-file target-file' % sys.argv[0]
   quit(1)
 
 Font = fontforge.open(sys.argv[1])

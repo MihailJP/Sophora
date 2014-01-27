@@ -6,7 +6,7 @@ import fontforge
 from color import isJGlyphP, isJGlyph
 
 if (len(sys.argv) < 3):
-  print 'Usage: fontforge -script %s source-file target-file' % sys.argv[0]
+  print 'Usage: %s source-file target-file' % sys.argv[0]
   quit(1)
 
 print 'Loading base file %s...' % sys.argv[1]
