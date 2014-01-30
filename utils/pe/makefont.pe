@@ -5,6 +5,8 @@ if ($argc < 3)
 	Quit(1)
 endif
 
+SetPref("CoverageFormatsAllowed", 1)
+
 Open($1)
 SelectWorthOutputting()
 foreach
