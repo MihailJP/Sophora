@@ -60,14 +60,12 @@
 
 
 ■開発環境
-	OS： デュアルブート(Windows 7 Home Premium 32bit、openSUSE 12.3 64bit)
+	OS： デュアルブート(Windows 7 Home Premium 32bit、openSUSE 13.1 64bit)
 	メモリ： 4GB
 	Cygwin： 1.7系列
 	バージョン管理ソフト： Git
 	FontForge： Development version from GIT repository
-	FontForgeライブラリ:  22 Feb 2011 (Linuxのみ)
-	Mensis： 7 May 2008 (Linuxのみ。Cygwin環境ではビルド失敗)
-	Perl： 5.16 (Linux)、5.14か5.10 (Cygwin)
+	Perl： 5.18 (Linux)、5.14か5.10 (Cygwin)
 	原稿用紙： 無印良品・整うノート(B5、30枚、6mm罫) 片面使用
 	ボールペン： 0.5mm油性黒(メイン)、0.7mm油性赤(補助)
 	スキャナの設定： 400dpi
