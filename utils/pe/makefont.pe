@@ -5,6 +5,8 @@ if ($argc < 3)
 	Quit(1)
 endif
 
+SetPref("CoverageFormatsAllowed", 1)
+
 Open($1)
 SelectWorthOutputting()
 foreach
@@ -18,16 +20,16 @@ if ($2:e == 'otf')
 	UnlinkReference()
 elseif ($2:e == 'ttf')
 	ScaleToEm(2048)
-	if (Strstr($fontname,"-HW-") != -1)
-		SetOS2Value("WinAscent", $ascent); SetOS2Value("WinAscentIsOffset", 0)
-		SetOS2Value("WinDescent", $descent); SetOS2Value("WinDescentIsOffset", 0)
-		SetOS2Value("TypoAscent", $ascent); SetOS2Value("TypoAscentIsOffset", 0)
-		SetOS2Value("TypoDescent", -$descent); SetOS2Value("TypoDescentIsOffset", 0)
-		SetOS2Value("TypoLineGap", 0)
-#		SetOS2Value("HHeadAscent", $ascent); SetOS2Value("HHeadAscentIsOffset", 0)
-#		SetOS2Value("HHeadDescent", -$descent); SetOS2Value("HHeadDescentIsOffset", 0)
-		SetOS2Value("HHeadLineGap", 0)
-	endif
+endif
+if (Strstr($fontname,"-HW-") != -1)
+	SetOS2Value("WinAscent", $ascent * 11 / 10); SetOS2Value("WinAscentIsOffset", 0)
+	SetOS2Value("WinDescent", $descent * 11 / 10); SetOS2Value("WinDescentIsOffset", 0)
+	SetOS2Value("TypoAscent", $ascent * 11 / 10); SetOS2Value("TypoAscentIsOffset", 0)
+	SetOS2Value("TypoDescent", -$descent * 11 / 10); SetOS2Value("TypoDescentIsOffset", 0)
+	SetOS2Value("TypoLineGap", 0)
+#	SetOS2Value("HHeadAscent", $ascent); SetOS2Value("HHeadAscentIsOffset", 0)
+#	SetOS2Value("HHeadDescent", -$descent); SetOS2Value("HHeadDescentIsOffset", 0)
+	SetOS2Value("HHeadLineGap", 0)
 endif
 AddExtrema()
 Simplify()
