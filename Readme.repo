@@ -12,8 +12,8 @@ Sophora, a print-style-like handwritten font project
 		http://x.cygwin.com/
 	FontForge
 		http://fontforge.sourceforge.net/
-	Mensis
-		http://mensis.sourceforge.net/
+	Font::TTF (Perl module)
+		http://search.cpan.org/~mhosken/Font-TTF/
 	potrace
 		Cygwinインストーラーにパッケージ有り
 		http://potrace.sourceforge.net/
