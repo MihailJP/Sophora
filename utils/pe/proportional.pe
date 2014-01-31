@@ -72,5 +72,6 @@ SelectGlyphsBoth()
 UnlinkReference()
 
 SetPanose(3, 2)
+SetOS2Value("IBMFamily", 65)
 
 Save($2)
