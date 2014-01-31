@@ -27,7 +27,7 @@ chkerr $?
 if [[ $PROPFLAG != 0 ]]; then
 	#$(cd $(dirname $0);pwd)/../mensis/flagmono.pe $2
 	$(cd $(dirname $0);pwd)/../perl/flagmono.pl $2_ $2
-	local ERRCODE=$?
+	ERRCODE=$?
 	rm $2_
 	chkerr $ERRCODE
 fi
