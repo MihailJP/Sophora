@@ -22,12 +22,15 @@ if [[ $HWFLAG == 0 ]]; then
 	PROPFLAG=1
 fi
 
-$(cd $(dirname $0);pwd)/../pe/makefont.pe $1 $2
+$(cd $(dirname $0);pwd)/../pe/makefont.pe $1 $2_
 chkerr $?
-#if [[ $PROPFLAG != 0 ]]; then
-#	$(cd $(dirname $0);pwd)/../mensis/flagmono.pe $2
-#	chkerr $?
-#fi
+if [[ $PROPFLAG != 0 ]]; then
+	#$(cd $(dirname $0);pwd)/../mensis/flagmono.pe $2
+	$(cd $(dirname $0);pwd)/../perl/flagmono.pl $2_ $2
+	local ERRCODE=$?
+	rm $2_
+	chkerr $ERRCODE
+fi
 #$(cd $(dirname $0);pwd)/../mensis/vert.pe $2
 #chkerr $?
 exit 0
