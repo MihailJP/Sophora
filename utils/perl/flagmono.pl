@@ -17,7 +17,7 @@ $t -> read;
 $t->{'isFixedPitch'} = 1;
 my $m = $f->{'hmtx'};
 $m -> read;
-my $w = $m->{'space'};
+my $w = $m->{'advance'}[3];
 my $o = $f->{'OS/2'};
 $o -> read;
 $o->{'xAvgCharWidth'} = $w;
