@@ -30,6 +30,8 @@ if [[ $PROPFLAG != 0 ]]; then
 	ERRCODE=$?
 	rm _$2
 	chkerr $ERRCODE
+else
+	mv _$2 $2
 fi
 #$(cd $(dirname $0);pwd)/../mensis/vert.pe $2
 #chkerr $?
