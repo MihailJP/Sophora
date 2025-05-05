@@ -6,33 +6,33 @@ import fontforge
 
 HackFlag = False
 if (len(sys.argv) < 4):
-  print 'Usage: %s base-sfd halfwidth-sfd target-file' % sys.argv[0]
+  print('Usage: %s base-sfd halfwidth-sfd target-file' % sys.argv[0])
   exit(1)
 elif (len(sys.argv) > 4):
   HackFlag = boolean(sys.argv[4])
 
-print "Reading source files..."
+print("Reading source files...")
 Base = fontforge.open(sys.argv[1])
 HW = fontforge.open(sys.argv[2])
 basewidth = HW["a"].width
 
 ReferenceGlyph = ()
-print "Checking for references..."
+print("Checking for references...")
 for Glyph in Base.glyphs():
   if Glyph.isWorthOutputting():
     for Ref in Glyph.references:
       ReferenceGlyph += (Glyph.glyphname,Ref[0])
 
-print "Unlinking references..."
+print("Unlinking references...")
 for Glyph in Base.glyphs():
   if Glyph.isWorthOutputting():
     Glyph.unlinkRef()
 
-print "Adding glyph slots..."
+print("Adding glyph slots...")
 Base.createChar(-1,"dotlessi.half")
 Base.createChar(-1,"dotlessj.half")
 
-print "Copying the halfwidth glyphs..."
+print("Copying the halfwidth glyphs...")
 for Glyph in HW.glyphs():
   if Glyph.isWorthOutputting():
     col = Glyph.color
@@ -43,7 +43,7 @@ for Glyph in HW.glyphs():
     Base.paste()
     Base[nom].color = col
 
-print "Changing the font information..."
+print("Changing the font information...")
 p = re.compile('-Italic')
 if HackFlag:
   Base.fullname = Base.familyname+" HW Hack "+p.sub(' Italic',Base.weight)
@@ -64,11 +64,11 @@ Base.hhea_linegap = 0
 Base["i"].addPosSub("Dotless forms-1", "dotlessi.half")
 Base["j"].addPosSub("Dotless forms-1", "dotlessj.half")
 
-print "Replacing with references..."
+print("Replacing with references...")
 Base.selection.none()
 for Glyph in ReferenceGlyph:
   Base.selection.select(("more",),Glyph)
 Base.replaceWithReference()
 
-print "Saving halfwidth SFD..."
+print("Saving halfwidth SFD...")
 Base.save(sys.argv[3])

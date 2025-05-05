@@ -5,12 +5,12 @@ import fontforge
 from color import isJGlyphP, isJGlyph
 
 if (len(sys.argv) < 4):
-  print 'Usage: %s base-file overlay-file target-file' % sys.argv[0]
+  print('Usage: %s base-file overlay-file target-file' % sys.argv[0])
   quit(1)
 
-print 'Loading base file %s...' % sys.argv[1]
+print('Loading base file %s...' % sys.argv[1])
 BaseFont = fontforge.open(sys.argv[1])
-print 'Loading overlay file %s...' % sys.argv[2]
+print('Loading overlay file %s...' % sys.argv[2])
 OvlFont = fontforge.open(sys.argv[2])
 
 
@@ -25,9 +25,9 @@ for glyph in BaseFont.glyphs():
     if isJGlyph(glyph):
       OvlFont.selection.select(("more",), glyph.glyphname)
       BaseFont.selection.select(("more",), glyph)
-print 'Overlaying...'
+print('Overlaying...')
 OvlFont.copy()
 BaseFont.paste()
 
-print 'Saving target file %s...' % sys.argv[3]
+print('Saving target file %s...' % sys.argv[3])
 BaseFont.save(sys.argv[3])

@@ -5,10 +5,10 @@ import re
 import fontforge
 
 if (len(sys.argv) < 3):
-  print 'Usage: %s source-file1 source-file2 [source-file3 ...]' % sys.argv[0]
+  print('Usage: %s source-file1 source-file2 [source-file3 ...]' % sys.argv[0])
   quit(1)
 
-print 'Loading base file %s...' % sys.argv[1]
+print('Loading base file %s...' % sys.argv[1])
 BaseFont = fontforge.open(sys.argv[1])
 
 FontName = (BaseFont.fontname,); FullName = (BaseFont.fullname,); FamilyName = (BaseFont.familyname,)
@@ -25,7 +25,7 @@ FontMetrics = ((BaseFont.os2_typoascent, BaseFont.os2_typoascent_add,
 FontNum = 2
 while FontNum < len(sys.argv):
   glyphSuffix = "font%04d" % FontNum
-  print 'Loading addend file %s...' % sys.argv[FontNum]
+  print('Loading addend file %s...' % sys.argv[FontNum])
   AddendFont = fontforge.open(sys.argv[FontNum])
   FontName += (AddendFont.fontname,); FullName += (AddendFont.fullname,); FamilyName += (AddendFont.familyname,)
   GlyphDifference += [(),]; GlyphCode += [(),]
@@ -43,16 +43,16 @@ while FontNum < len(sys.argv):
       GlyphName = Glyph.glyphname; GlyphDiffers = False
       try:
         GlyphDiffers = ((Glyph.width != BaseFont[GlyphName].width) or (Glyph.foreground != BaseFont[GlyphName].foreground))
-      except TypeError, inst:
+      except TypeError as inst:
         r = re.compile("No such glyph")
         if r.match(str(inst)):
-          print "%s is a new glyph" % Glyph.glyphname
+          print("%s is a new glyph" % Glyph.glyphname)
           GlyphDiffers = True
         else:
           raise
       else:
         if GlyphDiffers:
-          print "%s differs" % Glyph.glyphname
+          print("%s differs" % Glyph.glyphname)
       if GlyphDiffers:
         BaseFont.createChar(-1,"%s.%s" % (GlyphName, glyphSuffix))
         AddendFont.selection.select(GlyphName)
@@ -71,7 +71,7 @@ while FontNum < len(sys.argv):
 
 fncnv = re.compile('\.sfd$')
 BaseFile = fncnv.sub(".forTTC.sfd", sys.argv[1])
-print "Saving into %s..." % BaseFile
+print("Saving into %s..." % BaseFile)
 BaseFont.save(BaseFile)
 
 reFontName = re.compile('^FontName: ')
@@ -94,7 +94,7 @@ for nom in MetricName:
 FontNum = 2
 while FontNum < len(sys.argv):
   TargetFile = fncnv.sub(".forTTC.sfd", sys.argv[FontNum])
-  print "Converting into %s..." % TargetFile
+  print("Converting into %s..." % TargetFile)
   target = open(TargetFile, 'w')
   
   reSChar1 = {}; reSChar2 = {};
