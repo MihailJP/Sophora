@@ -1,4 +1,4 @@
-#!/usr/local/bin/fontforge
+#!/usr/bin/env fontforge
 
 if ($argc < 5)
 	Print("Usage: fontforge -script "+$0+" source-file stroke-width weight-name target-file [subfamily-suffix]")

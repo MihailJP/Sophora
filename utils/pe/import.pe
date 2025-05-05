@@ -1,4 +1,4 @@
-#!/usr/local/bin/fontforge
+#!/usr/bin/env fontforge
 
 if ($argc < 3)
 	Print("Usage: fontforge -script "+$0+" src-dir-name num-of-glyphs")

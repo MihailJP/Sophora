@@ -1,4 +1,4 @@
-#!/usr/local/bin/fontforge -script
+#!/usr/bin/env fontforge
 
 import sys
 import psMat
