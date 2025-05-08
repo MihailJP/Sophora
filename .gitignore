@@ -1,0 +1,11 @@
+__pycache__
+*.otf
+*.ttf
+*.ttc
+*.sfd
+!Sophora.sfd
+*.tar
+*.xz
+*~
+*.bak
+*.tmp
