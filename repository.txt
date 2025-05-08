@@ -3,7 +3,7 @@ Sophora, a print-style-like handwritten font project
 ボールペン書き楷書フォントプロジェクト Sophora
 
 
-■ビルド時に必要なもの
+■ビルド時に必要なもの（この情報は古いです）
 
 	Cygwin (when on Windows)
 		http://www.cygwin.com/

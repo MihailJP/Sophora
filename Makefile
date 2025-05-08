@@ -17,7 +17,7 @@ PRETTF=$(OTF:.otf=.forTTC.sfd) $(OTF:.otf=.forTTC.ttf)
 TTC=$(WEIGHTS:%=Sophora-%.ttc) $(WEIGHTS:%=Sophora-%-Italic.ttc)
 #TARGETS=$(OTF) $(TTF) $(TTC)
 TARGETS=$(OTF) $(TTF)
-DOCS=readme.txt pua.txt history.txt
+DOCS=README.md LICENSE pua.txt history.txt
 #DISTFILE=Sophora-OTF.tar.xz Sophora-TTF.tar.xz Sophora.tar.xz
 DISTFILE=Sophora-OTF.tar.xz Sophora-TTF.tar.xz
 DISTDIR=$(DISTFILE:.tar.xz=)
