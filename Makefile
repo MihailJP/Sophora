@@ -339,6 +339,8 @@ clean:
 		$(TARGETS:%.otf=%.tmp.sfd) \
 		$(TARGETS:%.otf=%.tmp2.sfd) \
 		$(TARGETS:%.otf=%.tmp3.sfd) \
+		$(TARGETS:%.otf=%.otf.sfd) \
+		$(TARGETS:%.otf=%.ttf.sfd) \
 		Sophora-Light.tmp4.sfd \
 		Sophora-Light.tmp5.sfd \
 		italic.sfd italic.tmp.sfd italic.tmp2.sfd italic-*.sfd \

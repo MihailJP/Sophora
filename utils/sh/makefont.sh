@@ -33,6 +33,7 @@ if [[ $PROPFLAG != 0 ]]; then
 else
 	mv _$2 $2
 fi
+rm _$2.sfd
 #$(cd $(dirname $0);pwd)/../mensis/vert.pe $2
 #chkerr $?
 exit 0
