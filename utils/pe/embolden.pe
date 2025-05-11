@@ -46,7 +46,7 @@ Scale(WorkingScale*100,0,0)
 AddExtrema()
 RoundToInt()
 Simplify()
-ExpandStroke(Strtol($2)*WorkingScale,0,2,0,1)
+ExpandStroke(Strtol($2)*WorkingScale,0,2,0,9)
 foreach
 	if (GlyphInfo("Color") == 0xff00ff)
 		UnlinkReference()
