@@ -39,7 +39,9 @@ for glyph in BaseFont.glyphs():
 print('Moving...')
 BaseFont.transform(psMat.translate(float(WidthJ - WidthE) / 2.0, 0.0))
 for glyph in BaseFont.selection.byGlyphs:
-  if glyph.width >= WidthE:
+  if glyph.width == 0:
+    pass
+  elif glyph.width >= WidthE:
     glyph.width = WidthJ
   else:
     glyph.width = WidthJ / 2
